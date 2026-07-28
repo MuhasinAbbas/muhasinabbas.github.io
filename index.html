@@ -343,3 +343,687 @@ section{
 }
 
 /* ===== PART 2 CONTINUES FROM HERE ===== */
+/* =======================================================
+   SECTIONS
+======================================================= */
+
+
+#about,
+#skills,
+#works,
+#contact{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+#about .section-overlay,
+#skills .section-overlay,
+#works .section-overlay,
+#contact .section-overlay{
+
+    width:100%;
+
+    max-width:1100px;
+
+}
+
+
+
+/* =======================================================
+   SKILLS CARDS
+======================================================= */
+
+
+.skill-container{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+
+
+.skill-card{
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    padding:30px;
+
+    border-radius:15px;
+
+    width:250px;
+
+    transition:.4s;
+
+}
+
+
+
+.skill-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.3);
+
+}
+
+
+
+.skill-card h3{
+
+    font-size:25px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+/* =======================================================
+   WORK SECTION
+======================================================= */
+
+
+.work-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.work-box{
+
+    height:250px;
+
+    background:rgba(255,255,255,.15);
+
+    border-radius:15px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    transition:.4s;
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+.work-box:hover{
+
+    transform:scale(1.05);
+
+    background:rgba(255,255,255,.3);
+
+}
+
+
+
+/* =======================================================
+   CONTACT
+======================================================= */
+
+
+.contact-links{
+
+    display:flex;
+
+    gap:30px;
+
+    margin-top:30px;
+
+}
+
+
+
+.contact-links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+
+
+.contact-links a:hover{
+
+    opacity:.6;
+
+}
+
+
+
+/* =======================================================
+   SCROLL ARROW
+======================================================= */
+
+
+.scroll-down{
+
+    margin-top:40px;
+
+    font-size:25px;
+
+    animation:bounce 2s infinite;
+
+}
+
+
+
+@keyframes bounce{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(15px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* =======================================================
+   MOBILE RESPONSIVE
+======================================================= */
+
+
+@media(max-width:768px){
+
+
+nav{
+
+    padding:0 20px;
+
+}
+
+
+
+.logo img{
+
+    height:30px;
+
+}
+
+
+
+.menu{
+
+    gap:15px;
+
+}
+
+
+
+.menu a{
+
+    font-size:10px;
+
+}
+
+
+
+.slogan{
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.roles{
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.portfolio{
+
+    letter-spacing:5px;
+
+}
+
+
+
+.section-title{
+
+    font-size:40px;
+
+}
+
+
+
+.section-overlay{
+
+    padding:30px;
+
+}
+
+
+}
+
+
+/* ===== PART 3 CONTINUES FROM HERE ===== */
+/* =======================================================
+   FINAL CSS
+======================================================= */
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =======================================================
+     NAVIGATION BAR
+======================================================= -->
+
+
+<nav>
+
+
+<div class="logo">
+
+<img src="ma-logo-with-black-white-design_773552-85.avif" alt="Muhasin Abbas Logo">
+
+</div>
+
+
+
+<div class="menu">
+
+<a href="#about">ABOUT</a>
+
+<a href="#skills">SKILLS</a>
+
+<a href="#works">WORKS</a>
+
+<a href="#contact">CONTACT</a>
+
+</div>
+
+
+</nav>
+
+
+
+
+
+<!-- =======================================================
+     HERO SECTION
+======================================================= -->
+
+
+<section class="hero">
+
+
+<div class="slogan">
+
+DESIGNS THAT ATTRACT . FRAMES THAT SPEAK
+
+</div>
+
+
+
+<div class="portfolio">
+
+PORTFOLIO
+
+</div>
+
+
+
+<div class="roles">
+
+CONTENT CREATOR . GRAPHIC DESIGNER . VIDEO EDITOR
+
+</div>
+
+
+
+<div class="scroll-down">
+
+↓
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =======================================================
+     ABOUT SECTION
+======================================================= -->
+
+
+<section id="about">
+
+
+<div class="section-overlay">
+
+
+<h1 class="section-title">
+
+ABOUT
+
+</h1>
+
+
+
+<p class="section-text">
+
+I am Muhasin Abbas, a creative designer and visual storyteller
+specializing in graphic design, video editing, and digital content creation.
+This portfolio showcases my creative journey and projects.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =======================================================
+     SKILLS SECTION
+======================================================= -->
+
+
+<section id="skills">
+
+
+<div class="section-overlay">
+
+
+<h1 class="section-title">
+
+SKILLS
+
+</h1>
+
+
+
+<div class="skill-container">
+
+
+<div class="skill-card">
+
+<h3>
+
+GRAPHIC DESIGN
+
+</h3>
+
+<p>
+
+Photoshop<br>
+Illustrator<br>
+Brand Design
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="skill-card">
+
+<h3>
+
+VIDEO EDITING
+
+</h3>
+
+<p>
+
+Premiere Pro<br>
+After Effects<br>
+Visual Storytelling
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="skill-card">
+
+<h3>
+
+CONTENT CREATION
+
+</h3>
+
+<p>
+
+Creative Direction<br>
+Social Media Content<br>
+Digital Media
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =======================================================
+     WORKS SECTION
+======================================================= -->
+
+
+<section id="works">
+
+
+<div class="section-overlay">
+
+
+<h1 class="section-title">
+
+WORKS
+
+</h1>
+
+
+
+<div class="work-grid">
+
+
+<div class="work-box">
+
+POSTERS
+
+</div>
+
+
+
+<div class="work-box">
+
+VIDEOS
+
+</div>
+
+
+
+<div class="work-box">
+
+BRANDING
+
+</div>
+
+
+
+<div class="work-box">
+
+PROJECTS
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =======================================================
+     CONTACT SECTION
+======================================================= -->
+
+
+<section id="contact">
+
+
+<div class="section-overlay">
+
+
+<h1 class="section-title">
+
+CONTACT
+
+</h1>
+
+
+
+<p class="section-text">
+
+Let's create something meaningful together.
+
+</p>
+
+
+
+<div class="contact-links">
+
+
+<a href="#">
+
+LINKEDIN
+
+</a>
+
+
+
+<a href="#">
+
+EMAIL
+
+</a>
+
+
+
+<a href="#">
+
+INSTAGRAM
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+</body>
+
+</html>   
