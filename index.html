@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -6,104 +6,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="logo">
-    <img src="ma-logo-with-black-white-design_773552-85.avif" alt="Muhasin Abbas Logo">
-</div>
+<title>Muhasin Abbas | Portfolio</title>
 
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+
+/* =======================================================
+   RESET
+======================================================= */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
 }
-
 
 html{
     scroll-behavior:smooth;
 }
 
-
 body{
 
-    background-image: url("b3bd86f7-404f-4465-a81e-2986c739f822.jpg");
+    font-family:'Poppins',sans-serif;
 
-    background-size: cover;
+    color:white;
 
-    background-position: center;
+    background-image:url("b3bd86f7-404f-4465-a81e-2986c739f822.jpg");
 
-    background-attachment: fixed;
+    background-size:cover;
 
-    color:#000000;
+    background-position:center;
+
+    background-repeat:no-repeat;
+
+    background-attachment:fixed;
 
 }
 
 
 
-/* NAVIGATION BAR */
+/* =======================================================
+   NAVIGATION BAR
+======================================================= */
 
 nav{
 
     position:fixed;
+
     top:0;
+
     left:0;
+
     width:100%;
 
-    height:60px;
+    height:70px;
 
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
 
-    padding:0 60px;
+    padding:0 45px;
 
-    background:#ffffff;
+    background:rgba(255,255,255,0.92);
 
-    z-index:1000;
+    backdrop-filter:blur(8px);
+
+    z-index:9999;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
 
 }
 
 
-/* LOGO */
+
+/* =======================================================
+   LOGO
+======================================================= */
 
 .logo{
 
-    font-size:22px;
-    font-weight:900;
-    text-transform:uppercase;
-    letter-spacing:1px;
+    display:flex;
+
+    align-items:center;
+
+}
+
+.logo img{
+
+    height:38px;
+
+    width:auto;
 
 }
 
 
 
-/* MENU */
+/* =======================================================
+   MENU
+======================================================= */
 
 .menu{
 
     display:flex;
-    gap:40px;
+
+    gap:28px;
 
 }
-
 
 .menu a{
 
     text-decoration:none;
-    color:black;
 
-    font-size:16px;
-    font-weight:700;
+    color:#111;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    letter-spacing:1px;
 
     position:relative;
 
+    transition:.35s;
+
 }
-
-
-
-/* HOVER UNDERLINE */
 
 .menu a::after{
 
@@ -112,26 +145,24 @@ nav{
     position:absolute;
 
     left:0;
-    bottom:-8px;
+
+    bottom:-6px;
 
     width:0%;
-    height:3px;
 
-    background:black;
+    height:2px;
 
-    transition:0.4s;
+    background:#000;
+
+    transition:.35s;
 
 }
-
-
 
 .menu a:hover{
 
     color:#777;
 
 }
-
-
 
 .menu a:hover::after{
 
@@ -141,16 +172,15 @@ nav{
 
 
 
-
-
-/* LANDING PAGE */
-
+/* =======================================================
+   HERO
+======================================================= */
 
 .hero{
 
-    height:100vh;
+    width:100%;
 
-    background:rgba(255,255,255,0.35);
+    height:100vh;
 
     display:flex;
 
@@ -158,106 +188,59 @@ nav{
 
     align-items:center;
 
-    text-align:center;
-
     flex-direction:column;
 
-    padding-top:80px;
+    text-align:center;
+
+    background:rgba(0,0,0,.25);
 
 }
 
 
 
-
-/* SLOGANS */
-
+/* =======================================================
+   TOP SLOGAN
+======================================================= */
 
 .slogan{
 
-    font-size:20px;
+    font-size:15px;
 
-    font-weight:800;
+    font-weight:600;
 
-    letter-spacing:4px;
+    letter-spacing:6px;
 
-    margin-bottom:25px;
+    margin-bottom:28px;
+
+    text-transform:uppercase;
 
 }
 
 
 
-/* BIG PORTFOLIO */
-
+/* =======================================================
+   PORTFOLIO TITLE
+======================================================= */
 
 .portfolio{
 
-    font-size:200px;
+    font-size:clamp(90px,15vw,230px);
 
-    font-weight:1000;
+    font-weight:900;
 
-    letter-spacing:8px;
+    letter-spacing:10px;
 
-    line-height:0.9;
+    text-transform:uppercase;
+
+    line-height:.9;
 
     position:relative;
 
     cursor:pointer;
 
-    transition:0.3s;
+    transition:.35s;
 
 }
-
-
-
-/* PORTFOLIO HOVER */
-
-
-.portfolio:hover{
-
-    color:#555;
-
-    animation:shake 0.4s;
-
-}
-
-
-
-
-@keyframes shake{
-
-
-0%{
-transform:translateX(0);
-}
-
-
-25%{
-transform:translateX(-8px);
-}
-
-
-50%{
-transform:translateX(8px);
-}
-
-
-75%{
-transform:translateX(-5px);
-}
-
-
-100%{
-transform:translateX(0);
-}
-
-
-}
-
-
-
-
-/* UNDERLINE BAR */
-
 
 .portfolio::after{
 
@@ -265,200 +248,98 @@ transform:translateX(0);
 
     position:absolute;
 
-    bottom:-25px;
-
     left:0;
+
+    bottom:-20px;
 
     width:100%;
 
-    height:8px;
+    height:7px;
 
-    background:black;
+    background:white;
 
-    transition:0.5s;
+    transition:.35s;
 
 }
 
+.portfolio:hover{
 
+    transform:scale(1.02);
+
+    letter-spacing:15px;
+
+}
 
 .portfolio:hover::after{
 
-    background:#555;
-
-    height:14px;
+    height:12px;
 
 }
 
 
 
-
-
-/* BOTTOM TITLES */
-
+/* =======================================================
+   BOTTOM TEXT
+======================================================= */
 
 .roles{
 
     margin-top:55px;
 
-    font-size:20px;
+    font-size:15px;
 
-    font-weight:800;
+    font-weight:600;
 
-    letter-spacing:4px;
+    letter-spacing:5px;
+
+    text-transform:uppercase;
 
 }
 
 
 
-/* PLACEHOLDER SECTIONS */
-
+/* =======================================================
+   COMMON SECTION STYLE
+======================================================= */
 
 section{
 
-    height:100vh;
+    min-height:100vh;
 
-    padding-top:100px;
-
-    text-align:center;
+    padding:120px 10%;
 
 }
 
+.section-overlay{
 
-#about{
+    background:rgba(0,0,0,.45);
 
-    background:#f5f5f5;
+    border-radius:18px;
 
-}
-
-
-#skills{
-
-    background:#ffffff;
+    padding:60px;
 
 }
 
+.section-title{
 
-#works{
+    font-size:60px;
 
-    background:#f5f5f5;
+    font-weight:800;
 
-}
+    margin-bottom:30px;
 
-
-#contact{
-
-    background:#ffffff;
+    text-transform:uppercase;
 
 }
 
+.section-text{
 
-</style>
+    font-size:18px;
 
+    line-height:1.9;
 
-</head>
+    max-width:900px;
 
+}
 
-
-<body>
-
-
-
-<nav>
-
-<div class="logo">
-
-Muhasin Abbas Portfolio
-
-</div>
-
-
-<div class="menu">
-
-<a href="#about">ABOUT</a>
-
-<a href="#skills">SKILLS</a>
-
-<a href="#works">WORKS</a>
-
-<a href="#contact">CONTACT</a>
-
-</div>
-
-
-</nav>
-
-
-
-
-
-<section class="hero">
-
-
-<div class="slogan">
-
-DESIGNS THAT ATTRACTS . FRAMES THAT SPEAKS
-
-</div>
-
-
-
-<div class="portfolio">
-
-PORTFOLIO
-
-</div>
-
-
-
-<div class="roles">
-
-CONTENT CREATOR . GRAPHIC DESIGNER . VIDEO EDITOR
-
-</div>
-
-
-
-</section>
-
-
-
-
-
-
-<section id="about">
-
-<h1>ABOUT</h1>
-
-</section>
-
-
-
-<section id="skills">
-
-<h1>SKILLS</h1>
-
-</section>
-
-
-
-
-<section id="works">
-
-<h1>WORKS</h1>
-
-</section>
-
-
-
-
-<section id="contact">
-
-<h1>CONTACT</h1>
-
-</section>
-
-
-
-</body>
-
-</html>
+/* ===== PART 2 CONTINUES FROM HERE ===== */
