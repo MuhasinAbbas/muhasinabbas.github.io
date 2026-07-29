@@ -867,15 +867,18 @@ PROJECTS SHOWCASE
 
 </div>
 
+
 <div class="projects-grid">
 
-<div class="project-card" id="photography">
+
+<div class="project-card" id="photography" onclick="openPhotography()">
 
 <img src="Photography.png" alt="Photography">
 
 <h3>Photography</h3>
 
 </div>
+
 
 <div class="project-card" id="graphic">
 
@@ -885,6 +888,7 @@ PROJECTS SHOWCASE
 
 </div>
 
+
 <div class="project-card" id="motion">
 
 <img src="Motion Graphics.png" alt="Motion Graphics">
@@ -892,6 +896,7 @@ PROJECTS SHOWCASE
 <h3>Motion Graphics</h3>
 
 </div>
+
 
 <div class="project-card" id="video">
 
@@ -901,15 +906,74 @@ PROJECTS SHOWCASE
 
 </div>
 
-</div>
 
 </div>
+
+
+
+<!-- =======================================================
+     PHOTOGRAPHY FULL SCREEN VIEWER
+======================================================= -->
+
+
+<div id="photo-viewer">
+
+
+<div class="viewer-header">
+
+
+<div class="viewer-title">
+
+<img src="Photography.png" alt="Photography">
+
+<span>PHOTOGRAPHY</span>
+
+</div>
+
+
+<button onclick="closePhotography()">
+
+RETURN
+
+</button>
+
+
+</div>
+
+
+
+<div class="viewer-content">
+
+
+<button class="arrow left" onclick="previousPhoto()">
+
+←
+
+</button>
+
+
+
+<img id="main-photo" src="kitty 1.jpg" alt="Photography Work">
+
+
+
+<button class="arrow right" onclick="nextPhoto()">
+
+→
+
+</button>
+
+
+</div>
+
+
+</div>
+
+
 
 </div>
 
 </section>
-
-
 
 <!-- =======================================================
    CONTACT CSS
