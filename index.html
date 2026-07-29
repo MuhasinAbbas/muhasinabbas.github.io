@@ -8,88 +8,56 @@
 
 <title>Muhasin Abbas | Portfolio</title>
 
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-
-
 <style>
-
 
 /* =======================================================
    GLOBAL
 ======================================================= */
 
-
 *{
-
     margin:0;
     padding:0;
     box-sizing:border-box;
-
 }
-
 
 html{
-
     scroll-behavior:smooth;
-
 }
-
-
 
 body{
-
     font-family:'Poppins',sans-serif;
-
     color:white;
-
     background-image:url("b3bd86f7-404f-4465-a81e-2986c739f822.jpg");
-
     background-size:cover;
-
     background-position:center;
-
     background-repeat:no-repeat;
-
     background-attachment:fixed;
-
 }
-
-
-
-
 
 /* =======================================================
    NAVIGATION BAR
 ======================================================= */
 
-
 nav{
 
     position:fixed;
-
     top:0;
-
     left:0;
-
     width:100%;
-
     height:70px;
 
     display:flex;
-
     justify-content:space-between;
-
     align-items:center;
 
     padding:0 45px;
 
-    background:rgba(255,255,255,0.92);
-
+    background:rgba(255,255,255,.92);
     backdrop-filter:blur(8px);
 
     z-index:9999;
@@ -98,58 +66,40 @@ nav{
 
 }
 
-
-
 .logo{
 
     display:flex;
-
     align-items:center;
 
 }
 
-
-
 .logo img{
 
     height:50px;
-
     width:auto;
 
 }
 
-
-
-
 .menu{
 
     display:flex;
-
     gap:28px;
 
 }
 
-
-
 .menu a{
 
     text-decoration:none;
-
     color:#111;
 
     font-size:12px;
-
     font-weight:600;
-
     letter-spacing:1px;
 
     position:relative;
-
     transition:.35s;
 
 }
-
-
 
 .menu a::after{
 
@@ -158,28 +108,22 @@ nav{
     position:absolute;
 
     left:0;
-
     bottom:-6px;
 
     width:0%;
-
     height:2px;
 
-    background:#25349a;
+    background:#25349A;
 
     transition:.35s;
 
 }
 
-
-
 .menu a:hover{
 
-    color:#25349a;
+    color:#25349A;
 
 }
-
-
 
 .menu a:hover::after{
 
@@ -187,29 +131,18 @@ nav{
 
 }
 
-
-
-
-
-
-
 /* =======================================================
    HERO SECTION
 ======================================================= */
 
-
 .hero{
 
     width:100%;
-
     height:100vh;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     flex-direction:column;
 
     text-align:center;
@@ -220,30 +153,16 @@ nav{
 
 }
 
-
-
-
-
-
 .slogan{
 
-
     font-size:15px;
-
     font-weight:600;
-
     letter-spacing:6px;
+    text-transform:uppercase;
 
     margin-bottom:28px;
 
-    text-transform:uppercase;
-
-
 }
-
-
-
-
 
 .portfolio{
 
@@ -267,66 +186,43 @@ nav{
 
 }
 
-
-
-
-
 .portfolio::after{
-
 
     content:"";
 
     position:absolute;
 
     left:0;
-
     bottom:-20px;
 
     width:100%;
-
     height:7px;
 
     background:white;
 
     transition:.35s;
 
-
 }
 
-
-
-
 .portfolio:hover{
-
 
     transform:scale(1.02);
 
     letter-spacing:15px;
 
-
 }
-
-
-
 
 .portfolio:hover::after{
 
-
     height:12px;
 
-
 }
-
-
-
-
 
 .roles{
 
     margin-top:55px;
 
     font-size:15px;
-
     font-weight:600;
 
     letter-spacing:5px;
@@ -334,10 +230,6 @@ nav{
     text-transform:uppercase;
 
 }
-
-
-
-
 
 .scroll-down{
 
@@ -349,98 +241,56 @@ nav{
 
 }
 
-
-
-
-
 @keyframes bounce{
 
-
 0%{
-
     transform:translateY(0);
-
 }
-
-
 
 50%{
-
     transform:translateY(15px);
-
 }
-
-
 
 100%{
-
     transform:translateY(0);
-
 }
 
-
 }
-
-
 
 </style>
 
-
 </head>
-
-
 
 <body>
 
-
-
-
 <!-- =========================
-NAVIGATION
+     NAVIGATION
 ========================= -->
-
 
 <nav>
 
-
 <div class="logo">
-
 
 <img src="ma-logo-with-black-white-design_773552-85.avif" alt="Muhasin Abbas Logo">
 
-
 </div>
-
-
 
 <div class="menu">
 
-
 <a href="#about">ABOUT</a>
-
 <a href="#skills">SKILLS</a>
-
 <a href="#works">WORKS</a>
-
 <a href="#contact">CONTACT</a>
-
 
 </div>
 
-
 </nav>
 
-
-
-
-
 <!-- =========================
-HERO
+     HERO
 ========================= -->
 
-
 <section class="hero">
-
 
 <div class="slogan">
 
@@ -448,15 +298,11 @@ DESIGNS THAT ATTRACT • FRAMES THAT SPEAK
 
 </div>
 
-
-
 <div class="portfolio">
 
 PORTFOLIO
 
 </div>
-
-
 
 <div class="roles">
 
@@ -464,32 +310,24 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
 </div>
 
-
-
 <div class="scroll-down">
 
 ↓
 
 </div>
 
-
-
 </section>
 <!-- =======================================================
-   ABOUT SECTION + TOOLS SECTION CSS
+   ABOUT + SKILLS CSS
 ======================================================= -->
 
-
 <style>
-
 
 /* =======================================================
    ABOUT SECTION
 ======================================================= */
 
-
 #about{
-
 
     min-height:100vh;
 
@@ -501,13 +339,9 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     padding:120px 8%;
 
-
 }
 
-
-
 .about-box{
-
 
     width:100%;
 
@@ -521,14 +355,9 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     backdrop-filter:blur(10px);
 
-
 }
 
-
-
-
 .about-heading{
-
 
     font-size:18px;
 
@@ -544,14 +373,9 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     display:inline-block;
 
-
 }
 
-
-
-
 .about-heading::after{
-
 
     content:"";
 
@@ -567,14 +391,9 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     background:white;
 
-
 }
 
-
-
-
 .about-name{
-
 
     font-family:'Agency FB',sans-serif;
 
@@ -584,21 +403,15 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     letter-spacing:8px;
 
-    color:#29409a;
+    color:#29409A;
 
     text-transform:uppercase;
 
     margin-bottom:35px;
 
-
 }
 
-
-
-
-
 .about-text{
-
 
     font-size:18px;
 
@@ -606,22 +419,13 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     max-width:1100px;
 
-
 }
 
-
-
-
-
-
-
 /* =======================================================
-   TOOLS FOR THE TRADE
+   CORE SOFTWARE COMPETENCIES
 ======================================================= */
 
-
 #skills{
-
 
     min-height:100vh;
 
@@ -633,11 +437,7 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     align-items:center;
 
-
 }
-
-
-
 
 .skills-box{
 
@@ -649,15 +449,11 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     border-radius:30px;
 
-    background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,.45);
 
     backdrop-filter:blur(10px);
 
 }
-
-
-
-
 
 .skills-heading{
 
@@ -681,7 +477,6 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
 }
 
-
 .skills-heading::after{
 
     content:"";
@@ -698,12 +493,7 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
 }
 
-
-
-
-
 .software-grid{
-
 
     display:grid;
 
@@ -711,19 +501,13 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     gap:35px;
 
-
 }
-
-
-
-
 
 .software-card{
 
+    background:rgba(255,255,255,.08);
 
-    background:rgba(255,255,255,0.08);
-
-    border:1px solid rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,.15);
 
     border-radius:22px;
 
@@ -745,33 +529,21 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     transition:.35s ease;
 
-
 }
-
-
-
-
 
 .software-card:hover{
 
-
     transform:translateY(-10px);
 
-    background:rgba(255,255,255,0.14);
+    background:rgba(255,255,255,.14);
 
     border-color:#25349A;
 
     box-shadow:0 15px 40px rgba(37,52,154,.35);
 
-
 }
 
-
-
-
-
 .software-card img{
-
 
     width:75px;
 
@@ -783,26 +555,15 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     transition:.35s ease;
 
-
 }
-
-
-
 
 .software-card:hover img{
 
-
     transform:scale(1.1);
-
 
 }
 
-
-
-
-
 .software-card h3{
-
 
     font-size:20px;
 
@@ -810,29 +571,17 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     letter-spacing:1px;
 
-
 }
 
-
-
-
 </style>
-
-
-
-
-
 
 <!-- =======================================================
    ABOUT HTML
 ======================================================= -->
 
-
 <section id="about">
 
-
 <div class="about-box">
-
 
 <div class="about-heading">
 
@@ -840,54 +589,32 @@ ABOUT ME
 
 </div>
 
-
-
-
 <div class="about-name">
 
 MUHASIN ABBAS
 
 </div>
 
-
-
-
-
 <p class="about-text">
-
 
 A digital media creator and visual storyteller who blends creativity, design and
 communication to craft meaningful content. With a foundation in Journalism and Mass Communication,
 along with skills in graphic design, video editing and post-production arts, ideas are transformed into engaging visual experiences.
 Every frame carries a story, every visual creates an emotion and every creation aims to leave an impact.
 
-
 </p>
-
-
 
 </div>
 
-
 </section>
 
-
-
-
-
-
-
-
 <!-- =======================================================
-   TOOLS FOR THE TRADE HTML
+   CORE SOFTWARE COMPETENCIES
 ======================================================= -->
-
 
 <section id="skills">
 
-
 <div class="skills-box">
-
 
 <div class="skills-heading">
 
@@ -895,15 +622,7 @@ CORE SOFTWARE COMPETENCIES
 
 </div>
 
-
-
-
-
 <div class="software-grid">
-
-
-
-
 
 <div class="software-card">
 
@@ -913,11 +632,6 @@ CORE SOFTWARE COMPETENCIES
 
 </div>
 
-
-
-
-
-
 <div class="software-card">
 
 <img src="Illustrator.png" alt="Adobe Illustrator">
@@ -925,12 +639,6 @@ CORE SOFTWARE COMPETENCIES
 <h3>Adobe Illustrator</h3>
 
 </div>
-
-
-
-
-
-
 
 <div class="software-card">
 
@@ -940,13 +648,6 @@ CORE SOFTWARE COMPETENCIES
 
 </div>
 
-
-
-
-
-
-
-
 <div class="software-card">
 
 <img src="Premiere Pro.png" alt="Adobe Premiere Pro">
@@ -954,13 +655,6 @@ CORE SOFTWARE COMPETENCIES
 <h3>Adobe Premiere Pro</h3>
 
 </div>
-
-
-
-
-
-
-
 
 <div class="software-card">
 
@@ -970,12 +664,6 @@ CORE SOFTWARE COMPETENCIES
 
 </div>
 
-
-
-
-
-
-
 <div class="software-card">
 
 <img src="Canva.png" alt="Canva">
@@ -984,29 +672,16 @@ CORE SOFTWARE COMPETENCIES
 
 </div>
 
-
-
-
-
-
 </div>
 
-
 </div>
-
 
 </section>
 <!-- =======================================================
-   WORKS + CONTACT CSS
+   PROJECTS SHOWCASE CSS
 ======================================================= -->
 
-
 <style>
-
-
-/* =======================================================
-   PROJECTS SHOWCASE
-======================================================= */
 
 #works{
 
@@ -1022,7 +697,7 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
-.works-box{
+.projects-box{
 
     width:100%;
 
@@ -1038,7 +713,7 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
-.works-heading{
+.projects-heading{
 
     text-align:center;
 
@@ -1060,7 +735,7 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
-.works-heading::after{
+.projects-heading::after{
 
     content:"";
 
@@ -1076,29 +751,23 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
-.work-grid{
+.projects-grid{
 
     display:grid;
 
     grid-template-columns:repeat(4,1fr);
 
-    gap:25px;
+    gap:30px;
 
 }
 
-/* ==========================================
-   PROJECT CARDS
-========================================== */
-
-.work-card{
+.project-card{
 
     background:rgba(255,255,255,.08);
 
-    border:1px solid rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.15);
 
     border-radius:22px;
-
-    padding:35px 20px;
 
     min-height:240px;
 
@@ -1110,209 +779,71 @@ CORE SOFTWARE COMPETENCIES
 
     align-items:center;
 
+    text-align:center;
+
     cursor:pointer;
 
-    transition:.45s ease;
+    transition:.35s ease;
 
-    overflow:hidden;
+    backdrop-filter:blur(10px);
 
 }
 
-.work-card:hover{
+.project-card:hover{
 
-    transform:translateY(-8px);
+    transform:translateY(-10px);
 
-    background:rgba(255,255,255,.12);
+    background:rgba(255,255,255,.14);
 
     border-color:#25349A;
 
-    box-shadow:0 15px 35px rgba(37,52,154,.30);
+    box-shadow:0 15px 40px rgba(37,52,154,.35);
 
 }
 
-.work-card img{
+.project-card img{
 
-    width:95px;
+    width:90px;
 
-    height:95px;
+    height:90px;
 
     object-fit:contain;
 
-    margin-bottom:22px;
-
-    transition:.45s;
-
-}
-
-.work-card h3{
-
-    font-size:18px;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    text-align:center;
+    margin-bottom:25px;
 
     transition:.35s;
 
 }
 
-/* ==========================================
-   EXPANDED CARD
-========================================== */
+.project-card:hover img{
 
-.work-card.active{
-
-    grid-column:span 4;
-
-    min-height:520px;
-
-    align-items:stretch;
+    transform:scale(1.08);
 
 }
 
-.work-card.active .card-top{
+.project-card h3{
 
-    display:flex;
+    font-size:20px;
 
-    align-items:center;
+    font-weight:600;
 
-    gap:20px;
-
-    margin-bottom:35px;
+    letter-spacing:1px;
 
 }
 
-.work-card.active .card-top img{
+@media(max-width:900px){
 
-    width:70px;
-
-    height:70px;
-
-    margin-bottom:0;
-
-}
-
-.work-card.active .card-top h3{
-
-    font-size:28px;
-
-    letter-spacing:3px;
-
-}
-
-.gallery{
-
-    display:none;
-
-}
-
-.work-card.active .gallery{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:25px;
-
-    animation:fadeIn .4s ease;
-
-}
-
-.gallery-images{
-
-    flex:1;
-
-    display:grid;
+.projects-grid{
 
     grid-template-columns:repeat(2,1fr);
 
-    gap:20px;
+}
 
 }
 
-.gallery-images img{
+@media(max-width:650px){
 
-    width:100%;
-
-    height:280px;
-
-    object-fit:cover;
-
-    border-radius:15px;
-
-}
-
-.gallery-btn{
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.12);
-
-    color:white;
-
-    font-size:28px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.gallery-btn:hover{
-
-    background:#25349A;
-
-}
-
-@keyframes fadeIn{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(15px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
-
-    }
-
-}
-
-/* ==========================================
-   MOBILE
-========================================== */
-
-@media(max-width:992px){
-
-.work-grid{
-
-    grid-template-columns:1fr;
-
-}
-
-.work-card.active{
-
-    grid-column:span 1;
-
-}
-
-.gallery-images{
+.projects-grid{
 
     grid-template-columns:1fr;
 
@@ -1320,19 +851,72 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+</style>
 
+<!-- =======================================================
+   PROJECTS SHOWCASE HTML
+======================================================= -->
 
+<section id="works">
 
+<div class="projects-box">
 
+<div class="projects-heading">
 
+PROJECTS SHOWCASE
+
+</div>
+
+<div class="projects-grid">
+
+<div class="project-card" id="photography">
+
+<img src="Photography.png" alt="Photography">
+
+<h3>Photography</h3>
+
+</div>
+
+<div class="project-card" id="graphic">
+
+<img src="Graphic Design.png" alt="Graphic Design">
+
+<h3>Graphic Design</h3>
+
+</div>
+
+<div class="project-card" id="motion">
+
+<img src="Motion Graphics.png" alt="Motion Graphics">
+
+<h3>Motion Graphics</h3>
+
+</div>
+
+<div class="project-card" id="video">
+
+<img src="Video Editing.png" alt="Video Editing">
+
+<h3>Video Editing</h3>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- =======================================================
+   CONTACT CSS
+======================================================= -->
+
+<style>
 
 /* =======================================================
    CONTACT SECTION
 ======================================================= */
 
-
 #contact{
-
 
     min-height:100vh;
 
@@ -1344,14 +928,9 @@ CORE SOFTWARE COMPETENCIES
 
     align-items:center;
 
-
 }
 
-
-
-
 .contact-box{
-
 
     width:100%;
 
@@ -1361,36 +940,61 @@ CORE SOFTWARE COMPETENCIES
 
     border-radius:30px;
 
-    background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,.45);
 
     backdrop-filter:blur(10px);
 
+}
+
+.contact-heading{
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    margin-bottom:45px;
+
+    display:table;
+
+    margin-left:auto;
+
+    margin-right:auto;
 
 }
 
+.contact-heading::after{
 
+    content:"";
 
+    display:block;
 
+    width:100%;
+
+    height:2px;
+
+    background:white;
+
+    margin-top:15px;
+
+}
 
 .contact-text{
 
+    text-align:center;
 
     font-size:18px;
 
     line-height:1.8;
 
-    text-align:center;
-
-
 }
 
-
-
-
-
-
 .contact-links{
-
 
     display:flex;
 
@@ -1398,17 +1002,11 @@ CORE SOFTWARE COMPETENCIES
 
     gap:40px;
 
-    margin-top:35px;
-
+    margin-top:40px;
 
 }
 
-
-
-
-
 .contact-links a{
-
 
     color:white;
 
@@ -1422,135 +1020,29 @@ CORE SOFTWARE COMPETENCIES
 
     transition:.3s;
 
-
 }
-
-
-
 
 .contact-links a:hover{
 
-
     color:#25349A;
-
 
 }
 
-
-
-
 </style>
-
-
-
-
-
-
-<!-- =======================================================
-   WORKS HTML
-======================================================= -->
-
-
-<section id="works">
-
-
-<div class="section-box">
-
-
-<h1 class="section-title">
-
-WORKS
-
-</h1>
-
-
-
-
-
-<div class="work-grid">
-
-
-
-
-
-<div class="work-box">
-
-POSTERS
-
-</div>
-
-
-
-
-
-<div class="work-box">
-
-VIDEOS
-
-</div>
-
-
-
-
-
-<div class="work-box">
-
-BRANDING
-
-</div>
-
-
-
-
-
-<div class="work-box">
-
-PROJECTS
-
-</div>
-
-
-
-
-
-
-</div>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
 
 <!-- =======================================================
    CONTACT HTML
 ======================================================= -->
 
-
 <section id="contact">
-
 
 <div class="contact-box">
 
-
-
-<h1 class="section-title">
+<div class="contact-heading">
 
 CONTACT
 
-</h1>
-
-
-
-
-
+</div>
 
 <p class="contact-text">
 
@@ -1558,340 +1050,205 @@ Let's create something meaningful together.
 
 </p>
 
-
-
-
-
-
 <div class="contact-links">
 
+<a href="#">LINKEDIN</a>
 
+<a href="#">EMAIL</a>
 
-
-
-<a href="#">
-
-LINKEDIN
-
-</a>
-
-
-
-
-
-
-<a href="#">
-
-EMAIL
-
-</a>
-
-
-
-
-
-
-<a href="#">
-
-INSTAGRAM
-
-</a>
-
-
-
-
-
+<a href="#">INSTAGRAM</a>
 
 </div>
 
-
-
 </div>
-
 
 </section>
+
 <!-- =======================================================
    FINAL RESPONSIVE CSS
 ======================================================= -->
 
-
 <style>
-
 
 @media(max-width:768px){
 
-
-
 /* NAVIGATION */
-
 
 nav{
 
-
     padding:0 20px;
 
-
 }
-
-
 
 .logo img{
 
-
     height:35px;
 
-
 }
-
-
-
 
 .menu{
 
-
     gap:12px;
 
-
 }
-
-
-
 
 .menu a{
 
-
     font-size:10px;
 
-
 }
-
-
-
-
-
-
 
 /* HERO */
 
-
 .slogan{
-
 
     font-size:10px;
 
     letter-spacing:3px;
 
-
 }
-
-
-
 
 .roles{
 
-
     font-size:10px;
 
     letter-spacing:3px;
 
-
 }
 
-
-
-
 .portfolio{
-
 
     font-size:70px;
 
     letter-spacing:5px;
 
-
 }
-
-
-
 
 .portfolio:hover{
 
-
     letter-spacing:7px;
-
 
 }
 
-
-
-
-
-
-
-/* ABOUT */
-
+/* SECTIONS */
 
 #about,
 #skills,
 #works,
 #contact{
 
-
     padding:90px 5%;
-
 
 }
 
-
-
+/* BOXES */
 
 .about-box,
 .skills-box,
-.section-box,
+.projects-box,
 .contact-box{
-
 
     padding:40px 25px;
 
-
 }
 
-
-
-
+/* ABOUT */
 
 .about-name{
-
 
     font-size:55px;
 
     letter-spacing:5px;
 
-
 }
 
-
-
-
 .about-text{
-
 
     font-size:16px;
 
     line-height:1.8;
 
-
 }
 
-
-
-
-
-
-
-
-/* TOOLS */
-
+/* SKILLS */
 
 .skills-heading{
-
 
     font-size:15px;
 
     letter-spacing:4px;
 
-
 }
 
-
-
-
 .software-grid{
-
 
     grid-template-columns:1fr;
 
     gap:25px;
 
-
 }
-
-
-
 
 .software-card{
 
-
     min-height:210px;
-
 
 }
 
-
-
-
-
 .software-card img{
-
 
     width:80px;
 
     height:80px;
 
-
 }
-
-
-
-
 
 .software-card h3{
 
-
     font-size:18px;
-
 
 }
 
+/* PROJECTS */
 
+.projects-heading{
 
+    font-size:16px;
 
+    letter-spacing:4px;
 
+}
 
-
-/* WORKS */
-
-
-.work-grid{
-
+.projects-grid{
 
     grid-template-columns:1fr;
 
+    gap:25px;
 
 }
 
+.project-card{
 
-
-
-.work-box{
-
-
-    height:220px;
-
+    min-height:220px;
 
 }
 
+.project-card img{
 
+    width:80px;
 
+    height:80px;
 
+}
 
+.project-card h3{
 
+    font-size:18px;
 
+}
 
 /* CONTACT */
 
-
 .contact-links{
-
 
     flex-direction:column;
 
@@ -1899,36 +1256,14 @@ nav{
 
     gap:20px;
 
-
 }
-
-
-
 
 .contact-links a{
 
-
     font-size:16px;
 
-
 }
 
-
-
-
 }
-
-
-
-
 
 </style>
-
-
-
-
-
-</body>
-
-
-</html>
