@@ -15,7 +15,9 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 
+
 <style>
+
 
 /* =======================================================
    GLOBAL
@@ -23,15 +25,20 @@
 
 
 *{
+
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
 
 
 html{
+
     scroll-behavior:smooth;
+
 }
+
 
 
 body{
@@ -54,9 +61,10 @@ body{
 
 
 
+
+
 /* =======================================================
    NAVIGATION BAR
-   (UNCHANGED)
 ======================================================= */
 
 
@@ -181,9 +189,12 @@ nav{
 
 
 
+
+
+
+
 /* =======================================================
    HERO SECTION
-   (UNCHANGED)
 ======================================================= */
 
 
@@ -212,7 +223,10 @@ nav{
 
 
 
+
+
 .slogan{
+
 
     font-size:15px;
 
@@ -224,14 +238,16 @@ nav{
 
     text-transform:uppercase;
 
+
 }
+
 
 
 
 
 .portfolio{
 
-    font-family:'Agency FB', sans-serif;
+    font-family:'Agency FB',sans-serif;
 
     font-size:clamp(90px,15vw,230px);
 
@@ -253,7 +269,10 @@ nav{
 
 
 
+
+
 .portfolio::after{
+
 
     content:"";
 
@@ -271,23 +290,30 @@ nav{
 
     transition:.35s;
 
+
 }
+
 
 
 
 .portfolio:hover{
 
+
     transform:scale(1.02);
 
     letter-spacing:15px;
+
 
 }
 
 
 
+
 .portfolio:hover::after{
 
+
     height:12px;
+
 
 }
 
@@ -311,6 +337,8 @@ nav{
 
 
 
+
+
 .scroll-down{
 
     margin-top:40px;
@@ -323,42 +351,47 @@ nav{
 
 
 
+
+
 @keyframes bounce{
+
 
 0%{
 
-transform:translateY(0);
+    transform:translateY(0);
 
 }
+
 
 
 50%{
 
-transform:translateY(15px);
+    transform:translateY(15px);
 
 }
+
 
 
 100%{
 
-transform:translateY(0);
+    transform:translateY(0);
 
 }
 
+
 }
 
-
-/* =======================================================
-   ABOUT SECTION STARTS IN PART 2
-======================================================= */
 
 
 </style>
 
+
 </head>
 
 
+
 <body>
+
 
 
 
@@ -372,13 +405,16 @@ NAVIGATION
 
 <div class="logo">
 
+
 <img src="ma-logo-with-black-white-design_773552-85.avif" alt="Muhasin Abbas Logo">
+
 
 </div>
 
 
 
 <div class="menu">
+
 
 <a href="#about">ABOUT</a>
 
@@ -388,10 +424,12 @@ NAVIGATION
 
 <a href="#contact">CONTACT</a>
 
+
 </div>
 
 
 </nav>
+
 
 
 
@@ -435,17 +473,23 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 </div>
 
 
+
 </section>
 <!-- =======================================================
-   ABOUT SECTION
+   ABOUT SECTION + TOOLS SECTION CSS
 ======================================================= -->
 
 
 <style>
 
-/* ABOUT SECTION */
+
+/* =======================================================
+   ABOUT SECTION
+======================================================= */
+
 
 #about{
+
 
     min-height:100vh;
 
@@ -457,11 +501,13 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     padding:120px 8%;
 
+
 }
 
 
 
 .about-box{
+
 
     width:100%;
 
@@ -475,13 +521,14 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     backdrop-filter:blur(10px);
 
-    transform:translateY(40px);
 
 }
 
 
 
+
 .about-heading{
+
 
     font-size:18px;
 
@@ -497,10 +544,14 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     display:inline-block;
 
+
 }
 
 
+
+
 .about-heading::after{
+
 
     content:"";
 
@@ -516,11 +567,14 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     background:white;
 
+
 }
 
 
 
+
 .about-name{
+
 
     font-family:'Agency FB',sans-serif;
 
@@ -536,11 +590,15 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     margin-bottom:35px;
 
+
 }
 
 
 
+
+
 .about-text{
+
 
     font-size:18px;
 
@@ -548,7 +606,10 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     max-width:1100px;
 
+
 }
+
+
 
 
 
@@ -558,9 +619,13 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
    TOOLS FOR THE TRADE
 ======================================================= */
 
-#tools{
+
+#skills{
+
 
     min-height:100vh;
+
+    padding:120px 8%;
 
     display:flex;
 
@@ -568,11 +633,14 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     align-items:center;
 
-    padding:120px 8%;
 
 }
 
-.tools-box{
+
+
+
+.skills-box{
+
 
     width:100%;
 
@@ -586,47 +654,59 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     backdrop-filter:blur(10px);
 
-    transform:translateY(40px);
 
 }
 
-.tools-heading{
 
-    font-size:18px;
 
-    font-weight:600;
 
-    letter-spacing:6px;
 
-    text-transform:uppercase;
+.skills-heading{
+
 
     text-align:center;
 
-    margin-bottom:45px;
+    font-size:22px;
 
-    position:relative;
+    font-weight:600;
 
-    display:block;
+    letter-spacing:7px;
+
+    text-transform:uppercase;
+
+    margin-bottom:50px;
+
 
 }
 
-.tools-heading::after{
+
+
+
+
+.skills-heading::after{
+
 
     content:"";
 
-    width:180px;
+    display:block;
+
+    width:200px;
 
     height:2px;
 
     background:white;
 
-    display:block;
+    margin:15px auto 0;
 
-    margin:12px auto 0;
 
 }
 
-.tools-grid{
+
+
+
+
+.software-grid{
+
 
     display:grid;
 
@@ -634,198 +714,19 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     gap:35px;
 
+
 }
 
-.tool-card{
+
+
+
+
+.software-card{
+
 
     background:rgba(255,255,255,0.08);
 
-    border:1px solid rgba(255,255,255,0.12);
-
-    border-radius:20px;
-
-    padding:35px 20px;
-
-    text-align:center;
-
-    transition:0.35s ease;
-
-    backdrop-filter:blur(8px);
-
-}
-
-.tool-card:hover{
-
-    transform:translateY(-8px);
-
-    border-color:#25349A;
-
-    box-shadow:0 15px 35px rgba(37,52,154,.30);
-
-}
-
-.tool-card img{
-
-    width:80px;
-
-    height:80px;
-
-    object-fit:contain;
-
-    margin-bottom:20px;
-
-    transition:0.35s ease;
-
-}
-
-.tool-card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-.tool-card h3{
-
-    font-size:20px;
-
-    font-weight:600;
-
-    color:white;
-
-}
-<!-- =======================================================
-     TOOLS FOR THE TRADE
-======================================================= -->
-
-<section id="tools">
-
-    <div class="tools-box">
-
-        <div class="tools-heading">
-
-            TOOLS FOR THE TRADE
-
-        </div>
-
-        <div class="tools-grid">
-
-            <div class="tool-card">
-
-                <img src="images/photoshop.png" alt="Adobe Photoshop">
-
-                <h3>Adobe Photoshop</h3>
-
-            </div>
-
-            <div class="tool-card">
-
-                <img src="images/illustrator.png" alt="Adobe Illustrator">
-
-                <h3>Adobe Illustrator</h3>
-
-            </div>
-
-            <div class="tool-card">
-
-                <img src="images/after-effects.png" alt="Adobe After Effects">
-
-                <h3>Adobe After Effects</h3>
-
-            </div>
-
-            <div class="tool-card">
-
-                <img src="images/premiere-pro.png" alt="Adobe Premiere Pro">
-
-                <h3>Adobe Premiere Pro</h3>
-
-            </div>
-
-            <div class="tool-card">
-
-                <img src="images/final-cut-pro.png" alt="Final Cut Pro">
-
-                <h3>Final Cut Pro</h3>
-
-            </div>
-
-            <div class="tool-card">
-
-                <img src="images/canva.png" alt="Canva">
-
-                <h3>Canva</h3>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-   /* =======================================================
-   TOOLS - MOBILE
-======================================================= */
-
-.tools-box{
-
-    padding:40px 25px;
-
-}
-
-.tools-grid{
-
-    grid-template-columns:1fr;
-
-    gap:25px;
-
-}
-
-.tool-card{
-
-    padding:30px 20px;
-
-}
-
-.tool-card img{
-
-    width:70px;
-
-    height:70px;
-
-}
-
-.tool-card h3{
-
-    font-size:18px;
-
-}
-/* =======================================================
-   EXTRA POLISH
-======================================================= */
-
-.tool-card{
-
-    cursor:pointer;
-
-}
-
-.tool-card:hover{
-
-    background:rgba(255,255,255,0.12);
-
-}
-
-.tool-card:hover h3{
-
-    color:#7fa7ff;
-
-}
-.tool-card{
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,0.15);
 
     border-radius:22px;
 
@@ -843,12 +744,37 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     text-align:center;
 
+    backdrop-filter:blur(10px);
+
     transition:.35s ease;
 
-    backdrop-filter:blur(8px);
 
 }
-.tool-card img{
+
+
+
+
+
+.software-card:hover{
+
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,0.14);
+
+    border-color:#25349A;
+
+    box-shadow:0 15px 40px rgba(37,52,154,.35);
+
+
+}
+
+
+
+
+
+.software-card img{
+
 
     width:95px;
 
@@ -860,75 +786,42 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     transition:.35s ease;
 
-}
-
-/* =======================================================
-   WORKS SECTION
-======================================================= */
-
-
-#works{
-
-    min-height:100vh;
-
-    padding:120px 8%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
 
 }
 
 
 
-.work-grid{
 
-    display:grid;
+.software-card:hover img{
 
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
 
-    gap:25px;
+    transform:scale(1.1);
+
 
 }
 
 
 
-.work-box{
 
-    height:250px;
 
-    border-radius:20px;
+.software-card h3{
 
-    background:rgba(255,255,255,0.15);
 
-    backdrop-filter:blur(10px);
+    font-size:20px;
 
-    display:flex;
+    font-weight:600;
 
-    justify-content:center;
+    letter-spacing:1px;
 
-    align-items:center;
-
-    font-size:22px;
-
-    font-weight:700;
-
-    transition:.4s;
 
 }
 
 
-
-.work-box:hover{
-
-    transform:scale(1.05);
-
-}
 
 
 </style>
+
+
 
 
 
@@ -952,6 +845,7 @@ ABOUT ME
 
 
 
+
 <div class="about-name">
 
 MUHASIN ABBAS
@@ -960,28 +854,27 @@ MUHASIN ABBAS
 
 
 
+
+
 <p class="about-text">
+
 
 A digital media creator and visual storyteller who blends creativity, design and
 communication to craft meaningful content. With a foundation in Journalism and Mass Communication,
 along with skills in graphic design, video editing and post-production arts, ideas are transformed into engaging visual experiences.
-Every frame carries a story, every visual creates an emotion and every creation aims to leave an impact.   
+Every frame carries a story, every visual creates an emotion and every creation aims to leave an impact.
 
-<!--
-
-My interests extend across graphic design, video editing, script writing,
-advertising, acting, and media presentation. I believe every visual has
-a story behind it, and my goal is to transform ideas into creative
-experiences that connect with people.
 
 </p>
--->
+
 
 
 </div>
 
 
 </section>
+
+
 
 
 
@@ -989,43 +882,19 @@ experiences that connect with people.
 
 
 <!-- =======================================================
-   SKILLS HTML
+   TOOLS FOR THE TRADE HTML
 ======================================================= -->
 
 
 <section id="skills">
 
 
-<div class="section-box">
+<div class="skills-box">
 
 
-<h1 class="section-title">
+<div class="skills-heading">
 
-SKILLS
-
-</h1>
-
-
-
-<div class="skill-container">
-
-
-
-<div class="skill-card">
-
-<h3>
-
-GRAPHIC DESIGN
-
-</h3>
-
-<p>
-
-Photoshop<br>
-Illustrator<br>
-Brand Design
-
-</p>
+TOOLS FOR THE TRADE
 
 </div>
 
@@ -1033,21 +902,17 @@ Brand Design
 
 
 
-<div class="skill-card">
+<div class="software-grid">
 
-<h3>
 
-VIDEO EDITING
 
-</h3>
 
-<p>
 
-Premiere Pro<br>
-After Effects<br>
-Visual Storytelling
+<div class="software-card">
 
-</p>
+<img src="Photoshop.png" alt="Adobe Photoshop">
+
+<h3>Adobe Photoshop</h3>
 
 </div>
 
@@ -1055,23 +920,75 @@ Visual Storytelling
 
 
 
-<div class="skill-card">
 
-<h3>
+<div class="software-card">
 
-CONTENT CREATION
+<img src="Illustrator.png" alt="Adobe Illustrator">
 
-</h3>
-
-<p>
-
-Creative Direction<br>
-Social Media Content<br>
-Digital Media
-
-</p>
+<h3>Adobe Illustrator</h3>
 
 </div>
+
+
+
+
+
+
+
+<div class="software-card">
+
+<img src="Aftereffects.png" alt="Adobe After Effects">
+
+<h3>Adobe After Effects</h3>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="software-card">
+
+<img src="Premiere Pro.png" alt="Adobe Premiere Pro">
+
+<h3>Adobe Premiere Pro</h3>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="software-card">
+
+<img src="FCP.png" alt="Final Cut Pro">
+
+<h3>Final Cut Pro</h3>
+
+</div>
+
+
+
+
+
+
+
+<div class="software-card">
+
+<img src="Canva.png" alt="Canva">
+
+<h3>Canva</h3>
+
+</div>
+
+
+
 
 
 
@@ -1082,6 +999,283 @@ Digital Media
 
 
 </section>
+<!-- =======================================================
+   WORKS + CONTACT CSS
+======================================================= -->
+
+
+<style>
+
+
+/* =======================================================
+   WORKS SECTION
+======================================================= */
+
+
+#works{
+
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+}
+
+
+
+
+.section-box{
+
+
+    width:100%;
+
+    max-width:1300px;
+
+    padding:70px 80px;
+
+    border-radius:30px;
+
+    background:rgba(0,0,0,0.45);
+
+    backdrop-filter:blur(10px);
+
+
+}
+
+
+
+
+
+
+.section-title{
+
+
+    font-size:22px;
+
+    font-weight:600;
+
+    letter-spacing:7px;
+
+    text-transform:uppercase;
+
+    margin-bottom:50px;
+
+    text-align:center;
+
+
+}
+
+
+
+
+.section-title::after{
+
+
+    content:"";
+
+    display:block;
+
+    width:180px;
+
+    height:2px;
+
+    background:white;
+
+    margin:15px auto 0;
+
+
+}
+
+
+
+
+
+.work-grid{
+
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+
+}
+
+
+
+
+
+.work-box{
+
+
+    height:250px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.12);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    transition:.4s;
+
+
+}
+
+
+
+
+.work-box:hover{
+
+
+    transform:scale(1.05);
+
+    background:rgba(255,255,255,0.18);
+
+
+}
+
+
+
+
+
+
+
+/* =======================================================
+   CONTACT SECTION
+======================================================= */
+
+
+#contact{
+
+
+    min-height:100vh;
+
+    padding:120px 8%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+}
+
+
+
+
+.contact-box{
+
+
+    width:100%;
+
+    max-width:1300px;
+
+    padding:70px 80px;
+
+    border-radius:30px;
+
+    background:rgba(0,0,0,0.45);
+
+    backdrop-filter:blur(10px);
+
+
+}
+
+
+
+
+
+.contact-text{
+
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    text-align:center;
+
+
+}
+
+
+
+
+
+
+.contact-links{
+
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:40px;
+
+    margin-top:35px;
+
+
+}
+
+
+
+
+
+.contact-links a{
+
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+
+}
+
+
+
+
+.contact-links a:hover{
+
+
+    color:#25349A;
+
+
+}
+
+
+
+
+</style>
 
 
 
@@ -1107,7 +1301,12 @@ WORKS
 
 
 
+
+
 <div class="work-grid">
+
+
+
 
 
 <div class="work-box">
@@ -1117,11 +1316,17 @@ POSTERS
 </div>
 
 
+
+
+
 <div class="work-box">
 
 VIDEOS
 
 </div>
+
+
+
 
 
 <div class="work-box">
@@ -1131,11 +1336,18 @@ BRANDING
 </div>
 
 
+
+
+
 <div class="work-box">
 
 PROJECTS
 
 </div>
+
+
+
+
 
 
 </div>
@@ -1145,199 +1357,9 @@ PROJECTS
 
 
 </section>
-<!-- =======================================================
-   CONTACT SECTION
-======================================================= -->
 
 
-<style>
 
-/* =======================================================
-   CONTACT SECTION
-======================================================= */
-
-
-#contact{
-
-    min-height:100vh;
-
-    padding:120px 8%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-
-
-.contact-box{
-
-    width:100%;
-
-    max-width:1300px;
-
-    padding:70px 80px;
-
-    border-radius:30px;
-
-    background:rgba(0,0,0,0.45);
-
-    backdrop-filter:blur(10px);
-
-}
-
-
-
-.contact-text{
-
-    font-size:18px;
-
-    line-height:1.8;
-
-}
-
-
-
-.contact-links{
-
-    display:flex;
-
-    gap:30px;
-
-    margin-top:35px;
-
-}
-
-
-
-.contact-links a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-size:18px;
-
-    font-weight:600;
-
-    transition:.3s;
-
-}
-
-
-
-.contact-links a:hover{
-
-    color:#25349A;
-
-}
-
-
-
-
-/* =======================================================
-   MOBILE RESPONSIVE
-======================================================= */
-
-
-@media(max-width:768px){
-
-
-
-nav{
-
-    padding:0 20px;
-
-}
-
-
-
-.logo img{
-
-    height:35px;
-
-}
-
-
-
-.menu{
-
-    gap:12px;
-
-}
-
-
-
-.menu a{
-
-    font-size:10px;
-
-}
-
-
-
-.slogan{
-
-    font-size:10px;
-
-    letter-spacing:3px;
-
-}
-
-
-
-.roles{
-
-    font-size:10px;
-
-    letter-spacing:3px;
-
-}
-
-
-
-.portfolio{
-
-    letter-spacing:5px;
-
-}
-
-
-
-.about-box,
-.section-box,
-.contact-box{
-
-    padding:40px 30px;
-
-}
-
-
-
-.about-name{
-
-    font-size:55px;
-
-}
-
-
-
-.section-title{
-
-    font-size:35px;
-
-}
-
-
-
-}
-
-
-
-</style>
 
 
 
@@ -1354,11 +1376,15 @@ nav{
 <div class="contact-box">
 
 
+
 <h1 class="section-title">
 
 CONTACT
 
 </h1>
+
+
+
 
 
 
@@ -1370,7 +1396,13 @@ Let's create something meaningful together.
 
 
 
+
+
+
 <div class="contact-links">
+
+
+
 
 
 <a href="#">
@@ -1378,6 +1410,9 @@ Let's create something meaningful together.
 LINKEDIN
 
 </a>
+
+
+
 
 
 
@@ -1389,6 +1424,9 @@ EMAIL
 
 
 
+
+
+
 <a href="#">
 
 INSTAGRAM
@@ -1397,18 +1435,336 @@ INSTAGRAM
 
 
 
+
+
+
 </div>
+
 
 
 </div>
 
 
 </section>
+<!-- =======================================================
+   FINAL RESPONSIVE CSS
+======================================================= -->
+
+
+<style>
+
+
+@media(max-width:768px){
+
+
+
+/* NAVIGATION */
+
+
+nav{
+
+
+    padding:0 20px;
+
+
+}
+
+
+
+.logo img{
+
+
+    height:35px;
+
+
+}
+
+
+
+
+.menu{
+
+
+    gap:12px;
+
+
+}
+
+
+
+
+.menu a{
+
+
+    font-size:10px;
+
+
+}
+
+
+
+
+
+
+
+/* HERO */
+
+
+.slogan{
+
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+.roles{
+
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+
+}
+
+
+
+
+.portfolio{
+
+
+    font-size:70px;
+
+    letter-spacing:5px;
+
+
+}
+
+
+
+
+.portfolio:hover{
+
+
+    letter-spacing:7px;
+
+
+}
+
+
+
+
+
+
+
+/* ABOUT */
+
+
+#about,
+#skills,
+#works,
+#contact{
+
+
+    padding:90px 5%;
+
+
+}
+
+
+
+
+.about-box,
+.skills-box,
+.section-box,
+.contact-box{
+
+
+    padding:40px 25px;
+
+
+}
+
+
+
+
+
+.about-name{
+
+
+    font-size:55px;
+
+    letter-spacing:5px;
+
+
+}
+
+
+
+
+.about-text{
+
+
+    font-size:16px;
+
+    line-height:1.8;
+
+
+}
+
+
+
+
+
+
+
+
+/* TOOLS */
+
+
+.skills-heading{
+
+
+    font-size:15px;
+
+    letter-spacing:4px;
+
+
+}
+
+
+
+
+.software-grid{
+
+
+    grid-template-columns:1fr;
+
+    gap:25px;
+
+
+}
+
+
+
+
+.software-card{
+
+
+    min-height:210px;
+
+
+}
+
+
+
+
+
+.software-card img{
+
+
+    width:80px;
+
+    height:80px;
+
+
+}
+
+
+
+
+
+.software-card h3{
+
+
+    font-size:18px;
+
+
+}
+
+
+
+
+
+
+
+/* WORKS */
+
+
+.work-grid{
+
+
+    grid-template-columns:1fr;
+
+
+}
+
+
+
+
+.work-box{
+
+
+    height:220px;
+
+
+}
+
+
+
+
+
+
+
+
+/* CONTACT */
+
+
+.contact-links{
+
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+
+}
+
+
+
+
+.contact-links a{
+
+
+    font-size:16px;
+
+
+}
+
+
+
+
+}
+
+
+
+
+
+</style>
 
 
 
 
 
 </body>
+
 
 </html>
