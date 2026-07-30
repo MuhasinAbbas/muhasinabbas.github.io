@@ -987,6 +987,11 @@ PROJECTS SHOWCASE
 
 }
 
+
+/* ===========================
+   CONTACT GRID
+=========================== */
+
 .contact-grid{
 
     display:grid;
@@ -997,6 +1002,11 @@ PROJECTS SHOWCASE
 
 }
 
+
+/* ===========================
+   CONTACT CARD
+=========================== */
+
 .contact-card{
 
     background:rgba(255,255,255,.08);
@@ -1005,7 +1015,7 @@ PROJECTS SHOWCASE
 
     border-radius:22px;
 
-    min-height:240px;
+    min-height:250px;
 
     display:flex;
 
@@ -1023,6 +1033,10 @@ PROJECTS SHOWCASE
 
     backdrop-filter:blur(10px);
 
+    text-decoration:none;
+
+    color:white;
+
 }
 
 .contact-card:hover{
@@ -1037,6 +1051,11 @@ PROJECTS SHOWCASE
 
 }
 
+
+/* ===========================
+   LOGOS
+=========================== */
+
 .contact-card img{
 
     width:80px;
@@ -1047,7 +1066,7 @@ PROJECTS SHOWCASE
 
     margin-bottom:25px;
 
-    transition:.35s;
+    transition:.35s ease;
 
 }
 
@@ -1057,6 +1076,22 @@ PROJECTS SHOWCASE
 
 }
 
+
+/* Make LinkedIn logo slightly bigger */
+
+.contact-card img.linkedin-logo{
+
+    width:100px;
+
+    height:100px;
+
+}
+
+
+/* ===========================
+   TITLE
+=========================== */
+
 .contact-card h3{
 
     font-size:20px;
@@ -1064,6 +1099,29 @@ PROJECTS SHOWCASE
     font-weight:600;
 
     letter-spacing:2px;
+
+    margin-bottom:10px;
+
+}
+
+
+/* ===========================
+   SUBTEXT
+=========================== */
+
+.contact-card p{
+
+    font-size:15px;
+
+    color:rgba(255,255,255,.85);
+
+    font-weight:400;
+
+    letter-spacing:.5px;
+
+    word-break:break-word;
+
+    padding:0 12px;
 
 }
 
@@ -1084,29 +1142,60 @@ LET'S CONNECT
 
 <div class="contact-grid">
 
-<div class="contact-card">
 
-<img src="linkedinlogo.png" alt="LinkedIn">
+<!-- =======================
+     LINKEDIN
+======================= -->
+
+<a href="https://www.linkedin.com/in/muhasinabbas"
+   target="_blank"
+   class="contact-card">
+
+<img src="linkedinlogo.png"
+     alt="LinkedIn"
+     class="linkedin-logo">
 
 <h3>LINKEDIN</h3>
 
-</div>
+<p>muhasinabbas</p>
 
-<div class="contact-card">
+</a>
 
-<img src="Email logo.png" alt="Email">
+
+<!-- =======================
+     EMAIL
+======================= -->
+
+<a href="mailto:muhasin4g@gmail.com"
+   class="contact-card">
+
+<img src="Email logo.png"
+     alt="Email">
 
 <h3>EMAIL</h3>
 
-</div>
+<p>muhasin4g@gmail.com</p>
 
-<div class="contact-card">
+</a>
 
-<img src="Instagram logo.png" alt="Instagram">
+
+<!-- =======================
+     INSTAGRAM
+======================= -->
+
+<a href="https://www.instagram.com/mzn.abz/"
+   target="_blank"
+   class="contact-card">
+
+<img src="Instagram Logo.png"
+     alt="Instagram">
 
 <h3>INSTAGRAM</h3>
 
-</div>
+<p>@mzn.abz</p>
+
+</a>
+
 
 </div>
 
@@ -1296,9 +1385,9 @@ nav{
 
 }
 
-/* CONTACT */
-
-/* CONTACT */
+/* =======================================================
+   CONTACT
+======================================================= */
 
 .contact-grid{
 
@@ -1322,8 +1411,22 @@ nav{
 
 }
 
+.contact-card img.linkedin-logo{
+
+    width:85px;
+
+    height:85px;
+
+}
+
 .contact-card h3{
 
     font-size:18px;
+
+}
+
+.contact-card p{
+
+    font-size:14px;
 
 }
