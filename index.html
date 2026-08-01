@@ -1059,7 +1059,233 @@ PROJECTS SHOWCASE
 
 }
 
+<style>
 
+/* =======================================================
+   GRAPHIC DESIGN VIEWER
+======================================================= */
+
+
+#graphic-viewer{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.35s ease;
+
+    z-index:9999;
+
+}
+
+
+#graphic-viewer.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+
+
+.graphic-viewer-box{
+
+    width:min(1100px,90vw);
+
+    height:min(700px,85vh);
+
+    background:rgba(0,0,0,.45);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    border-radius:30px;
+
+    backdrop-filter:blur(15px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+#graphic-image{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    object-fit:contain;
+
+    border-radius:18px;
+
+}
+
+
+
+/* TITLE */
+
+.graphic-title{
+
+    position:absolute;
+
+    top:25px;
+
+    left:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.graphic-title img{
+
+    width:38px;
+
+    height:38px;
+
+    object-fit:contain;
+
+}
+
+
+.graphic-title span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+
+
+/* CLOSE */
+
+
+#close-graphic{
+
+    position:absolute;
+
+    top:20px;
+
+    right:25px;
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+}
+
+
+
+/* ARROWS */
+
+
+#prev-graphic,
+#next-graphic{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
+
+
+#prev-graphic{
+
+    left:25px;
+
+}
+
+
+#next-graphic{
+
+    right:25px;
+
+}
+
+
+
+/* COUNTER */
+
+
+#graphic-counter{
+
+    position:absolute;
+
+    bottom:25px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+}
 
 /* =======================================================
    VIEWER TITLE
@@ -1290,6 +1516,7 @@ PROJECTS SHOWCASE
     color:rgba(255,255,255,.85);
 
 }
+   
 </style>
 
 <!-- =======================================================
@@ -1391,6 +1618,68 @@ PROJECTS SHOWCASE
 </div>
 
 <style>
+
+ <!-- =======================================================
+   GRAPHIC DESIGN VIEWER HTML
+======================================================= -->
+
+
+<div id="graphic-viewer">
+
+
+<div class="graphic-viewer-box">
+
+
+<div class="graphic-title">
+
+<img src="Graphic Design.png">
+
+<span>GRAPHIC DESIGN</span>
+
+</div>
+
+
+
+<button id="close-graphic">
+
+&times;
+
+</button>
+
+
+
+<button id="prev-graphic">
+
+&#10094;
+
+</button>
+
+
+
+<img id="graphic-image" src="">
+
+
+
+<div id="graphic-counter">
+
+1 / 14
+
+</div>
+
+
+
+<button id="next-graphic">
+
+&#10095;
+
+</button>
+
+
+
+</div>
+
+
+</div>  
 
 /* =======================================================
    CONTACT SECTION
@@ -1891,6 +2180,185 @@ document.addEventListener("keydown",(e)=>{
 
 
 </script>
+
+<script>
+
+
+const graphicImages = [
+
+"Royal.png",
+
+"Mahindra.png",
+
+"Card.png",
+
+"Cordelia.png",
+
+"Costa.png",
+
+"MHN.png",
+
+"Salad Bistro Social Media Poster.png",
+
+"Dangler.png",
+
+"National Reading Day.jpg",
+
+"Zudio.png",
+
+"Wedding.png",
+
+"Batman.png",
+
+"Reliance.png",
+
+"Couples.png"
+
+];
+
+
+const graphicCard = document.getElementById("graphic");
+
+const graphicViewer = document.getElementById("graphic-viewer");
+
+const graphicImage = document.getElementById("graphic-image");
+
+const closeGraphic = document.getElementById("close-graphic");
+
+const nextGraphic = document.getElementById("next-graphic");
+
+const prevGraphic = document.getElementById("prev-graphic");
+
+const graphicCounter = document.getElementById("graphic-counter");
+
+
+let currentGraphic = 0;
+
+
+
+function showGraphic(){
+
+
+graphicImage.src = graphicImages[currentGraphic];
+
+
+graphicCounter.textContent =
+
+(currentGraphic + 1) + " / " + graphicImages.length;
+
+
+}
+
+
+
+graphicCard.addEventListener("click",()=>{
+
+
+currentGraphic = 0;
+
+
+showGraphic();
+
+
+graphicViewer.classList.add("show");
+
+
+document.body.style.overflow="hidden";
+
+
+});
+
+
+
+
+
+nextGraphic.addEventListener("click",()=>{
+
+
+currentGraphic++;
+
+
+if(currentGraphic >= graphicImages.length){
+
+currentGraphic = 0;
+
+}
+
+
+showGraphic();
+
+
+});
+
+
+
+
+
+prevGraphic.addEventListener("click",()=>{
+
+
+currentGraphic--;
+
+
+if(currentGraphic < 0){
+
+currentGraphic = graphicImages.length - 1;
+
+}
+
+
+showGraphic();
+
+
+});
+
+
+
+
+
+function closeGraphicViewer(){
+
+
+graphicViewer.classList.remove("show");
+
+
+document.body.style.overflow="auto";
+
+
+}
+
+
+
+
+closeGraphic.addEventListener("click",()=>{
+
+
+closeGraphicViewer();
+
+
+});
+
+
+
+
+
+graphicViewer.addEventListener("click",(e)=>{
+
+
+if(e.target === graphicViewer){
+
+
+closeGraphicViewer();
+
+
+}
+
+
+});
+
+
+
+</script>   
 
 </body>
 
