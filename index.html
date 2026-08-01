@@ -2694,17 +2694,19 @@ let currentMotion = 0;
 // SHOW VIDEO
 // =======================
 
-function showMotion(){
+function showMotion() {
 
     motionVideo.pause();
 
-    motionVideo.src = motionVideos[currentMotion];
+    motionVideo.innerHTML = "";
+
+    motionVideo.innerHTML =
+        '<source src="' + motionVideos[currentMotion] + '" type="video/mp4">';
 
     motionVideo.load();
 
     motionCounter.textContent =
-    (currentMotion + 1) + " / " + motionVideos.length;
-
+        (currentMotion + 1) + " / " + motionVideos.length;
 }
 
 
