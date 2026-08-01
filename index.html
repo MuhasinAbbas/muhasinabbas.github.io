@@ -1029,6 +1029,51 @@ CORE SOFTWARE COMPETENCIES
 }
 
 /* =======================================================
+   VIEWER TITLE
+======================================================= */
+
+.viewer-title{
+
+    position:absolute;
+
+    top:25px;
+
+    left:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    z-index:5;
+
+}
+
+
+.viewer-title img{
+
+    width:38px;
+
+    height:38px;
+
+    object-fit:contain;
+
+}
+
+
+.viewer-title span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    color:white;
+
+}   
+/* =======================================================
    VIEWER CONTENT
 ======================================================= */
 
@@ -1121,9 +1166,21 @@ PROJECTS SHOWCASE
 
     <div class="photo-viewer-box">
 
+
+        <div class="viewer-title">
+
+            <img src="Photography.png" alt="Photography">
+
+            <span>PHOTOGRAPHY</span>
+
+        </div>
+
+
         <button id="close-viewer">&times;</button>
 
+
         <button id="prev-photo">&#10094;</button>
+
 
         <div id="viewer-content">
 
@@ -1133,7 +1190,9 @@ PROJECTS SHOWCASE
 
         </div>
 
+
         <button id="next-photo">&#10095;</button>
+
 
     </div>
 
