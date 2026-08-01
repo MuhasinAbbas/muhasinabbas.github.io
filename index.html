@@ -1647,3 +1647,163 @@ nav{
     font-size:14px;
 
 }
+}
+
+</style>
+
+
+<script>
+
+const photographyImages = [
+
+    "kitty 1.jpg",
+    "kitty 2.jpg",
+    "night sky.jpg",
+    "cloud.jpg",
+    "eagle.jpg",
+    "monkey.jpg",
+    "tree 0.jpg",
+    "eagles.jpg"
+
+];
+
+
+const photographyCard = document.getElementById("photography");
+
+const photoViewer = document.getElementById("photo-viewer");
+
+const viewerImage = document.getElementById("viewer-image");
+
+const viewerVideo = document.getElementById("viewer-video");
+
+const closeViewer = document.getElementById("close-viewer");
+
+const nextPhoto = document.getElementById("next-photo");
+
+const prevPhoto = document.getElementById("prev-photo");
+
+
+let currentPhoto = 0;
+
+
+
+function showPhoto(){
+
+    viewerVideo.style.display = "none";
+
+    viewerVideo.pause();
+
+    viewerImage.style.display = "block";
+
+    viewerImage.src = photographyImages[currentPhoto];
+
+}
+
+
+
+photographyCard.addEventListener("click",()=>{
+
+    currentPhoto = 0;
+
+    showPhoto();
+
+    photoViewer.classList.add("show");
+
+    document.body.style.overflow="hidden";
+
+});
+
+
+
+nextPhoto.addEventListener("click",()=>{
+
+    currentPhoto++;
+
+    if(currentPhoto >= photographyImages.length){
+
+        currentPhoto = 0;
+
+    }
+
+    showPhoto();
+
+});
+
+
+
+prevPhoto.addEventListener("click",()=>{
+
+    currentPhoto--;
+
+    if(currentPhoto < 0){
+
+        currentPhoto = photographyImages.length - 1;
+
+    }
+
+    showPhoto();
+
+});
+
+
+
+function closePhotoViewer(){
+
+    photoViewer.classList.remove("show");
+
+    document.body.style.overflow="auto";
+
+}
+
+
+
+closeViewer.addEventListener("click",()=>{
+
+    closePhotoViewer();
+
+});
+
+
+
+photoViewer.addEventListener("click",(e)=>{
+
+    if(e.target === photoViewer){
+
+        closePhotoViewer();
+
+    }
+
+});
+
+
+
+document.addEventListener("keydown",(e)=>{
+
+    if(e.key === "Escape"){
+
+        closePhotoViewer();
+
+    }
+
+
+    if(e.key === "ArrowRight"){
+
+        nextPhoto.click();
+
+    }
+
+
+    if(e.key === "ArrowLeft"){
+
+        prevPhoto.click();
+
+    }
+
+});
+
+</script>
+
+
+</body>
+
+</html>
