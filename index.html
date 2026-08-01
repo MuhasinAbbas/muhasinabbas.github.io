@@ -37,6 +37,16 @@ body{
     background-position:center;
     background-repeat:no-repeat;
     background-attachment:fixed;
+    overflow-x:hidden;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+button{
+    font-family:inherit;
 }
 
 /* =======================================================
@@ -97,7 +107,7 @@ nav{
     letter-spacing:1px;
 
     position:relative;
-    transition:.35s;
+    transition:.35s ease;
 
 }
 
@@ -110,12 +120,12 @@ nav{
     left:0;
     bottom:-6px;
 
-    width:0%;
+    width:0;
     height:2px;
 
     background:#25349A;
 
-    transition:.35s;
+    transition:.35s ease;
 
 }
 
@@ -130,7 +140,6 @@ nav{
     width:100%;
 
 }
-
 /* =======================================================
    HERO SECTION
 ======================================================= */
@@ -182,7 +191,7 @@ nav{
 
     cursor:pointer;
 
-    transition:.35s;
+    transition:.35s ease;
 
 }
 
@@ -200,7 +209,7 @@ nav{
 
     background:white;
 
-    transition:.35s;
+    transition:.35s ease;
 
 }
 
@@ -243,87 +252,32 @@ nav{
 
 @keyframes bounce{
 
-0%{
-    transform:translateY(0);
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(15px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
 }
-
-50%{
-    transform:translateY(15px);
-}
-
-100%{
-    transform:translateY(0);
-}
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<!-- =========================
-     NAVIGATION
-========================= -->
-
-<nav>
-
-<div class="logo">
-
-<img src="ma-logo-with-black-white-design_773552-85.avif" alt="Muhasin Abbas Logo">
-
-</div>
-
-<div class="menu">
-
-<a href="#about">ABOUT</a>
-<a href="#skills">SKILLS</a>
-<a href="#works">WORKS</a>
-<a href="#contact">CONTACT</a>
-
-</div>
-
-</nav>
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section class="hero">
-
-<div class="slogan">
-
-DESIGNS THAT ATTRACT • FRAMES THAT SPEAK
-
-</div>
-
-<div class="portfolio">
-
-PORTFOLIO
-
-</div>
-
-<div class="roles">
-
-DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
-
-</div>
-
-<div class="scroll-down">
-
-↓
-
-</div>
-
-</section>
-<!-- =======================================================
-   ABOUT + SKILLS CSS
-======================================================= -->
-
-<style>
 
 /* =======================================================
+   ABOUT SECTION
+   (Part 1C starts here)
+======================================================= */
+
+   /* =======================================================
    ABOUT SECTION
 ======================================================= */
 
@@ -351,7 +305,7 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     border-radius:30px;
 
-    background:rgba(0,0,0,0.45);
+    background:rgba(0,0,0,.45);
 
     backdrop-filter:blur(10px);
 
@@ -409,13 +363,15 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
     margin-bottom:35px;
 
+    cursor:default;
+
     transition:color .35s ease;
 
 }
 
 .about-name:hover{
 
-    color:white;
+    color:#ffffff;
 
 }
 
@@ -583,111 +539,12 @@ DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
 
 }
 
+/* =======================================================
+   END OF PART 1
+======================================================= */
+
 </style>
 
-<!-- =======================================================
-   ABOUT HTML
-======================================================= -->
-
-<section id="about">
-
-<div class="about-box">
-
-<div class="about-heading">
-
-ABOUT ME
-
-</div>
-
-<div class="about-name">
-
-MUHASIN ABBAS
-
-</div>
-
-<p class="about-text">
-
-A digital media creator and visual storyteller who blends creativity, design and
-communication to craft meaningful content. With a foundation in Journalism and Mass Communication,
-along with skills in graphic design, video editing and post-production arts, ideas are transformed into engaging visual experiences.
-Every frame carries a story, every visual creates an emotion and every creation aims to leave an impact.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- =======================================================
-   CORE SOFTWARE COMPETENCIES
-======================================================= -->
-
-<section id="skills">
-
-<div class="skills-box">
-
-<div class="skills-heading">
-
-CORE SOFTWARE COMPETENCIES
-
-</div>
-
-<div class="software-grid">
-
-<div class="software-card">
-
-<img src="Photoshop.png" alt="Adobe Photoshop">
-
-<h3>Adobe Photoshop</h3>
-
-</div>
-
-<div class="software-card">
-
-<img src="Illustrator.png" alt="Adobe Illustrator">
-
-<h3>Adobe Illustrator</h3>
-
-</div>
-
-<div class="software-card">
-
-<img src="Aftereffects.png" alt="Adobe After Effects">
-
-<h3>Adobe After Effects</h3>
-
-</div>
-
-<div class="software-card">
-
-<img src="Premiere Pro.png" alt="Adobe Premiere Pro">
-
-<h3>Adobe Premiere Pro</h3>
-
-</div>
-
-<div class="software-card">
-
-<img src="FCP.png" alt="Final Cut Pro">
-
-<h3>Final Cut Pro</h3>
-
-</div>
-
-<div class="software-card">
-
-<img src="Canva.png" alt="Canva">
-
-<h3>Canva</h3>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-   
 <!-- =======================================================
    PROJECTS SHOWCASE CSS
 ======================================================= -->
@@ -708,6 +565,7 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+
 .projects-box{
 
     width:100%;
@@ -723,6 +581,7 @@ CORE SOFTWARE COMPETENCIES
     backdrop-filter:blur(10px);
 
 }
+
 
 .projects-heading{
 
@@ -746,6 +605,7 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+
 .projects-heading::after{
 
     content:"";
@@ -762,6 +622,7 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+
 .projects-grid{
 
     display:grid;
@@ -771,6 +632,7 @@ CORE SOFTWARE COMPETENCIES
     gap:30px;
 
 }
+
 
 .project-card{
 
@@ -800,6 +662,7 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+
 .project-card:hover{
 
     transform:translateY(-10px);
@@ -811,6 +674,7 @@ CORE SOFTWARE COMPETENCIES
     box-shadow:0 15px 40px rgba(37,52,154,.35);
 
 }
+
 
 .project-card img{
 
@@ -826,11 +690,13 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+
 .project-card:hover img{
 
     transform:scale(1.08);
 
 }
+
 
 .project-card h3{
 
@@ -842,29 +708,121 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+
+/* RESPONSIVE */
+
 @media(max-width:900px){
 
-.projects-grid{
+    .projects-grid{
 
-    grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(2,1fr);
+
+    }
 
 }
 
-}
 
 @media(max-width:650px){
 
-.projects-grid{
+    .projects-grid{
 
-    grid-template-columns:1fr;
+        grid-template-columns:1fr;
+
+    }
 
 }
 
-}
+</style>
 
-   /* =======================================================
-   PHOTOGRAPHY VIEWER
-======================================================= */
+<!-- =======================================================
+   PROJECTS SHOWCASE HTML
+======================================================= -->
+
+<section id="works">
+
+<div class="projects-box">
+
+
+<div class="projects-heading">
+
+PROJECTS SHOWCASE
+
+</div>
+
+
+
+<div class="projects-grid">
+
+
+
+<!-- =======================
+     PHOTOGRAPHY CARD
+======================= -->
+
+<div class="project-card" id="photography">
+
+<img src="Photography.png" alt="Photography">
+
+<h3>Photography</h3>
+
+</div>
+
+
+
+<!-- =======================
+     GRAPHIC DESIGN CARD
+======================= -->
+
+<div class="project-card" id="graphic">
+
+<img src="Graphic Design.png" alt="Graphic Design">
+
+<h3>Graphic Design</h3>
+
+</div>
+
+
+
+<!-- =======================
+     MOTION GRAPHICS CARD
+======================= -->
+
+<div class="project-card" id="motion">
+
+<img src="Motion Graphics.png" alt="Motion Graphics">
+
+<h3>Motion Graphics</h3>
+
+</div>
+
+
+
+<!-- =======================
+     VIDEO EDITING CARD
+======================= -->
+
+<div class="project-card" id="video">
+
+<img src="Video Editing.png" alt="Video Editing">
+
+<h3>Video Editing</h3>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+<!-- =======================================================
+   PHOTOGRAPHY VIEWER CSS
+======================================================= -->
+
+<style>
+
 
 #photo-viewer{
 
@@ -898,6 +856,7 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+
 #photo-viewer.show{
 
     opacity:1;
@@ -905,6 +864,8 @@ CORE SOFTWARE COMPETENCIES
     visibility:visible;
 
 }
+
+
 
 .photo-viewer-box{
 
@@ -936,11 +897,71 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+
+
 #photo-viewer.show .photo-viewer-box{
 
     transform:scale(1);
 
 }
+
+
+
+/* =======================================================
+   VIEWER TITLE
+======================================================= */
+
+
+.viewer-title{
+
+    position:absolute;
+
+    top:25px;
+
+    left:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    z-index:5;
+
+}
+
+
+
+.viewer-title img{
+
+    width:38px;
+
+    height:38px;
+
+    object-fit:contain;
+
+}
+
+
+
+.viewer-title span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+    color:white;
+
+}
+
+
+
+/* =======================================================
+   IMAGE
+======================================================= */
+
 
 #viewer-image{
 
@@ -953,6 +974,13 @@ CORE SOFTWARE COMPETENCIES
     border-radius:18px;
 
 }
+
+
+
+/* =======================================================
+   CLOSE BUTTON
+======================================================= */
+
 
 #close-viewer{
 
@@ -982,11 +1010,20 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+
+
 #close-viewer:hover{
 
     background:#25349A;
 
 }
+
+
+
+/* =======================================================
+   NAVIGATION BUTTONS
+======================================================= */
+
 
 #prev-photo,
 #next-photo{
@@ -1017,17 +1054,23 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
+
+
 #prev-photo{
 
     left:25px;
 
 }
 
+
+
 #next-photo{
 
     right:25px;
 
 }
+
+
 
 #prev-photo:hover,
 #next-photo:hover{
@@ -1036,54 +1079,12 @@ CORE SOFTWARE COMPETENCIES
 
 }
 
-/* =======================================================
-   VIEWER TITLE
-======================================================= */
-
-.viewer-title{
-
-    position:absolute;
-
-    top:25px;
-
-    left:30px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    z-index:5;
-
-}
 
 
-.viewer-title img{
-
-    width:38px;
-
-    height:38px;
-
-    object-fit:contain;
-
-}
-
-
-.viewer-title span{
-
-    font-size:15px;
-
-    font-weight:600;
-
-    letter-spacing:3px;
-
-    color:white;
-
-}   
 /* =======================================================
    VIEWER CONTENT
 ======================================================= */
+
 
 #viewer-content{
 
@@ -1110,70 +1111,47 @@ CORE SOFTWARE COMPETENCIES
     border-radius:18px;
 
 }
-   
-</style>   
-<!-- =======================================================
-   PROJECTS SHOWCASE HTML
-======================================================= -->
 
-<section id="works">
 
-<div class="projects-box">
+/* =======================================================
+   PHOTO COUNTER
+======================================================= */
 
-<div class="projects-heading">
+#photo-counter{
 
-PROJECTS SHOWCASE
+    position:absolute;
 
-</div>
+    bottom:35px;
 
-<div class="projects-grid">
+    left:50%;
 
-<div class="project-card" id="photography">
+    transform:translateX(-50%);
 
-<img src="Photography.png" alt="Photography">
+    font-size:14px;
 
-<h3>Photography</h3>
+    font-weight:500;
 
-</div>
+    letter-spacing:3px;
 
-<div class="project-card" id="graphic">
+    color:rgba(255,255,255,.85);
 
-<img src="Graphic Design.png" alt="Graphic Design">
-
-<h3>Graphic Design</h3>
-
-</div>
-
-<div class="project-card" id="motion">
-
-<img src="Motion Graphics.png" alt="Motion Graphics">
-
-<h3>Motion Graphics</h3>
-
-</div>
-
-<div class="project-card" id="video">
-
-<img src="Video Editing.png" alt="Video Editing">
-
-<h3>Video Editing</h3>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
+}
+</style>
 
 <!-- =======================================================
-   PHOTOGRAPHY VIEWER
+   PHOTOGRAPHY VIEWER HTML
 ======================================================= -->
 
 <div id="photo-viewer">
 
+
     <div class="photo-viewer-box">
 
+
+
+        <!-- =======================
+             VIEWER TITLE
+        ======================= -->
 
         <div class="viewer-title">
 
@@ -1184,542 +1162,86 @@ PROJECTS SHOWCASE
         </div>
 
 
-        <button id="close-viewer">&times;</button>
 
 
-        <button id="prev-photo">&#10094;</button>
+        <!-- =======================
+             CLOSE BUTTON
+        ======================= -->
 
+        <button id="close-viewer">
+
+            &times;
+
+        </button>
+
+
+
+
+
+        <!-- =======================
+             PREVIOUS BUTTON
+        ======================= -->
+
+        <button id="prev-photo">
+
+            &#10094;
+
+        </button>
+
+
+
+
+
+        <!-- =======================
+             IMAGE / VIDEO AREA
+        ======================= -->
 
         <div id="viewer-content">
 
-            <img id="viewer-image" src="" alt="Photography">
 
-            <video id="viewer-video" controls></video>
+    <img id="viewer-image" 
+         src="" 
+         alt="Photography">
 
-        </div>
+
+    <video id="viewer-video" controls></video>
 
 
-        <button id="next-photo">&#10095;</button>
+</div>
+
+
+<!-- PHOTO COUNTER -->
+
+<div id="photo-counter">
+
+    1 / 8
+
+</div>
+       
+        <!-- =======================
+             NEXT BUTTON
+        ======================= -->
+
+        <button id="next-photo">
+
+            &#10095;
+
+        </button>
+
+
 
 
     </div>
 
-</div>
-<!-- =======================================================
-   CONTACT CSS
-======================================================= -->
-
-<style>
-
-/* =======================================================
-   CONTACT SECTION
-======================================================= */
-
-#contact{
-
-    min-height:100vh;
-
-    padding:100px 8%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-.contact-box{
-
-    width:100%;
-
-    max-width:1300px;
-
-    padding:60px 70px;
-
-    border-radius:30px;
-
-    background:rgba(0,0,0,.45);
-
-    backdrop-filter:blur(10px);
-
-}
-
-.contact-heading{
-
-    text-align:center;
-
-    font-size:22px;
-
-    font-weight:600;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-    margin-bottom:55px;
-
-    display:table;
-
-    margin-left:auto;
-
-    margin-right:auto;
-
-}
-
-.contact-heading::after{
-
-    content:"";
-
-    display:block;
-
-    width:100%;
-
-    height:2px;
-
-    background:white;
-
-    margin-top:15px;
-
-}
-
-
-/* ===========================
-   CONTACT GRID
-=========================== */
-
-.contact-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-
-/* ===========================
-   CONTACT CARD
-=========================== */
-
-.contact-card{
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    border-radius:22px;
-
-    min-height:250px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
-    backdrop-filter:blur(10px);
-
-    text-decoration:none;
-
-    color:white;
-
-}
-
-.contact-card:hover{
-
-    transform:translateY(-10px);
-
-    background:rgba(255,255,255,.14);
-
-    border-color:#25349A;
-
-    box-shadow:0 15px 40px rgba(37,52,154,.35);
-
-}
-
-
-/* ===========================
-   LOGOS
-=========================== */
-
-.contact-card img{
-
-    width:80px;
-
-    height:80px;
-
-    object-fit:contain;
-
-    margin-bottom:25px;
-
-    transition:.35s ease;
-
-}
-
-.contact-card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-/* ===========================
-   TITLE
-=========================== */
-
-.contact-card h3{
-
-    font-size:20px;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    margin-bottom:10px;
-
-}
-
-
-/* ===========================
-   SUBTEXT
-=========================== */
-
-.contact-card p{
-
-    font-size:15px;
-
-    color:rgba(255,255,255,.85);
-
-    font-weight:400;
-
-    letter-spacing:.5px;
-
-    word-break:break-word;
-
-    padding:0 12px;
-
-}
-
-</style>   
-<!-- =======================================================
-   CONTACT HTML
-======================================================= -->
-
-<section id="contact">
-
-<div class="contact-box">
-
-<div class="contact-heading">
-
-LET'S CONNECT
 
 </div>
-
-<div class="contact-grid">
-
-
-<!-- =======================
-     LINKEDIN
-======================= -->
-
-<a href="https://www.linkedin.com/in/muhasinabbas"
-   target="_blank"
-   class="contact-card">
-
-<img src="linkedinlogo.png"
-     alt="LinkedIn"
-     class="linkedin-logo">
-
-<h3>LINKEDIN</h3>
-
-<p>muhasinabbas</p>
-
-</a>
-
-
-<!-- =======================
-     EMAIL
-======================= -->
-
-<a href="mailto:muhasin4g@gmail.com"
-   class="contact-card">
-
-<img src="Email logo.png"
-     alt="Email">
-
-<h3>EMAIL</h3>
-
-<p>muhasin4g@gmail.com</p>
-
-</a>
-
-
-<!-- =======================
-     INSTAGRAM
-======================= -->
-
-<a href="https://www.instagram.com/mzn.abz/"
-   target="_blank"
-   class="contact-card">
-
-<img src="Instagram logo.png"
-     alt="Instagram">
-
-<h3>INSTAGRAM</h3>
-
-<p>@mzn.abz</p>
-
-</a>
-
-
-</div>
-
-</div>
-
-</section>
 
 <!-- =======================================================
-   FINAL RESPONSIVE CSS
+   PHOTOGRAPHY VIEWER JAVASCRIPT
 ======================================================= -->
-
-<style>
-
-@media(max-width:768px){
-
-/* NAVIGATION */
-
-nav{
-
-    padding:0 20px;
-
-}
-
-.logo img{
-
-    height:35px;
-
-}
-
-.menu{
-
-    gap:12px;
-
-}
-
-.menu a{
-
-    font-size:10px;
-
-}
-
-/* HERO */
-
-.slogan{
-
-    font-size:10px;
-
-    letter-spacing:3px;
-
-}
-
-.roles{
-
-    font-size:10px;
-
-    letter-spacing:3px;
-
-}
-
-.portfolio{
-
-    font-size:70px;
-
-    letter-spacing:5px;
-
-}
-
-.portfolio:hover{
-
-    letter-spacing:7px;
-
-}
-
-/* SECTIONS */
-
-#about,
-#skills,
-#works,
-#contact{
-
-    padding:90px 5%;
-
-}
-
-/* BOXES */
-
-.about-box,
-.skills-box,
-.projects-box,
-.contact-box{
-
-    padding:40px 25px;
-
-}
-
-/* ABOUT */
-
-.about-name{
-
-    font-size:55px;
-
-    letter-spacing:5px;
-
-}
-
-.about-text{
-
-    font-size:16px;
-
-    line-height:1.8;
-
-}
-
-/* SKILLS */
-
-.skills-heading{
-
-    font-size:15px;
-
-    letter-spacing:4px;
-
-}
-
-.software-grid{
-
-    grid-template-columns:1fr;
-
-    gap:25px;
-
-}
-
-.software-card{
-
-    min-height:210px;
-
-}
-
-.software-card img{
-
-    width:80px;
-
-    height:80px;
-
-}
-
-.software-card h3{
-
-    font-size:18px;
-
-}
-
-/* PROJECTS */
-
-.projects-heading{
-
-    font-size:16px;
-
-    letter-spacing:4px;
-
-}
-
-.projects-grid{
-
-    grid-template-columns:1fr;
-
-    gap:25px;
-
-}
-
-.project-card{
-
-    min-height:220px;
-
-}
-
-.project-card img{
-
-    width:80px;
-
-    height:80px;
-
-}
-
-.project-card h3{
-
-    font-size:18px;
-
-}
-
-/* =======================================================
-   CONTACT
-======================================================= */
-
-.contact-grid{
-
-    grid-template-columns:1fr;
-
-    gap:25px;
-
-}
-
-.contact-card{
-
-    min-height:220px;
-
-}
-
-.contact-card img{
-
-    width:70px;
-
-    height:70px;
-
-}
-
-.contact-card img.linkedin-logo{
-
-    width:85px;
-
-    height:85px;
-
-}
-
-.contact-card h3{
-
-    font-size:18px;
-
-}
-
-.contact-card p{
-
-    font-size:14px;
-
-}
-}
-
-</style>
-
 
 <script>
+
 
 const photographyImages = [
 
@@ -1735,6 +1257,7 @@ const photographyImages = [
 ];
 
 
+
 const photographyCard = document.getElementById("photography");
 
 const photoViewer = document.getElementById("photo-viewer");
@@ -1743,20 +1266,22 @@ const viewerImage = document.getElementById("viewer-image");
 
 const viewerVideo = document.getElementById("viewer-video");
 
-const viewerTitleText = document.getElementById("viewer-title-text");
-
-const viewerTitleIcon = document.getElementById("viewer-title-icon");   
-
 const closeViewer = document.getElementById("close-viewer");
 
 const nextPhoto = document.getElementById("next-photo");
 
 const prevPhoto = document.getElementById("prev-photo");
 
+const photoCounter = document.getElementById("photo-counter");
 
 let currentPhoto = 0;
 
 
+
+
+// =======================
+// DISPLAY PHOTO
+// =======================
 
 function showPhoto(){
 
@@ -1768,31 +1293,48 @@ function showPhoto(){
 
     viewerImage.src = photographyImages[currentPhoto];
 
+    photoCounter.textContent = 
+    (currentPhoto + 1) + " / " + photographyImages.length;
+
 }
 
+
+// =======================
+// OPEN PHOTOGRAPHY VIEWER
+// =======================
 
 
 photographyCard.addEventListener("click",()=>{
 
-    viewerTitleText.textContent = "PHOTOGRAPHY";
-
-    viewerTitleIcon.src = "Photography.png";
 
     currentPhoto = 0;
 
+
     showPhoto();
+
 
     photoViewer.classList.add("show");
 
-    document.body.style.overflow = "hidden";
+
+    document.body.style.overflow="hidden";
+
 
 });
 
 
 
+
+
+// =======================
+// NEXT PHOTO
+// =======================
+
+
 nextPhoto.addEventListener("click",()=>{
 
+
     currentPhoto++;
+
 
     if(currentPhoto >= photographyImages.length){
 
@@ -1800,15 +1342,28 @@ nextPhoto.addEventListener("click",()=>{
 
     }
 
+
     showPhoto();
+
 
 });
 
 
 
+
+
+
+
+// =======================
+// PREVIOUS PHOTO
+// =======================
+
+
 prevPhoto.addEventListener("click",()=>{
 
+
     currentPhoto--;
+
 
     if(currentPhoto < 0){
 
@@ -1816,69 +1371,120 @@ prevPhoto.addEventListener("click",()=>{
 
     }
 
+
     showPhoto();
+
 
 });
 
 
 
+
+
+
+
+// =======================
+// CLOSE VIEWER FUNCTION
+// =======================
+
+
 function closePhotoViewer(){
+
 
     photoViewer.classList.remove("show");
 
+
     document.body.style.overflow="auto";
+
 
 }
 
 
 
+
+
+
+
+// CLOSE BUTTON
+
+
 closeViewer.addEventListener("click",()=>{
+
 
     closePhotoViewer();
 
+
 });
 
+
+
+
+
+
+
+// CLICK OUTSIDE TO CLOSE
 
 
 photoViewer.addEventListener("click",(e)=>{
 
+
     if(e.target === photoViewer){
+
 
         closePhotoViewer();
 
+
     }
+
 
 });
 
+
+
+
+
+
+
+// =======================
+// KEYBOARD CONTROLS
+// =======================
 
 
 document.addEventListener("keydown",(e)=>{
 
+
     if(e.key === "Escape"){
+
 
         closePhotoViewer();
 
+
     }
+
 
 
     if(e.key === "ArrowRight"){
 
+
         nextPhoto.click();
 
+
     }
+
 
 
     if(e.key === "ArrowLeft"){
 
+
         prevPhoto.click();
+
 
     }
 
+
+
 });
 
-</script>
 
 
-</body>
-
-</html>
+</script>   
