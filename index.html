@@ -1735,6 +1735,10 @@ const viewerImage = document.getElementById("viewer-image");
 
 const viewerVideo = document.getElementById("viewer-video");
 
+const viewerTitleText = document.getElementById("viewer-title-text");
+
+const viewerTitleIcon = document.getElementById("viewer-title-icon");   
+
 const closeViewer = document.getElementById("close-viewer");
 
 const nextPhoto = document.getElementById("next-photo");
@@ -1762,13 +1766,17 @@ function showPhoto(){
 
 photographyCard.addEventListener("click",()=>{
 
+    viewerTitleText.textContent = "PHOTOGRAPHY";
+
+    viewerTitleIcon.src = "Photography.png";
+
     currentPhoto = 0;
 
     showPhoto();
 
     photoViewer.classList.add("show");
 
-    document.body.style.overflow="hidden";
+    document.body.style.overflow = "hidden";
 
 });
 
