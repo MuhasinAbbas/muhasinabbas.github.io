@@ -2352,7 +2352,51 @@ closeGraphicViewer();
 
 });
 
+document.addEventListener("keydown",(e)=>{
 
+
+    // CLOSE GRAPHIC VIEWER
+
+    if(e.key === "Escape"){
+
+        if(graphicViewer.classList.contains("show")){
+
+            closeGraphicViewer();
+
+        }
+
+    }
+
+
+
+    // NEXT GRAPHIC
+
+    if(e.key === "ArrowRight"){
+
+        if(graphicViewer.classList.contains("show")){
+
+            nextGraphic.click();
+
+        }
+
+    }
+
+
+
+    // PREVIOUS GRAPHIC
+
+    if(e.key === "ArrowLeft"){
+
+        if(graphicViewer.classList.contains("show")){
+
+            prevGraphic.click();
+
+        }
+
+    }
+
+
+});
 
 </script>   
 
