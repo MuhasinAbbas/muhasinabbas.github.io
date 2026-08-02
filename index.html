@@ -2091,10 +2091,10 @@ PROJECTS SHOWCASE
 
 .cursor-outline{
 
-    width:28px;
-    height:28px;
+    width:22px;
+    height:22px;
 
-    border:1px solid rgba(255,255,255,.7);
+    border:1px solid rgba(255,255,255,.6);
 
     border-radius:50%;
 
@@ -2109,14 +2109,7 @@ PROJECTS SHOWCASE
 }
 
 
-.cursor-trail{
-
-    width:12px;
-    height:12px;
-
-    background:white;
-
-    border-radius:50%;
+.cursor-trails{
 
     position:fixed;
 
@@ -2124,13 +2117,50 @@ PROJECTS SHOWCASE
 
     z-index:99997;
 
-    opacity:.4;
+}
+
+
+.cursor-trail-dot{
+
+    width:10px;
+
+    height:10px;
+
+    background:white;
+
+    border-radius:50%;
+
+    position:absolute;
 
     transform:translate(-50%,-50%);
 
-    filter:blur(2px);
+    opacity:.7;
 
-} 
+    animation:fadeTrail .6s forwards;
+
+}
+
+
+@keyframes fadeTrail{
+
+    from{
+
+        opacity:.7;
+
+        transform:translate(-50%,-50%) scale(1);
+
+    }
+
+
+    to{
+
+        opacity:0;
+
+        transform:translate(-50%,-50%) scale(0);
+
+    }
+
+}
    
 </style>
 
@@ -3635,54 +3665,53 @@ document.addEventListener("keydown",(e)=>{
 
 <div class="cursor-dot"></div>
 <div class="cursor-outline"></div>
-<div class="cursor-trail"></div> 
+<div class="cursor-trails"></div>
 
 <script>   
+
 const cursorDot = document.querySelector(".cursor-dot");
 const cursorOutline = document.querySelector(".cursor-outline");
-const cursorTrail = document.querySelector(".cursor-trail");
-
-
-let mouseX = 0;
-let mouseY = 0;
-
-let trailX = 0;
-let trailY = 0;
+const cursorTrails = document.querySelector(".cursor-trails");
 
 
 window.addEventListener("mousemove",(e)=>{
 
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+
+    const x = e.clientX;
+    const y = e.clientY;
 
 
-    cursorDot.style.left = mouseX + "px";
-    cursorDot.style.top = mouseY + "px";
+    cursorDot.style.left = x + "px";
+    cursorDot.style.top = y + "px";
 
 
-    cursorOutline.style.left = mouseX + "px";
-    cursorOutline.style.top = mouseY + "px";
-
-});
+    cursorOutline.style.left = x + "px";
+    cursorOutline.style.top = y + "px";
 
 
 
-function animateTrail(){
-
-    trailX += (mouseX - trailX) * 0.12;
-    trailY += (mouseY - trailY) * 0.12;
+    const trail = document.createElement("div");
 
 
-    cursorTrail.style.left = trailX + "px";
-    cursorTrail.style.top = trailY + "px";
+    trail.className="cursor-trail-dot";
 
 
-    requestAnimationFrame(animateTrail);
+    trail.style.left = x + "px";
+    trail.style.top = y + "px";
 
-}
+
+    cursorTrails.appendChild(trail);
 
 
-animateTrail();
+
+    setTimeout(()=>{
+
+        trail.remove();
+
+    },600);
+
+
+});   
 
 </script>   
    
