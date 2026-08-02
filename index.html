@@ -2064,6 +2064,60 @@ PROJECTS SHOWCASE
     color:rgba(255,255,255,.85);
 
 }
+
+/* =========================
+   CUSTOM MOUSE CURSOR
+========================= */
+
+.cursor-dot{
+
+    width:10px;
+    height:10px;
+
+    background:white;
+
+    border-radius:50%;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    transform:translate(-50%,-50%);
+
+}
+
+
+.cursor-outline{
+
+    width:45px;
+    height:45px;
+
+    border:2px solid rgba(255,255,255,.6);
+
+    border-radius:50%;
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    pointer-events:none;
+
+    z-index:99998;
+
+    transform:translate(-50%,-50%);
+
+    transition:
+    width .3s ease,
+    height .3s ease,
+    background .3s ease;
+
+}   
    
 </style>
 
@@ -3563,6 +3617,42 @@ document.addEventListener("keydown",(e)=>{
 
 
 </script>
+
+<!-- CUSTOM CURSOR -->
+
+<div class="cursor-dot"></div>
+<div class="cursor-outline"></div>   
+
+<script>   
+
+const cursorDot = document.querySelector(".cursor-dot");
+const cursorOutline = document.querySelector(".cursor-outline");
+
+
+window.addEventListener("mousemove",(e)=>{
+
+    const posX = e.clientX;
+    const posY = e.clientY;
+
+
+    cursorDot.style.left = `${posX}px`;
+    cursorDot.style.top = `${posY}px`;
+
+
+    cursorOutline.animate({
+
+        left:`${posX}px`,
+        top:`${posY}px`
+
+    },{
+        duration:500,
+        fill:"forwards"
+
+    });
+
+});   
+
+</script>   
    
 </body>
 
