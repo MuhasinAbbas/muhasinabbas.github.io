@@ -15,9 +15,9 @@
 
 <style>
 
-/* =======================================================
-   GLOBAL
-======================================================= */
+/*=========================================================
+  GLOBAL
+=========================================================*/
 
 *{
     margin:0;
@@ -31,30 +31,30 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    color:white;
+    color:#fff;
     background-image:url("b3bd86f7-404f-4465-a81e-2986c739f822.jpg");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
     background-attachment:fixed;
     overflow-x:hidden;
+    cursor:default;
 }
 
 img{
-    max-width:100%;
     display:block;
+    max-width:100%;
 }
 
 button{
     font-family:inherit;
 }
 
-/* =======================================================
-   NAVIGATION BAR
-======================================================= */
+/*=========================================================
+  NAVIGATION
+=========================================================*/
 
 nav{
-
     position:fixed;
     top:0;
     left:0;
@@ -70,53 +70,44 @@ nav{
     background:rgba(255,255,255,.92);
     backdrop-filter:blur(8px);
 
-    z-index:9999;
-
     box-shadow:0 5px 18px rgba(0,0,0,.08);
 
+    z-index:9999;
 }
 
 .logo{
-
     display:flex;
     align-items:center;
-
 }
 
 .logo img{
-
     height:50px;
     width:auto;
-
 }
 
 .menu{
-
     display:flex;
     gap:28px;
-
 }
 
 .menu a{
+    position:relative;
 
     text-decoration:none;
+
     color:#111;
 
     font-size:12px;
     font-weight:600;
     letter-spacing:1px;
 
-    position:relative;
     transition:.35s ease;
-
 }
 
 .menu a::after{
-
     content:"";
 
     position:absolute;
-
     left:0;
     bottom:-6px;
 
@@ -126,77 +117,65 @@ nav{
     background:#25349A;
 
     transition:.35s ease;
-
 }
 
 .menu a:hover{
-
     color:#25349A;
-
 }
 
 .menu a:hover::after{
-
     width:100%;
-
 }
-/* =======================================================
-   HERO SECTION
-======================================================= */
+
+/*=========================================================
+  HERO
+=========================================================*/
 
 .hero{
-
     width:100%;
     height:100vh;
 
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
 
     text-align:center;
 
     background:rgba(0,0,0,.25);
 
     transform:translateY(70px);
-
 }
 
 .slogan{
+    margin-bottom:28px;
 
     font-size:15px;
     font-weight:600;
     letter-spacing:6px;
+
     text-transform:uppercase;
-
-    margin-bottom:28px;
-
 }
 
 .portfolio{
+    position:relative;
 
     font-family:'Agency FB',sans-serif;
-
     font-size:clamp(90px,15vw,230px);
-
     font-weight:900;
 
     letter-spacing:10px;
 
-    text-transform:uppercase;
-
     line-height:.9;
 
-    position:relative;
+    text-transform:uppercase;
 
     cursor:pointer;
 
     transition:.35s ease;
-
 }
 
 .portfolio::after{
-
     content:"";
 
     position:absolute;
@@ -207,98 +186,68 @@ nav{
     width:100%;
     height:7px;
 
-    background:white;
+    background:#fff;
 
     transition:.35s ease;
-
 }
 
 .portfolio:hover{
-
     transform:scale(1.02);
-
     letter-spacing:15px;
-
 }
 
 .portfolio:hover::after{
-
     height:12px;
-
 }
 
 .roles{
-
     margin-top:55px;
 
     font-size:15px;
     font-weight:600;
-
     letter-spacing:5px;
 
     text-transform:uppercase;
-
 }
 
 .scroll-down{
-
     margin-top:40px;
-
     font-size:25px;
-
     animation:bounce 2s infinite;
-
 }
 
 @keyframes bounce{
 
     0%{
-
         transform:translateY(0);
-
     }
 
     50%{
-
         transform:translateY(15px);
-
     }
 
     100%{
-
         transform:translateY(0);
-
     }
 
 }
 
-/* =======================================================
-   ABOUT SECTION
-   (Part 1C starts here)
-======================================================= */
-
-   /* =======================================================
-   ABOUT SECTION
-======================================================= */
+/*=========================================================
+  ABOUT
+=========================================================*/
 
 #about{
-
     min-height:100vh;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     padding:120px 8%;
-
 }
 
 .about-box{
-
     width:100%;
-
     max-width:1300px;
 
     padding:70px 80px 60px;
@@ -306,53 +255,42 @@ nav{
     border-radius:30px;
 
     background:rgba(0,0,0,.45);
-
     backdrop-filter:blur(10px);
-
 }
 
 .about-heading{
-
-    font-size:18px;
-
-    font-weight:600;
-
-    letter-spacing:6px;
-
-    text-transform:uppercase;
-
-    margin-bottom:35px;
+    display:inline-block;
 
     position:relative;
 
-    display:inline-block;
+    margin-bottom:35px;
 
+    font-size:18px;
+    font-weight:600;
+    letter-spacing:6px;
+
+    text-transform:uppercase;
 }
 
 .about-heading::after{
-
     content:"";
 
     position:absolute;
 
     left:0;
-
     bottom:-10px;
 
     width:100%;
-
     height:2px;
 
-    background:white;
-
+    background:#fff;
 }
 
 .about-name{
+    margin-bottom:35px;
 
     font-family:'Agency FB',sans-serif;
-
     font-size:90px;
-
     font-weight:900;
 
     letter-spacing:8px;
@@ -361,33 +299,21 @@ nav{
 
     text-transform:uppercase;
 
-    margin-bottom:35px;
-
-    cursor:default;
-
     transition:color .35s ease;
-
 }
 
 .about-name:hover{
-
-    color:#ffffff;
-
+    color:#fff;
 }
 
 .about-text{
-
-    font-size:18px;
-
-    line-height:1.9;
-
     max-width:1100px;
 
+    font-size:18px;
+    line-height:1.9;
 }
 
-
 .resume-btn{
-
     display:inline-block;
 
     margin-top:40px;
@@ -398,53 +324,39 @@ nav{
 
     background:#25349A;
 
-    color:white;
+    color:#fff;
 
     text-decoration:none;
 
     font-size:14px;
-
     font-weight:600;
-
     letter-spacing:2px;
 
     transition:.35s ease;
-
 }
-
 
 .resume-btn:hover{
-
-    background:white;
-
+    background:#fff;
     color:#25349A;
-
     transform:translateY(-5px);
-
 }
 
-/* =======================================================
-   CORE SOFTWARE COMPETENCIES
-======================================================= */
+/*=========================================================
+  SKILLS
+=========================================================*/
 
 #skills{
-
     min-height:100vh;
 
-    padding:85px 8% 120px;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
+    padding:85px 8% 120px;
 }
 
 .skills-box{
-
     width:100%;
-
     max-width:1300px;
 
     padding:45px 80px 30px;
@@ -452,91 +364,67 @@ nav{
     border-radius:30px;
 
     background:rgba(0,0,0,.45);
-
     backdrop-filter:blur(10px);
 
     transform:translateY(10px);
-
 }
 
 .skills-heading{
+    display:table;
+
+    margin:0 auto 50px;
 
     text-align:center;
 
     font-size:22px;
-
     font-weight:600;
-
     letter-spacing:5px;
 
     text-transform:uppercase;
-
-    margin-bottom:50px;
-
-    display:table;
-
-    margin-left:auto;
-
-    margin-right:auto;
-
 }
 
 .skills-heading::after{
-
     content:"";
 
     display:block;
 
     width:100%;
-
     height:2px;
-
-    background:white;
 
     margin-top:15px;
 
+    background:#fff;
 }
 
 .software-grid{
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
     gap:35px;
-
 }
 
 .software-card{
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    border-radius:22px;
-
-    padding:35px 20px;
-
     min-height:200px;
 
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
 
     text-align:center;
 
+    padding:35px 20px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+
     backdrop-filter:blur(10px);
 
     transition:.35s ease;
-
 }
 
 .software-card:hover{
-
     transform:translateY(-10px);
 
     background:rgba(255,255,255,.14);
@@ -544,13 +432,10 @@ nav{
     border-color:#25349A;
 
     box-shadow:0 15px 40px rgba(37,52,154,.35);
-
 }
 
 .software-card img{
-
     width:75px;
-
     height:75px;
 
     object-fit:contain;
@@ -558,32 +443,34 @@ nav{
     margin-bottom:25px;
 
     transition:.35s ease;
-
 }
 
 .software-card:hover img{
-
     transform:scale(1.1);
-
 }
 
 .software-card h3{
-
     font-size:20px;
-
     font-weight:600;
-
     letter-spacing:1px;
-
 }
 
-/* =======================================================
-   END OF PART 1
-======================================================= */
+/* Individual Logo Sizes */
 
-/* =======================================================
-   END OF PART 1
-======================================================= */
+.illustrator-logo{
+    width:65px !important;
+    height:65px !important;
+}
+
+.canva-logo{
+    width:65px !important;
+    height:65px !important;
+}
+
+.fcp-logo{
+    width:65px !important;
+    height:65px !important;
+}
 
 </style>
 
@@ -591,163 +478,135 @@ nav{
 
 <body>
 
-<!-- =========================
-     NAVIGATION HTML
-========================= -->
+<!--=======================================================
+  NAVIGATION
+========================================================-->
 
 <nav>
 
-<div class="logo">
+    <div class="logo">
+        <img src="MA.jpg" alt="Logo">
+    </div>
 
-<img src="MA.jpg">
-
-</div>
-
-
-<div class="menu">
-
-<a href="#about">ABOUT</a>
-<a href="#skills">SKILLS</a>
-<a href="#works">WORKS</a>
-<a href="#contact">CONTACT</a>
-
-</div>
+    <div class="menu">
+        <a href="#about">ABOUT</a>
+        <a href="#skills">SKILLS</a>
+        <a href="#works">WORKS</a>
+        <a href="#contact">CONTACT</a>
+    </div>
 
 </nav>
 
-
-<!-- =========================
-     HERO HTML
-========================= -->
+<!--=======================================================
+  HERO
+========================================================-->
 
 <section class="hero">
 
-<div class="slogan">
+    <div class="slogan">
+        EVERY DESIGN HAS A PURPOSE • EVERY FRAME HAS A STORY
+    </div>
 
-EVERY DESIGN HAS A PURPOSE • EVERY FRAME HAS A STORY
+    <div class="portfolio">
+        PORTFOLIO
+    </div>
 
-</div>
+    <div class="roles">
+        DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
+    </div>
 
-
-<div class="portfolio">
-
-PORTFOLIO
-
-</div>
-
-
-<div class="roles">
-
-DIGITAL MEDIA CREATOR • VISUAL STORYTELLER • CREATIVE ARTIST
-
-</div>
-
-
-<div class="scroll-down">
-
-↓
-
-</div>
+    <div class="scroll-down">
+        ↓
+    </div>
 
 </section>
 
+<!--=======================================================
+  ABOUT
+========================================================-->
 
 <section id="about">
 
-<div class="about-box">
+    <div class="about-box">
 
-<div class="about-heading">
+        <div class="about-heading">
+            ABOUT ME
+        </div>
 
-ABOUT ME
+        <div class="about-name">
+            MUHASIN ABBAS
+        </div>
 
-</div>
+        <p class="about-text">
+            A digital media creator and visual storyteller who blends creativity, design and communication to craft meaningful content. With a foundation in Journalism and Mass Communication, along with skills in graphic design, video editing and post-production arts, ideas are transformed into engaging visual experiences. Every frame carries a story, every visual creates an emotion and every creation aims to leave an impact.
+        </p>
 
-<div class="about-name">
+        <a href="Muhasin Abbas Resume.pdf" download class="resume-btn">
+            DOWNLOAD RESUME
+        </a>
 
-MUHASIN ABBAS
-
-</div>
-
-<p class="about-text">
-
-A digital media creator and visual storyteller who blends creativity, design and
-communication to craft meaningful content. With a foundation in Journalism and Mass Communication,
-along with skills in graphic design, video editing and post-production arts, ideas are transformed into engaging visual experiences.
-Every frame carries a story, every visual creates an emotion and every creation aims to leave an impact.
-
-</p>
-
-<a href="Muhasin Abbas Resume.pdf" download class="resume-btn">
-
-DOWNLOAD RESUME
-
-</a>   
-
-</div>
+    </div>
 
 </section>
 
+<!--=======================================================
+  SKILLS
+========================================================-->
+
 <section id="skills">
 
-<div class="skills-box">
+    <div class="skills-box">
 
-<div class="skills-heading">
+        <div class="skills-heading">
+            CORE SOFTWARE COMPETENCIES
+        </div>
 
-CORE SOFTWARE COMPETENCIES
+        <div class="software-grid">
 
-</div>
+            <div class="software-card">
+                <img src="Photoshop.png" alt="Adobe Photoshop">
+                <h3>Adobe Photoshop</h3>
+            </div>
 
-<div class="software-grid">
+            <div class="software-card">
+                <img src="Illustrator.png" class="illustrator-logo" alt="Adobe Illustrator">
+                <h3>Adobe Illustrator</h3>
+            </div>
 
+            <div class="software-card">
+                <img src="Aftereffects.png" alt="Adobe After Effects">
+                <h3>Adobe After Effects</h3>
+            </div>
 
-<div class="software-card">
-<img src="Photoshop.png">
-<h3>Adobe Photoshop</h3>
-</div>
+            <div class="software-card">
+                <img src="Premiere Pro.png" alt="Adobe Premiere Pro">
+                <h3>Adobe Premiere Pro</h3>
+            </div>
 
+            <div class="software-card">
+                <img src="FCP.png" class="fcp-logo" alt="Final Cut Pro">
+                <h3>Final Cut Pro</h3>
+            </div>
 
-<div class="software-card">
-<img src="Illustrator.png" class="illustrator-logo">
-<h3>Adobe Illustrator</h3>
-</div>
+            <div class="software-card">
+                <img src="Canva.png" class="canva-logo" alt="Canva">
+                <h3>Canva</h3>
+            </div>
 
+        </div>
 
-<div class="software-card">
-<img src="Aftereffects.png">
-<h3>Adobe After Effects</h3>
-</div>
+    </div>
 
-
-<div class="software-card">
-<img src="Premiere Pro.png">
-<h3>Adobe Premiere Pro</h3>
-</div>
-
-
-<div class="software-card">
-<img src="FCP.png" class="fcp-logo">
-<h3>Final Cut Pro</h3>
-</div>
-
-
-<div class="software-card">
-<img src="Canva.png" class="canva-logo">
-<h3>Canva</h3>
-</div>
-
-
-</div>
-
-</div>
-
-</section>   
-
-   
-<!-- =======================================================
-   PROJECTS SHOWCASE CSS
-======================================================= -->
+</section>
+<!--=======================================================
+  PROJECT SHOWCASE
+========================================================-->
 
 <style>
+
+/*=========================================================
+  PROJECT SECTION
+=========================================================*/
 
 #works{
 
@@ -756,9 +615,7 @@ CORE SOFTWARE COMPETENCIES
     padding:100px 8%;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
 }
@@ -767,7 +624,6 @@ CORE SOFTWARE COMPETENCIES
 .projects-box{
 
     width:100%;
-
     max-width:1300px;
 
     padding:60px 70px;
@@ -785,6 +641,10 @@ CORE SOFTWARE COMPETENCIES
 
 .projects-heading{
 
+    display:table;
+
+    margin:0 auto 55px;
+
     text-align:center;
 
     font-size:22px;
@@ -794,14 +654,6 @@ CORE SOFTWARE COMPETENCIES
     letter-spacing:5px;
 
     text-transform:uppercase;
-
-    margin-bottom:55px;
-
-    display:table;
-
-    margin-left:auto;
-
-    margin-right:auto;
 
 }
 
@@ -816,9 +668,9 @@ CORE SOFTWARE COMPETENCIES
 
     height:2px;
 
-    background:white;
-
     margin-top:15px;
+
+    background:#fff;
 
 }
 
@@ -836,12 +688,6 @@ CORE SOFTWARE COMPETENCIES
 
 .project-card{
 
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    border-radius:22px;
-
     min-height:240px;
 
     display:flex;
@@ -856,9 +702,15 @@ CORE SOFTWARE COMPETENCIES
 
     cursor:pointer;
 
-    transition:.35s ease;
+    border-radius:22px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
 
     backdrop-filter:blur(10px);
+
+    transition:.35s ease;
 
 }
 
@@ -886,7 +738,7 @@ CORE SOFTWARE COMPETENCIES
 
     margin-bottom:25px;
 
-    transition:.35s;
+    transition:.35s ease;
 
 }
 
@@ -909,142 +761,27 @@ CORE SOFTWARE COMPETENCIES
 }
 
 
-/* RESPONSIVE */
 
-@media(max-width:900px){
-
-    .projects-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-}
-
-
-@media(max-width:650px){
-
-    .projects-grid{
-
-        grid-template-columns:1fr;
-
-    }
-
-}
-
-</style>
-
-<!-- =======================================================
-   PROJECTS SHOWCASE HTML
-======================================================= -->
-
-<section id="works">
-
-<div class="projects-box">
-
-
-<div class="projects-heading">
-
-PROJECTS SHOWCASE
-
-</div>
-
-
-
-<div class="projects-grid">
-
-
-
-<!-- =======================
-     PHOTOGRAPHY CARD
-======================= -->
-
-<div class="project-card" id="photography">
-
-<img src="Photography.png" alt="Photography" class="photography-logo">
-
-<h3>Photography</h3>
-
-</div>
-
-
-
-<!-- =======================
-     GRAPHIC DESIGN CARD
-======================= -->
-
-<div class="project-card" id="graphic">
-
-<img src="Graphic Design.png" alt="Graphic Design" class="graphic-logo">
-
-<h3>Graphic Design</h3>
-
-</div>
-
-
-
-<!-- =======================
-     MOTION GRAPHICS CARD
-======================= -->
-
-<div class="project-card" id="motion">
-
-<img src="Motion Graphics.png" alt="Motion Graphics" class="motion-logo">
-
-<h3>Motion Graphics</h3>
-
-</div>
-
-
-
-<!-- =======================
-     VIDEO EDITING CARD
-======================= -->
-
-<div class="project-card" id="video">
-
-<img src="Video Editing.png" alt="Video Editing" class="video-logo">
-
-<h3>Video Editing</h3>
-
-</div>
-
-
-
-</div>
-
-</div>
-
-</section>
-
-<!-- =======================================================
-   PHOTOGRAPHY VIEWER CSS
-======================================================= -->
-
-<style>
+/*=========================================================
+  PHOTOGRAPHY VIEWER
+=========================================================*/
 
 
 #photo-viewer{
 
     position:fixed;
 
-    top:0;
-
-    left:0;
-
-    width:100%;
-
-    height:100%;
-
-    background:rgba(0,0,0,.75);
-
-    backdrop-filter:blur(10px);
+    inset:0;
 
     display:flex;
 
     justify-content:center;
 
     align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(10px);
 
     opacity:0;
 
@@ -1073,13 +810,7 @@ PROJECTS SHOWCASE
 
     height:min(700px,85vh);
 
-    background:rgba(0,0,0,.45);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    border-radius:30px;
-
-    backdrop-filter:blur(15px);
+    position:relative;
 
     display:flex;
 
@@ -1087,9 +818,15 @@ PROJECTS SHOWCASE
 
     align-items:center;
 
-    position:relative;
-
     overflow:hidden;
+
+    border-radius:30px;
+
+    background:rgba(0,0,0,.45);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
 
     transform:scale(.92);
 
@@ -1098,37 +835,213 @@ PROJECTS SHOWCASE
 }
 
 
-
 #photo-viewer.show .photo-viewer-box{
 
     transform:scale(1);
 
 }
 
-/* =======================================================
-   GRAPHIC DESIGN VIEWER
-======================================================= */
 
 
-#graphic-viewer{
+/* VIEWER TITLE */
 
-    position:fixed;
+.viewer-title{
 
-    top:0;
-    left:0;
+    position:absolute;
+
+    top:25px;
+
+    left:30px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.viewer-title img{
+
+    width:38px;
+
+    height:38px;
+
+    object-fit:contain;
+
+}
+
+
+.viewer-title span{
+
+    font-size:15px;
+
+    font-weight:600;
+
+    letter-spacing:3px;
+
+}
+
+
+
+/* IMAGE AREA */
+
+
+#viewer-content{
 
     width:100%;
+
     height:100%;
-
-    background:rgba(0,0,0,.75);
-
-    backdrop-filter:blur(10px);
 
     display:flex;
 
     justify-content:center;
 
     align-items:center;
+
+}
+
+
+#viewer-image{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    object-fit:contain;
+
+    border-radius:18px;
+
+}
+
+
+#viewer-video{
+
+    display:none;
+
+}
+
+
+
+/* BUTTONS */
+
+
+#close-viewer,
+#prev-photo,
+#next-photo{
+
+    position:absolute;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s ease;
+
+}
+
+
+#close-viewer{
+
+    top:20px;
+
+    right:25px;
+
+    width:45px;
+
+    height:45px;
+
+    font-size:34px;
+
+}
+
+
+
+#prev-photo,
+#next-photo{
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+
+    height:55px;
+
+    font-size:30px;
+
+}
+
+
+#prev-photo{
+
+    left:25px;
+
+}
+
+
+#next-photo{
+
+    right:25px;
+
+}
+
+
+#close-viewer:hover,
+#prev-photo:hover,
+#next-photo:hover{
+
+    background:#25349A;
+
+}
+
+
+
+#photo-counter{
+
+    position:absolute;
+
+    bottom:7px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+}
+
+
+
+/*=========================================================
+  GRAPHIC DESIGN VIEWER
+=========================================================*/
+
+
+#graphic-viewer{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(10px);
 
     opacity:0;
 
@@ -1150,20 +1063,13 @@ PROJECTS SHOWCASE
 }
 
 
-
 .graphic-viewer-box{
 
     width:min(1100px,90vw);
 
     height:min(700px,85vh);
 
-    background:rgba(0,0,0,.45);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    border-radius:30px;
-
-    backdrop-filter:blur(15px);
+    position:relative;
 
     display:flex;
 
@@ -1171,29 +1077,19 @@ PROJECTS SHOWCASE
 
     align-items:center;
 
-    position:relative;
-
     overflow:hidden;
 
-}
+    border-radius:30px;
 
+    background:rgba(0,0,0,.45);
 
+    border:1px solid rgba(255,255,255,.15);
 
-#graphic-image{
-
-    max-width:90%;
-
-    max-height:90%;
-
-    object-fit:contain;
-
-    border-radius:18px;
+    backdrop-filter:blur(15px);
 
 }
 
 
-
-/* TITLE */
 
 .graphic-title{
 
@@ -1218,8 +1114,6 @@ PROJECTS SHOWCASE
 
     height:38px;
 
-    object-fit:contain;
-
 }
 
 
@@ -1235,12 +1129,42 @@ PROJECTS SHOWCASE
 
 
 
-/* CLOSE */
+#graphic-image{
+
+    max-width:90%;
+
+    max-height:90%;
+
+    object-fit:contain;
+
+    border-radius:18px;
+
+}
+
+
+
+#close-graphic,
+#prev-graphic,
+#next-graphic{
+
+    position:absolute;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
 
 
 #close-graphic{
-
-    position:absolute;
 
     top:20px;
 
@@ -1250,34 +1174,13 @@ PROJECTS SHOWCASE
 
     height:45px;
 
-    border:none;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    color:white;
-
     font-size:34px;
 
-    cursor:pointer;
-
 }
-
-#close-graphic:hover{
-
-    background:#25349A;
-
-}   
-
-
-/* ARROWS */
 
 
 #prev-graphic,
 #next-graphic{
-
-    position:absolute;
 
     top:50%;
 
@@ -1287,19 +1190,8 @@ PROJECTS SHOWCASE
 
     height:55px;
 
-    border:none;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    color:white;
-
     font-size:30px;
 
-    cursor:pointer;
-
-    transition:.3s;
 }
 
 
@@ -1316,6 +1208,8 @@ PROJECTS SHOWCASE
 
 }
 
+
+#close-graphic:hover,
 #prev-graphic:hover,
 #next-graphic:hover{
 
@@ -1323,47 +1217,219 @@ PROJECTS SHOWCASE
 
 }
 
-/* COUNTER */
 
 
 #graphic-counter{
 
     position:absolute;
 
-    bottom:07px;
+    bottom:7px;
 
     left:50%;
 
     transform:translateX(-50%);
 
-    font-size:14px;
-
     letter-spacing:3px;
+
+    font-size:14px;
 
 }
 
- /* =======================================================
-   MOTION GRAPHICS VIEWER
-======================================================= */
+</style>
+
+
+<!--=======================================================
+  PROJECT HTML
+=========================================================-->
+
+
+<section id="works">
+
+<div class="projects-box">
+
+
+<div class="projects-heading">
+PROJECTS SHOWCASE
+</div>
+
+
+<div class="projects-grid">
+
+
+<div class="project-card" id="photography">
+
+<img src="Photography.png">
+
+<h3>Photography</h3>
+
+</div>
+
+
+<div class="project-card" id="graphic">
+
+<img src="Graphic Design.png">
+
+<h3>Graphic Design</h3>
+
+</div>
+
+
+<div class="project-card" id="motion">
+
+<img src="Motion Graphics.png">
+
+<h3>Motion Graphics</h3>
+
+</div>
+
+
+<div class="project-card" id="video">
+
+<img src="Video Editing.png">
+
+<h3>Video Editing</h3>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!--=======================================================
+  PHOTOGRAPHY VIEWER HTML
+=========================================================-->
+
+
+<div id="photo-viewer">
+
+
+<div class="photo-viewer-box">
+
+
+<div class="viewer-title">
+
+<img src="Photography.png">
+
+<span>PHOTOGRAPHY</span>
+
+</div>
+
+
+<button id="close-viewer">
+&times;
+</button>
+
+
+<button id="prev-photo">
+&#10094;
+</button>
+
+
+<div id="viewer-content">
+
+<img id="viewer-image">
+
+<video id="viewer-video" controls></video>
+
+</div>
+
+
+<div id="photo-counter">
+1 / 10
+</div>
+
+
+<button id="next-photo">
+&#10095;
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<!--=======================================================
+  GRAPHIC VIEWER HTML
+=========================================================-->
+
+
+<div id="graphic-viewer">
+
+
+<div class="graphic-viewer-box">
+
+
+<div class="graphic-title">
+
+<img src="Graphic Design.png">
+
+<span>GRAPHIC DESIGN</span>
+
+</div>
+
+
+<button id="close-graphic">
+&times;
+</button>
+
+
+<button id="prev-graphic">
+&#10094;
+</button>
+
+
+<img id="graphic-image">
+
+
+<div id="graphic-counter">
+1 / 14
+</div>
+
+
+<button id="next-graphic">
+&#10095;
+</button>
+
+
+</div>
+
+</div>
+<!--=======================================================
+  MOTION GRAPHICS VIEWER
+=========================================================-->
+
+<style>
+
+/*=========================================================
+  MOTION VIEWER
+=========================================================*/
 
 #motion-viewer{
 
     position:fixed;
-    top:0;
-    left:0;
 
-    width:100%;
-    height:100%;
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
     background:rgba(0,0,0,.75);
 
     backdrop-filter:blur(10px);
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
     opacity:0;
+
     visibility:hidden;
 
     transition:.35s ease;
@@ -1372,57 +1438,74 @@ PROJECTS SHOWCASE
 
 }
 
+
 #motion-viewer.show{
 
     opacity:1;
+
     visibility:visible;
 
 }
 
+
+
 .motion-viewer-box{
 
     width:min(1100px,90vw);
+
     height:min(700px,85vh);
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    border-radius:30px;
 
     background:rgba(0,0,0,.45);
 
     border:1px solid rgba(255,255,255,.15);
 
-    border-radius:30px;
-
     backdrop-filter:blur(15px);
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    position:relative;
-
-    overflow:hidden;
-
 }
+
+
 
 .motion-title{
 
     position:absolute;
 
     top:25px;
+
     left:30px;
 
     display:flex;
+
     align-items:center;
+
     gap:12px;
 
 }
 
+
+
 .motion-title img{
 
     width:38px;
+
     height:38px;
 
     object-fit:contain;
 
 }
+
+
 
 .motion-title span{
 
@@ -1434,24 +1517,25 @@ PROJECTS SHOWCASE
 
 }
 
+
+
 #motion-video{
 
     max-width:90%;
+
     max-height:90%;
 
     border-radius:18px;
 
 }
 
-#close-motion{
+
+
+#close-motion,
+#prev-motion,
+#next-motion{
 
     position:absolute;
-
-    top:20px;
-    right:25px;
-
-    width:45px;
-    height:45px;
 
     border:none;
 
@@ -1461,47 +1545,46 @@ PROJECTS SHOWCASE
 
     color:white;
 
-    font-size:34px;
-
     cursor:pointer;
 
-    transition:.3s;
+    transition:.3s ease;
 
 }
 
-#close-motion:hover{
 
-    background:#25349A;
+
+#close-motion{
+
+    top:20px;
+
+    right:25px;
+
+    width:45px;
+
+    height:45px;
+
+    font-size:34px;
 
 }
+
+
 
 #prev-motion,
 #next-motion{
-
-    position:absolute;
 
     top:50%;
 
     transform:translateY(-50%);
 
     width:55px;
+
     height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    color:white;
 
     font-size:30px;
 
-    cursor:pointer;
-
-    transition:.3s;
-
 }
+
+
 
 #prev-motion{
 
@@ -1509,18 +1592,25 @@ PROJECTS SHOWCASE
 
 }
 
+
+
 #next-motion{
 
     right:25px;
 
 }
 
+
+
+#close-motion:hover,
 #prev-motion:hover,
 #next-motion:hover{
 
     background:#25349A;
 
 }
+
+
 
 #motion-counter{
 
@@ -1538,29 +1628,300 @@ PROJECTS SHOWCASE
 
 }
 
-/* =======================================================
-   VIDEO EDITING VIEWER CSS
-======================================================= */
+
+</style>
+
+
+
+<!--=======================================================
+  MOTION VIEWER HTML
+=========================================================-->
+
+
+<div id="motion-viewer">
+
+
+<div class="motion-viewer-box">
+
+
+<div class="motion-title">
+
+<img src="Motion Graphics.png">
+
+<span>MOTION GRAPHICS</span>
+
+</div>
+
+
+
+<button id="close-motion">
+&times;
+</button>
+
+
+
+<button id="prev-motion">
+&#10094;
+</button>
+
+
+
+<video id="motion-video" controls></video>
+
+
+
+<div id="motion-counter">
+1 / 3
+</div>
+
+
+
+<button id="next-motion">
+&#10095;
+</button>
+
+
+</div>
+
+
+</div>
+
+
+
+<!--=======================================================
+  MOTION JAVASCRIPT
+=========================================================-->
+
+<script>
+
+
+const motionVideos = [
+
+    "25.mp4",
+    "Singapore.mp4",
+    "Car.mp4"
+
+];
+
+
+const motionCard =
+document.getElementById("motion");
+
+
+const motionViewer =
+document.getElementById("motion-viewer");
+
+
+const motionVideo =
+document.getElementById("motion-video");
+
+
+const closeMotion =
+document.getElementById("close-motion");
+
+
+const nextMotion =
+document.getElementById("next-motion");
+
+
+const prevMotion =
+document.getElementById("prev-motion");
+
+
+const motionCounter =
+document.getElementById("motion-counter");
+
+
+let currentMotion = 0;
+
+
+
+function showMotion(){
+
+
+    motionVideo.pause();
+
+
+    motionVideo.innerHTML =
+    `<source src="${motionVideos[currentMotion]}" type="video/mp4">`;
+
+
+    motionVideo.load();
+
+
+    motionCounter.textContent =
+    `${currentMotion + 1} / ${motionVideos.length}`;
+
+}
+
+
+
+motionCard.addEventListener("click",()=>{
+
+
+    currentMotion = 0;
+
+
+    showMotion();
+
+
+    motionViewer.classList.add("show");
+
+
+    document.body.style.overflow="hidden";
+
+
+});
+
+
+
+
+nextMotion.addEventListener("click",()=>{
+
+
+    currentMotion++;
+
+
+    if(currentMotion >= motionVideos.length){
+
+        currentMotion = 0;
+
+    }
+
+
+    showMotion();
+
+
+});
+
+
+
+
+prevMotion.addEventListener("click",()=>{
+
+
+    currentMotion--;
+
+
+    if(currentMotion < 0){
+
+        currentMotion = motionVideos.length - 1;
+
+    }
+
+
+    showMotion();
+
+
+});
+
+
+
+
+function closeMotionViewer(){
+
+
+    motionVideo.pause();
+
+
+    motionViewer.classList.remove("show");
+
+
+    document.body.style.overflow="auto";
+
+
+}
+
+
+
+
+closeMotion.addEventListener("click",closeMotionViewer);
+
+
+
+motionViewer.addEventListener("click",(e)=>{
+
+
+    if(e.target === motionViewer){
+
+        closeMotionViewer();
+
+    }
+
+
+});
+
+
+
+
+document.addEventListener("keydown",(e)=>{
+
+
+    if(!motionViewer.classList.contains("show"))
+    return;
+
+
+
+    if(e.key==="Escape"){
+
+        closeMotionViewer();
+
+    }
+
+
+    if(e.key==="ArrowRight"){
+
+        nextMotion.click();
+
+    }
+
+
+    if(e.key==="ArrowLeft"){
+
+        prevMotion.click();
+
+    }
+
+
+});
+
+
+</script>
+
+
+
+
+
+<!--=======================================================
+  VIDEO EDITING VIEWER
+=========================================================-->
+
+<style>
+
+
+/*=========================================================
+  VIDEO VIEWER
+=========================================================*/
 
 
 #video-viewer{
 
     position:fixed;
-    top:0;
-    left:0;
 
-    width:100%;
-    height:100%;
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
 
     background:rgba(0,0,0,.75);
 
     backdrop-filter:blur(10px);
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
     opacity:0;
+
     visibility:hidden;
 
     transition:.35s ease;
@@ -1570,9 +1931,11 @@ PROJECTS SHOWCASE
 }
 
 
+
 #video-viewer.show{
 
     opacity:1;
+
     visibility:visible;
 
 }
@@ -1585,15 +1948,7 @@ PROJECTS SHOWCASE
 
     height:min(700px,85vh);
 
-
-    background:rgba(0,0,0,.45);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    border-radius:30px;
-
-    backdrop-filter:blur(15px);
-
+    position:relative;
 
     display:flex;
 
@@ -1601,18 +1956,18 @@ PROJECTS SHOWCASE
 
     align-items:center;
 
-
-    position:relative;
-
     overflow:hidden;
+
+    border-radius:30px;
+
+    background:rgba(0,0,0,.45);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
 
 }
 
-
-
-/* =======================================================
-   TITLE
-======================================================= */
 
 
 .video-title{
@@ -1620,8 +1975,8 @@ PROJECTS SHOWCASE
     position:absolute;
 
     top:25px;
-    left:30px;
 
+    left:30px;
 
     display:flex;
 
@@ -1632,15 +1987,15 @@ PROJECTS SHOWCASE
 }
 
 
+
 .video-title img{
 
     width:38px;
+
     height:38px;
 
-
-    object-fit:contain;
-
 }
+
 
 
 .video-title span{
@@ -1655,17 +2010,11 @@ PROJECTS SHOWCASE
 
 
 
-/* =======================================================
-   VIDEO PLAYER
-======================================================= */
-
-
 #editing-video{
 
     max-width:90%;
 
     max-height:90%;
-
 
     border-radius:18px;
 
@@ -1673,106 +2022,56 @@ PROJECTS SHOWCASE
 
 
 
-/* =======================================================
-   CLOSE BUTTON
-======================================================= */
-
-
-#close-video{
+#close-video,
+#prev-video,
+#next-video{
 
     position:absolute;
 
+    border:none;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+#close-video{
 
     top:20px;
 
     right:25px;
 
-
     width:45px;
 
     height:45px;
 
-
-    border:none;
-
-    border-radius:50%;
-
-
-    background:rgba(255,255,255,.08);
-
-
-    color:white;
-
-
     font-size:34px;
 
-
-    cursor:pointer;
-
-
-    transition:.3s;
-
 }
 
-
-
-#close-video:hover{
-
-    background:#25349A;
-
-}
-
-
-
-/* =======================================================
-   NAVIGATION BUTTONS
-======================================================= */
 
 
 #prev-video,
 #next-video{
 
-
-    position:absolute;
-
-
     top:50%;
 
-
     transform:translateY(-50%);
-
-
 
     width:55px;
 
     height:55px;
 
-
-
-    border:none;
-
-    border-radius:50%;
-
-
-
-    background:rgba(255,255,255,.08);
-
-
-
-    color:white;
-
-
-
     font-size:30px;
-
-
-
-    cursor:pointer;
-
-
-
-    transition:.3s;
-
 
 }
 
@@ -1794,6 +2093,7 @@ PROJECTS SHOWCASE
 
 
 
+#close-video:hover,
 #prev-video:hover,
 #next-video:hover{
 
@@ -1803,1563 +2103,94 @@ PROJECTS SHOWCASE
 
 
 
-/* =======================================================
-   COUNTER
-======================================================= */
-
-
 #video-counter{
 
-
     position:absolute;
-
 
     bottom:8px;
 
-
-    left:50%;
-
-
-    transform:translateX(-50%);
-
-
-
-    font-size:14px;
-
-
-    letter-spacing:3px;
-
-
-    color:rgba(255,255,255,.85);
-
-
-}
-
-/* =======================================================
-   VIEWER TITLE
-======================================================= */
-
-
-.viewer-title{
-
-    position:absolute;
-
-    top:25px;
-
-    left:30px;
-
-    display:flex;
-
-    align-items:center;
-
-    gap:12px;
-
-    z-index:5;
-
-}
-
-
-
-.viewer-title img{
-
-    width:38px;
-
-    height:38px;
-
-    object-fit:contain;
-
-}
-
-
-
-.viewer-title span{
-
-    font-size:15px;
-
-    font-weight:600;
-
-    letter-spacing:3px;
-
-    color:white;
-
-}
-
-
-
-/* =======================================================
-   IMAGE
-======================================================= */
-
-
-#viewer-image{
-
-    max-width:90%;
-
-    max-height:90%;
-
-    object-fit:contain;
-
-    border-radius:18px;
-
-}
-
-
-
-/* =======================================================
-   CLOSE BUTTON
-======================================================= */
-
-
-#close-viewer{
-
-    position:absolute;
-
-    top:20px;
-
-    right:25px;
-
-    width:45px;
-
-    height:45px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    color:white;
-
-    font-size:34px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-
-
-#close-viewer:hover{
-
-    background:#25349A;
-
-}
-
-
-
-/* =======================================================
-   NAVIGATION BUTTONS
-======================================================= */
-
-
-#prev-photo,
-#next-photo{
-
-    position:absolute;
-
-    top:50%;
-
-    transform:translateY(-50%);
-
-    width:55px;
-
-    height:55px;
-
-    border:none;
-
-    border-radius:50%;
-
-    background:rgba(255,255,255,.08);
-
-    color:white;
-
-    font-size:30px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-
-
-#prev-photo{
-
-    left:25px;
-
-}
-
-
-
-#next-photo{
-
-    right:25px;
-
-}
-
-
-
-#prev-photo:hover,
-#next-photo:hover{
-
-    background:#25349A;
-
-}
-
-
-
-/* =======================================================
-   VIEWER CONTENT
-======================================================= */
-
-
-#viewer-content{
-
-    width:100%;
-
-    height:100%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-#viewer-video{
-
-    display:none;
-
-    max-width:90%;
-
-    max-height:90%;
-
-    border-radius:18px;
-
-}
-
-
-/* =======================================================
-   PHOTO COUNTER
-======================================================= */
-
-#photo-counter{
-
-    position:absolute;
-
-    bottom:07px;
-
     left:50%;
 
     transform:translateX(-50%);
 
     font-size:14px;
 
-    font-weight:500;
-
     letter-spacing:3px;
 
-    color:rgba(255,255,255,.85);
-
-}
-
-/* ======================================
-      PREMIUM CUSTOM CURSOR
-====================================== */
-
-body{
-    cursor:default;
-}
-
-.cursor-dot{
-
-    position:fixed;
-
-    width:7px;
-    height:7px;
-
-    background:#ffffff;
-
-    border-radius:50%;
-
-    pointer-events:none;
-
-    z-index:99999;
-
-    transform:translate(-50%,-50%);
-
 }
 
 
-.cursor-ring{
 
-    position:fixed;
-
-    width:38px;
-    height:38px;
-
-    border:2px solid rgba(255,255,255,.95);
-
-    border-radius:50%;
-
-    pointer-events:none;
-
-    z-index:99998;
-
-    transform:translate(-50%,-50%);
-
-    box-shadow:
-    0 0 12px rgba(255,255,255,.25),
-    0 0 25px rgba(255,255,255,.10);
-
-    transition:
-    width .25s,
-    height .25s,
-    border-color .25s;
-
-}
-   
 </style>
 
-<!-- =======================================================
-   PHOTOGRAPHY VIEWER HTML
-======================================================= -->
 
-<div id="photo-viewer">
 
 
-    <div class="photo-viewer-box">
 
-
-
-        <!-- =======================
-             VIEWER TITLE
-        ======================= -->
-
-        <div class="viewer-title">
-
-            <img src="Photography.png" alt="Photography">
-
-            <span>PHOTOGRAPHY</span>
-
-        </div>
-
-
-
-
-        <!-- =======================
-             CLOSE BUTTON
-        ======================= -->
-
-        <button id="close-viewer">
-
-            &times;
-
-        </button>
-
-
-
-
-
-        <!-- =======================
-             PREVIOUS BUTTON
-        ======================= -->
-
-        <button id="prev-photo">
-
-            &#10094;
-
-        </button>
-
-
-
-
-
-        <!-- =======================
-             IMAGE / VIDEO AREA
-        ======================= -->
-
-        <div id="viewer-content">
-
-
-    <img id="viewer-image" 
-         src="" 
-         alt="Photography">
-
-
-    <video id="viewer-video" controls></video>
-
-
-</div>
-
-
-<!-- PHOTO COUNTER -->
-
-<div id="photo-counter">
-
-    1 / 8
-
-</div>
-       
-        <!-- =======================
-             NEXT BUTTON
-        ======================= -->
-
-        <button id="next-photo">
-
-            &#10095;
-
-        </button>
-
-
-
-
-    </div>
-
-
-</div>
-
- <!-- =======================================================
-   GRAPHIC DESIGN VIEWER HTML
-======================================================= -->
-
-
-<div id="graphic-viewer">
-
-
-<div class="graphic-viewer-box">
-
-
-<div class="graphic-title">
-
-<img src="Graphic Design.png">
-
-<span>GRAPHIC DESIGN</span>
-
-</div>
-
-
-
-<button id="close-graphic">
-
-&times;
-
-</button>
-
-
-
-<button id="prev-graphic">
-
-&#10094;
-
-</button>
-
-
-
-<img id="graphic-image" src="">
-
-
-
-<div id="graphic-counter">
-
-1 / 14
-
-</div>
-
-
-
-<button id="next-graphic">
-
-&#10095;
-
-</button>
-
-
-
-</div>
-
-
-</div>  
-
-<!-- =======================================================
-   MOTION GRAPHICS VIEWER HTML
-======================================================= -->
-
-<div id="motion-viewer">
-
-    <div class="motion-viewer-box">
-
-        <!-- TITLE -->
-
-        <div class="motion-title">
-
-            <img src="Motion Graphics.png" alt="Motion Graphics">
-
-            <span>MOTION GRAPHICS</span>
-
-        </div>
-
-
-        <!-- CLOSE BUTTON -->
-
-        <button id="close-motion">
-
-            &times;
-
-        </button>
-
-
-        <!-- PREVIOUS -->
-
-        <button id="prev-motion">
-
-            &#10094;
-
-        </button>
-
-
-        <!-- VIDEO -->
-
-        <video id="motion-video" controls></video>
-
-
-        <!-- COUNTER -->
-
-        <div id="motion-counter">
-
-            1 / 3
-
-        </div>
-
-
-        <!-- NEXT -->
-
-        <button id="next-motion">
-
-            &#10095;
-
-        </button>
-
-    </div>
-
-</div>  
-   
-<!-- =======================================================
-   VIDEO EDITING VIEWER HTML
-======================================================= -->
+<!--=======================================================
+  VIDEO VIEWER HTML
+=========================================================-->
 
 
 <div id="video-viewer">
 
 
-    <div class="video-viewer-box">
+<div class="video-viewer-box">
 
 
-        <!-- TITLE -->
+<div class="video-title">
 
-        <div class="video-title">
+<img src="Video Editing.png">
 
-            <img src="Video Editing.png" alt="Video Editing">
-
-            <span>VIDEO EDITING</span>
-
-        </div>
-
-
-
-        <!-- CLOSE BUTTON -->
-
-        <button id="close-video">
-
-            &times;
-
-        </button>
-
-
-
-        <!-- PREVIOUS BUTTON -->
-
-        <button id="prev-video">
-
-            &#10094;
-
-        </button>
-
-
-
-        <!-- VIDEO -->
-
-        <video id="editing-video" controls></video>
-
-
-
-        <!-- COUNTER -->
-
-        <div id="video-counter">
-
-            1 / 1
-
-        </div>
-
-
-
-        <!-- NEXT BUTTON -->
-
-        <button id="next-video">
-
-            &#10095;
-
-        </button>
-
-
-
-    </div>
-
-
-</div>  
-
-<style>   
-
-/* =======================================================
-   CONTACT SECTION
-======================================================= */
-
-#contact{
-
-    min-height:100vh;
-
-    padding:100px 8%;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-}
-
-.contact-box{
-
-    width:100%;
-
-    max-width:1300px;
-
-    padding:60px 70px;
-
-    border-radius:30px;
-
-    background:rgba(0,0,0,.45);
-
-    backdrop-filter:blur(10px);
-
-    transform:translateY(40px);
-
-}
-
-.contact-heading{
-
-    text-align:center;
-
-    font-size:22px;
-
-    font-weight:600;
-
-    letter-spacing:5px;
-
-    text-transform:uppercase;
-
-    margin-bottom:55px;
-
-    display:table;
-
-    margin-left:auto;
-
-    margin-right:auto;
-
-}
-
-.contact-heading::after{
-
-    content:"";
-
-    display:block;
-
-    width:100%;
-
-    height:2px;
-
-    background:white;
-
-    margin-top:15px;
-
-}
-
-
-.contact-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-
-.contact-card{
-
-    background:rgba(255,255,255,.08);
-
-    border:1px solid rgba(255,255,255,.15);
-
-    border-radius:22px;
-
-    min-height:250px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    justify-content:center;
-
-    align-items:center;
-
-    text-align:center;
-
-    cursor:pointer;
-
-    transition:.35s ease;
-
-    backdrop-filter:blur(10px);
-
-    text-decoration:none;
-
-    color:white;
-
-}
-
-
-.contact-card:hover{
-
-    transform:translateY(-10px);
-
-    background:rgba(255,255,255,.14);
-
-    border-color:#25349A;
-
-    box-shadow:0 15px 40px rgba(37,52,154,.35);
-
-}
-
-
-.contact-card img{
-
-    width:80px;
-
-    height:80px;
-
-    object-fit:contain;
-
-    margin-bottom:25px;
-
-    transition:.35s ease;
-
-}
-
-
-.contact-card:hover img{
-
-    transform:scale(1.08);
-
-}
-
-
-.contact-card h3{
-
-    font-size:20px;
-
-    font-weight:600;
-
-    letter-spacing:2px;
-
-    margin-bottom:10px;
-
-}
-
-
-.contact-card p{
-
-    font-size:15px;
-    color:rgba(255,255,255,.85);
-    font-weight:400;
-    letter-spacing:.5px;
-    word-break:break-word;
-    padding:0 12px;
-
-}
-
-/* =====================================
-   CUSTOM LOGO SIZES
-===================================== */
-
-.illustrator-logo{
-    width:65px !important;
-    height:65px !important;
-}
-
-.canva-logo{
-    width:65px !important;
-    height:65px !important;
-}
-
-.fcp-logo{
-    width:65px !important;
-    height:65px !important;
-}
-
-.motion-logo{
-    width:105px !important;
-    height:105px !important;
-
-    position:relative;
-    left:-0px;
-}
-
-.video-logo{
-    width:80px !important;
-    height:80px !important;
-    margin-bottom:40px !important;
-}
-
-.linkedin-logo{
-    width:70px !important;
-    height:70px !important;
-   
-    position:relative;
-    top:05px;
-    margin-bottom:-20px;
-}
-
-.photography-logo{
-    width:90px !important;
-    height:90px !important;
-}
-
-.graphic-logo{
-    width:85px !important;
-    height:85px !important;
-    margin-bottom:40px !important;
-}   
-
-</style>
-
-<section id="contact">
-
-<div class="contact-box">
-
-<div class="contact-heading">
-
-LET'S CONNECT
+<span>VIDEO EDITING</span>
 
 </div>
 
 
-<div class="contact-grid">
 
-
-<a href="https://www.linkedin.com/in/muhasinabbas"
-target="_blank"
-class="contact-card">
-
-<img src="linkedinlogo.png" alt="LinkedIn" class="linkedin-logo">
-
-<h3>LINKEDIN</h3>
-
-<p>muhasinabbas</p>
-
-</a>
+<button id="close-video">
+&times;
+</button>
 
 
 
-<a href="mailto:muhasin4g@gmail.com"
-class="contact-card">
-
-<img src="Email logo.png"
-alt="Email">
-
-<h3>EMAIL</h3>
-
-<p>muhasin4g@gmail.com</p>
-
-</a>
+<button id="prev-video">
+&#10094;
+</button>
 
 
 
-<a href="https://www.instagram.com/mzn.abz/"
-target="_blank"
-class="contact-card">
+<video id="editing-video" controls></video>
 
-<img src="Instagram logo.png"
-alt="Instagram">
 
-<h3>INSTAGRAM</h3>
 
-<p>@mzn.abz</p>
+<div id="video-counter">
+1 / 1
+</div>
 
-</a>
+
+
+<button id="next-video">
+&#10095;
+</button>
+
 
 
 </div>
 
+
 </div>
 
-</section>
-   
-<!-- =======================================================
-   PHOTOGRAPHY VIEWER JAVASCRIPT
-======================================================= -->
+
+
+
+
+<!--=======================================================
+  VIDEO JAVASCRIPT
+=========================================================-->
+
 
 <script>
-
-
-const photographyImages = [
-
-    "Manjaadi.png",
-    "kitty 1.jpg",
-    "kitty 2.jpg",
-    "nightsky.png",
-    "cloud.jpg",
-    "eagle.jpg",
-    "monkey.jpg",
-    "tree 0.jpg",
-    "eagles.jpg",
-    "tree 2.jpg"
-
-];
-
-
-
-const photographyCard = document.getElementById("photography");
-
-const photoViewer = document.getElementById("photo-viewer");
-
-const viewerImage = document.getElementById("viewer-image");
-
-const viewerVideo = document.getElementById("viewer-video");
-
-const closeViewer = document.getElementById("close-viewer");
-
-const nextPhoto = document.getElementById("next-photo");
-
-const prevPhoto = document.getElementById("prev-photo");
-
-const photoCounter = document.getElementById("photo-counter");
-
-let currentPhoto = 0;
-
-
-
-
-// =======================
-// DISPLAY PHOTO
-// =======================
-
-function showPhoto(){
-
-    viewerVideo.style.display = "none";
-
-    viewerVideo.pause();
-
-    viewerImage.style.display = "block";
-
-    viewerImage.src = photographyImages[currentPhoto];
-
-    photoCounter.textContent = 
-    (currentPhoto + 1) + " / " + photographyImages.length;
-
-}
-
-
-// =======================
-// OPEN PHOTOGRAPHY VIEWER
-// =======================
-
-
-photographyCard.addEventListener("click",()=>{
-
-
-    currentPhoto = 0;
-
-
-    showPhoto();
-
-
-    photoViewer.classList.add("show");
-
-
-    document.body.style.overflow="hidden";
-
-
-});
-
-
-
-
-
-// =======================
-// NEXT PHOTO
-// =======================
-
-
-nextPhoto.addEventListener("click",()=>{
-
-
-    currentPhoto++;
-
-
-    if(currentPhoto >= photographyImages.length){
-
-        currentPhoto = 0;
-
-    }
-
-
-    showPhoto();
-
-
-});
-
-
-
-
-
-
-
-// =======================
-// PREVIOUS PHOTO
-// =======================
-
-
-prevPhoto.addEventListener("click",()=>{
-
-
-    currentPhoto--;
-
-
-    if(currentPhoto < 0){
-
-        currentPhoto = photographyImages.length - 1;
-
-    }
-
-
-    showPhoto();
-
-
-});
-
-
-
-
-
-
-
-// =======================
-// CLOSE VIEWER FUNCTION
-// =======================
-
-
-function closePhotoViewer(){
-
-
-    photoViewer.classList.remove("show");
-
-
-    document.body.style.overflow="auto";
-
-
-}
-
-
-
-
-
-
-
-// CLOSE BUTTON
-
-
-closeViewer.addEventListener("click",()=>{
-
-
-    closePhotoViewer();
-
-
-});
-
-
-
-
-
-
-
-// CLICK OUTSIDE TO CLOSE
-
-
-photoViewer.addEventListener("click",(e)=>{
-
-
-    if(e.target === photoViewer){
-
-
-        closePhotoViewer();
-
-
-    }
-
-
-});
-
-
-
-
-
-
-
-// =======================
-// KEYBOARD CONTROLS
-// =======================
-
-
-document.addEventListener("keydown",(e)=>{
-
-
-    if(e.key === "Escape"){
-
-
-        closePhotoViewer();
-
-
-    }
-
-
-
-    if(e.key === "ArrowRight"){
-
-
-        nextPhoto.click();
-
-
-    }
-
-
-
-    if(e.key === "ArrowLeft"){
-
-
-        prevPhoto.click();
-
-
-    }
-
-
-
-});
-
-
-
-</script>
-
-<script>
-
-
-const graphicImages = [
-
-"Royal.png",
-"Mahindra.png",
-"Card.png",
-"Cordelia.png",
-"Costa.png",
-"MHN.png",
-"Salad Bistro Social Media Poster.png",
-"Dangler.png",
-"National Reading Day.jpg",
-"Zudio.png",
-"Wedding.png",
-"Batman.png",
-"Reliance.png",
-"Couples.png"
-
-];
-
-
-const graphicCard = document.getElementById("graphic");
-
-const graphicViewer = document.getElementById("graphic-viewer");
-
-const graphicImage = document.getElementById("graphic-image");
-
-const closeGraphic = document.getElementById("close-graphic");
-
-const nextGraphic = document.getElementById("next-graphic");
-
-const prevGraphic = document.getElementById("prev-graphic");
-
-const graphicCounter = document.getElementById("graphic-counter");
-
-
-let currentGraphic = 0;
-
-
-
-function showGraphic(){
-
-
-graphicImage.src = graphicImages[currentGraphic];
-
-
-graphicCounter.textContent =
-
-(currentGraphic + 1) + " / " + graphicImages.length;
-
-
-}
-
-
-
-graphicCard.addEventListener("click",()=>{
-
-
-currentGraphic = 0;
-
-
-showGraphic();
-
-
-graphicViewer.classList.add("show");
-
-
-document.body.style.overflow="hidden";
-
-
-});
-
-
-
-
-
-nextGraphic.addEventListener("click",()=>{
-
-
-currentGraphic++;
-
-
-if(currentGraphic >= graphicImages.length){
-
-currentGraphic = 0;
-
-}
-
-
-showGraphic();
-
-
-});
-
-
-
-
-
-prevGraphic.addEventListener("click",()=>{
-
-
-currentGraphic--;
-
-
-if(currentGraphic < 0){
-
-currentGraphic = graphicImages.length - 1;
-
-}
-
-
-showGraphic();
-
-
-});
-
-
-
-
-
-function closeGraphicViewer(){
-
-
-graphicViewer.classList.remove("show");
-
-
-document.body.style.overflow="auto";
-
-
-}
-
-
-
-
-closeGraphic.addEventListener("click",()=>{
-
-
-closeGraphicViewer();
-
-
-});
-
-
-
-
-
-graphicViewer.addEventListener("click",(e)=>{
-
-
-if(e.target === graphicViewer){
-
-
-closeGraphicViewer();
-
-
-}
-
-
-});
-
-document.addEventListener("keydown",(e)=>{
-
-
-    // CLOSE GRAPHIC VIEWER
-
-    if(e.key === "Escape"){
-
-        if(graphicViewer.classList.contains("show")){
-
-            closeGraphicViewer();
-
-        }
-
-    }
-
-
-
-    // NEXT GRAPHIC
-
-    if(e.key === "ArrowRight"){
-
-        if(graphicViewer.classList.contains("show")){
-
-            nextGraphic.click();
-
-        }
-
-    }
-
-
-
-    // PREVIOUS GRAPHIC
-
-    if(e.key === "ArrowLeft"){
-
-        if(graphicViewer.classList.contains("show")){
-
-            prevGraphic.click();
-
-        }
-
-    }
-
-
-});
-
-</script>   
-
-<script>
-
-// ======================================================
-// MOTION GRAPHICS
-// ======================================================
-
-const motionVideos = [
-
-    "25.mp4",
-    "Singapore.mp4",
-    "Car.mp4"
-
-];
-
-const motionCard = document.getElementById("motion");
-
-const motionViewer = document.getElementById("motion-viewer");
-
-const motionVideo = document.getElementById("motion-video");
-
-const closeMotion = document.getElementById("close-motion");
-
-const nextMotion = document.getElementById("next-motion");
-
-const prevMotion = document.getElementById("prev-motion");
-
-const motionCounter = document.getElementById("motion-counter");
-
-let currentMotion = 0;
-
-
-// =======================
-// SHOW VIDEO
-// =======================
-
-function showMotion() {
-
-    motionVideo.pause();
-
-    motionVideo.innerHTML = "";
-
-    motionVideo.innerHTML =
-        '<source src="' + motionVideos[currentMotion] + '" type="video/mp4">';
-
-    motionVideo.load();
-
-    motionCounter.textContent =
-        (currentMotion + 1) + " / " + motionVideos.length;
-}
-
-
-// =======================
-// OPEN VIEWER
-// =======================
-
-motionCard.addEventListener("click",()=>{
-
-    currentMotion = 0;
-
-    showMotion();
-
-    motionViewer.classList.add("show");
-
-    document.body.style.overflow="hidden";
-
-});
-
-
-// =======================
-// NEXT
-// =======================
-
-nextMotion.addEventListener("click",()=>{
-
-    currentMotion++;
-
-    if(currentMotion >= motionVideos.length){
-
-        currentMotion = 0;
-
-    }
-
-    showMotion();
-
-});
-
-
-// =======================
-// PREVIOUS
-// =======================
-
-prevMotion.addEventListener("click",()=>{
-
-    currentMotion--;
-
-    if(currentMotion < 0){
-
-        currentMotion = motionVideos.length - 1;
-
-    }
-
-    showMotion();
-
-});
-
-
-// =======================
-// CLOSE
-// =======================
-
-function closeMotionViewer(){
-
-    motionVideo.pause();
-
-    motionViewer.classList.remove("show");
-
-    document.body.style.overflow="auto";
-
-}
-
-
-// CLOSE BUTTON
-
-closeMotion.addEventListener("click",()=>{
-
-    closeMotionViewer();
-
-});
-
-
-// CLICK OUTSIDE
-
-motionViewer.addEventListener("click",(e)=>{
-
-    if(e.target === motionViewer){
-
-        closeMotionViewer();
-
-    }
-
-});
-
-
-// =======================
-// KEYBOARD
-// =======================
-
-document.addEventListener("keydown",(e)=>{
-
-    if(!motionViewer.classList.contains("show")) return;
-
-    if(e.key === "Escape"){
-
-        closeMotionViewer();
-
-    }
-
-    if(e.key === "ArrowRight"){
-
-        nextMotion.click();
-
-    }
-
-    if(e.key === "ArrowLeft"){
-
-        prevMotion.click();
-
-    }
-
-});
-
-</script>   
-
-<script>
-
-// ======================================================
-// VIDEO EDITING
-// ======================================================
 
 
 const editingVideos = [
@@ -3370,28 +2201,37 @@ const editingVideos = [
 
 
 
-const videoCard = document.getElementById("video");
+const videoCard =
+document.getElementById("video");
 
-const videoViewer = document.getElementById("video-viewer");
 
-const editingVideo = document.getElementById("editing-video");
+const videoViewer =
+document.getElementById("video-viewer");
 
-const closeVideo = document.getElementById("close-video");
 
-const nextVideo = document.getElementById("next-video");
+const editingVideo =
+document.getElementById("editing-video");
 
-const prevVideo = document.getElementById("prev-video");
 
-const videoCounter = document.getElementById("video-counter");
+const closeVideo =
+document.getElementById("close-video");
+
+
+const nextVideo =
+document.getElementById("next-video");
+
+
+const prevVideo =
+document.getElementById("prev-video");
+
+
+const videoCounter =
+document.getElementById("video-counter");
+
 
 
 let currentVideo = 0;
 
-
-
-// =======================
-// SHOW VIDEO
-// =======================
 
 
 function showEditingVideo(){
@@ -3400,11 +2240,8 @@ function showEditingVideo(){
     editingVideo.pause();
 
 
-    editingVideo.innerHTML = "";
-
-
     editingVideo.innerHTML =
-    '<source src="' + editingVideos[currentVideo] + '" type="video/mp4">';
+    `<source src="${editingVideos[currentVideo]}" type="video/mp4">`;
 
 
     editingVideo.load();
@@ -3412,18 +2249,11 @@ function showEditingVideo(){
 
 
     videoCounter.textContent =
-
-    (currentVideo + 1) + " / " + editingVideos.length;
-
+    `${currentVideo + 1} / ${editingVideos.length}`;
 
 }
 
 
-
-
-// =======================
-// OPEN VIEWER
-// =======================
 
 
 videoCard.addEventListener("click",()=>{
@@ -3446,27 +2276,17 @@ videoCard.addEventListener("click",()=>{
 
 
 
-
-// =======================
-// NEXT VIDEO
-// =======================
-
-
 nextVideo.addEventListener("click",()=>{
 
 
     currentVideo++;
 
 
-
     if(currentVideo >= editingVideos.length){
-
 
         currentVideo = 0;
 
-
     }
-
 
 
     showEditingVideo();
@@ -3475,13 +2295,6 @@ nextVideo.addEventListener("click",()=>{
 });
 
 
-
-
-
-
-// =======================
-// PREVIOUS VIDEO
-// =======================
 
 
 prevVideo.addEventListener("click",()=>{
@@ -3490,15 +2303,11 @@ prevVideo.addEventListener("click",()=>{
     currentVideo--;
 
 
-
     if(currentVideo < 0){
-
 
         currentVideo = editingVideos.length - 1;
 
-
     }
-
 
 
     showEditingVideo();
@@ -3507,13 +2316,6 @@ prevVideo.addEventListener("click",()=>{
 });
 
 
-
-
-
-
-// =======================
-// CLOSE FUNCTION
-// =======================
 
 
 function closeEditingViewer(){
@@ -3533,24 +2335,8 @@ function closeEditingViewer(){
 
 
 
+closeVideo.addEventListener("click",closeEditingViewer);
 
-// CLOSE BUTTON
-
-
-closeVideo.addEventListener("click",()=>{
-
-
-    closeEditingViewer();
-
-
-});
-
-
-
-
-
-
-// CLICK OUTSIDE TO CLOSE
 
 
 videoViewer.addEventListener("click",(e)=>{
@@ -3558,9 +2344,7 @@ videoViewer.addEventListener("click",(e)=>{
 
     if(e.target === videoViewer){
 
-
         closeEditingViewer();
-
 
     }
 
@@ -3570,48 +2354,664 @@ videoViewer.addEventListener("click",(e)=>{
 
 
 
-
-
-// =======================
-// KEYBOARD CONTROLS
-// =======================
-
-
 document.addEventListener("keydown",(e)=>{
 
 
-    if(!videoViewer.classList.contains("show")) return;
+    if(!videoViewer.classList.contains("show"))
+    return;
 
 
 
-    if(e.key === "Escape"){
-
+    if(e.key==="Escape"){
 
         closeEditingViewer();
 
-
     }
 
 
-
-    if(e.key === "ArrowRight"){
-
+    if(e.key==="ArrowRight"){
 
         nextVideo.click();
 
-
     }
 
 
-
-    if(e.key === "ArrowLeft"){
-
+    if(e.key==="ArrowLeft"){
 
         prevVideo.click();
 
-
     }
 
+
+});
+
+
+</script>
+<!--=======================================================
+  CONTACT SECTION
+=========================================================-->
+
+<style>
+
+/*=========================================================
+  CONTACT
+=========================================================*/
+
+
+#contact{
+
+    min-height:100vh;
+
+    padding:100px 8%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.contact-box{
+
+    width:100%;
+
+    max-width:1300px;
+
+    padding:60px 70px;
+
+    border-radius:30px;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(10px);
+
+    transform:translateY(40px);
+
+}
+
+
+
+.contact-heading{
+
+    display:table;
+
+    margin:0 auto 55px;
+
+    text-align:center;
+
+    font-size:22px;
+
+    font-weight:600;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.contact-heading::after{
+
+    content:"";
+
+    display:block;
+
+    width:100%;
+
+    height:2px;
+
+    margin-top:15px;
+
+    background:#fff;
+
+}
+
+
+
+.contact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+
+
+.contact-card{
+
+    min-height:250px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:#fff;
+
+    cursor:pointer;
+
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    transition:.35s ease;
+
+}
+
+
+
+.contact-card:hover{
+
+    transform:translateY(-10px);
+
+    background:rgba(255,255,255,.14);
+
+    border-color:#25349A;
+
+    box-shadow:0 15px 40px rgba(37,52,154,.35);
+
+}
+
+
+
+.contact-card img{
+
+    width:80px;
+
+    height:80px;
+
+    object-fit:contain;
+
+    margin-bottom:25px;
+
+    transition:.35s ease;
+
+}
+
+
+
+.contact-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+.contact-card h3{
+
+    font-size:20px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.contact-card p{
+
+    padding:0 12px;
+
+    color:rgba(255,255,255,.85);
+
+    font-size:15px;
+
+    letter-spacing:.5px;
+
+    word-break:break-word;
+
+}
+
+
+
+/* LOGO ADJUSTMENTS */
+
+
+.linkedin-logo{
+
+    width:70px !important;
+
+    height:70px !important;
+
+    margin-bottom:-20px;
+
+}
+
+
+
+.photography-logo{
+
+    width:90px !important;
+
+    height:90px !important;
+
+}
+
+
+
+.graphic-logo{
+
+    width:85px !important;
+
+    height:85px !important;
+
+    margin-bottom:40px;
+
+}
+
+
+
+.motion-logo{
+
+    width:105px !important;
+
+    height:105px !important;
+
+}
+
+
+
+.video-logo{
+
+    width:80px !important;
+
+    height:80px !important;
+
+    margin-bottom:40px !important;
+
+}
+
+
+
+</style>
+
+
+
+
+<!--=======================================================
+  CONTACT HTML
+=========================================================-->
+
+<section id="contact">
+
+
+<div class="contact-box">
+
+
+<div class="contact-heading">
+
+LET'S CONNECT
+
+</div>
+
+
+
+<div class="contact-grid">
+
+
+
+<a href="https://www.linkedin.com/in/muhasinabbas"
+target="_blank"
+class="contact-card">
+
+
+<img src="linkedinlogo.png"
+class="linkedin-logo"
+alt="LinkedIn">
+
+
+<h3>LINKEDIN</h3>
+
+
+<p>muhasinabbas</p>
+
+
+</a>
+
+
+
+
+<a href="mailto:muhasin4g@gmail.com"
+class="contact-card">
+
+
+<img src="Email logo.png"
+alt="Email">
+
+
+<h3>EMAIL</h3>
+
+
+<p>muhasin4g@gmail.com</p>
+
+
+</a>
+
+
+
+
+<a href="https://www.instagram.com/mzn.abz/"
+target="_blank"
+class="contact-card">
+
+
+<img src="Instagram logo.png"
+alt="Instagram">
+
+
+<h3>INSTAGRAM</h3>
+
+
+<p>@mzn.abz</p>
+
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<!--=======================================================
+  CUSTOM CURSOR
+=========================================================-->
+
+<style>
+
+
+.cursor-dot{
+
+    position:fixed;
+
+    width:7px;
+
+    height:7px;
+
+    background:white;
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:99999;
+
+    transform:translate(-50%,-50%);
+
+}
+
+
+
+.cursor-ring{
+
+    position:fixed;
+
+    width:38px;
+
+    height:38px;
+
+    border:2px solid rgba(255,255,255,.95);
+
+    border-radius:50%;
+
+    pointer-events:none;
+
+    z-index:99998;
+
+
+    transform:translate(-50%,-50%);
+
+    box-shadow:
+
+    0 0 12px rgba(255,255,255,.25),
+
+    0 0 25px rgba(255,255,255,.10);
+
+
+    transition:
+
+    width .25s,
+
+    height .25s,
+
+    border-color .25s;
+
+}
+
+
+</style>
+
+
+
+
+<div class="cursor-dot"></div>
+
+<div class="cursor-ring"></div>
+
+
+
+
+
+<script>
+
+
+/*=========================================================
+  CUSTOM CURSOR SCRIPT
+=========================================================*/
+
+
+const dot =
+document.querySelector(".cursor-dot");
+
+
+const ring =
+document.querySelector(".cursor-ring");
+
+
+
+let mouseX =
+window.innerWidth / 2;
+
+
+let mouseY =
+window.innerHeight / 2;
+
+
+
+let ringX = mouseX;
+
+let ringY = mouseY;
+
+
+
+let previousX = mouseX;
+
+let previousY = mouseY;
+
+
+
+
+window.addEventListener("mousemove",(e)=>{
+
+
+    mouseX=e.clientX;
+
+    mouseY=e.clientY;
+
+
+    dot.style.left =
+    mouseX+"px";
+
+
+    dot.style.top =
+    mouseY+"px";
+
+
+});
+
+
+
+
+
+function animateCursor(){
+
+
+    ringX +=
+    (mouseX-ringX)*0.16;
+
+
+    ringY +=
+    (mouseY-ringY)*0.16;
+
+
+
+    const dx =
+    mouseX-previousX;
+
+
+    const dy =
+    mouseY-previousY;
+
+
+
+    const speed =
+    Math.min(Math.sqrt(dx*dx+dy*dy),20);
+
+
+
+    const scaleX =
+    1+(speed*.025);
+
+
+
+    const scaleY =
+    1-(speed*.012);
+
+
+
+    const angle =
+    Math.atan2(dy,dx)*(180/Math.PI);
+
+
+
+    ring.style.left =
+    ringX+"px";
+
+
+    ring.style.top =
+    ringY+"px";
+
+
+
+    ring.style.transform =
+    `
+    translate(-50%,-50%)
+    rotate(${angle}deg)
+    scale(${scaleX},${scaleY})
+    `;
+
+
+
+    previousX=mouseX;
+
+    previousY=mouseY;
+
+
+
+    requestAnimationFrame(animateCursor);
+
+}
+
+
+
+animateCursor();
+
+
+
+
+
+window.addEventListener("mousedown",()=>{
+
+    ring.style.width="28px";
+
+    ring.style.height="28px";
+
+});
+
+
+
+window.addEventListener("mouseup",()=>{
+
+    ring.style.width="38px";
+
+    ring.style.height="38px";
+
+});
+
+
+
+
+
+document
+.querySelectorAll(
+"a,button,.project-card,.contact-card,.software-card"
+)
+.forEach(el=>{
+
+
+el.addEventListener("mouseenter",()=>{
+
+
+    ring.style.width="55px";
+
+    ring.style.height="55px";
+
+
+});
+
+
+
+el.addEventListener("mouseleave",()=>{
+
+
+    ring.style.width="38px";
+
+    ring.style.height="38px";
+
+
+});
 
 
 });
@@ -3620,118 +3020,325 @@ document.addEventListener("keydown",(e)=>{
 
 </script>
 
-<!-- CUSTOM CURSOR -->
-
-<div class="cursor-dot"></div>
-<div class="cursor-ring"></div>
-
-<script>   
-
-const dot = document.querySelector(".cursor-dot");
-const ring = document.querySelector(".cursor-ring");
-
-let mouseX = window.innerWidth / 2;
-let mouseY = window.innerHeight / 2;
-
-let ringX = mouseX;
-let ringY = mouseY;
-
-let previousX = mouseX;
-let previousY = mouseY;
 
 
 
-window.addEventListener("mousemove",(e)=>{
-
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-
-    dot.style.left = mouseX + "px";
-    dot.style.top = mouseY + "px";
-
-});
 
 
 
-function animateCursor(){
+<!--=======================================================
+  RESPONSIVE DESIGN
+=========================================================-->
 
 
-    ringX += (mouseX-ringX)*0.16;
-    ringY += (mouseY-ringY)*0.16;
+<style>
 
 
-    const dx = mouseX-previousX;
-    const dy = mouseY-previousY;
+/*=========================================================
+  TABLET
+=========================================================*/
 
 
-    const speed = Math.min(Math.sqrt(dx*dx+dy*dy),20);
+@media(max-width:900px){
 
 
-    const scaleX = 1 + speed*0.025;
-    const scaleY = 1 - speed*0.012;
+.menu{
 
-
-    const angle = Math.atan2(dy,dx)*(180/Math.PI);
-
-
-    ring.style.left = ringX+"px";
-    ring.style.top = ringY+"px";
-
-    ring.style.transform =
-    `translate(-50%,-50%)
-     rotate(${angle}deg)
-     scale(${scaleX},${scaleY})`;
-
-
-    previousX = mouseX;
-    previousY = mouseY;
-
-
-    requestAnimationFrame(animateCursor);
+    gap:18px;
 
 }
 
 
-animateCursor();
+
+.hero .slogan,
+.roles{
+
+    letter-spacing:3px;
+
+}
 
 
 
-// CLICK PULSE
+.software-grid{
 
-window.addEventListener("mousedown",()=>{
+    grid-template-columns:repeat(2,1fr);
 
-    ring.style.width="28px";
-    ring.style.height="28px";
-
-});
+}
 
 
-window.addEventListener("mouseup",()=>{
 
-    ring.style.width="38px";
-    ring.style.height="38px";
+.projects-grid{
 
-});
+    grid-template-columns:repeat(2,1fr);
 
-document.querySelectorAll("a, button, .project-card, .contact-card, .software-card").forEach(el=>{
-
-    el.addEventListener("mouseenter",()=>{
-
-        ring.style.width="55px";
-        ring.style.height="55px";
-
-    });
+}
 
 
-    el.addEventListener("mouseleave",()=>{
 
-        ring.style.width="38px";
-        ring.style.height="38px";
+.contact-grid{
 
-    });   
+    grid-template-columns:1fr;
 
-</script>   
-   
+}
+
+
+
+.about-box,
+.skills-box,
+.projects-box,
+.contact-box{
+
+    padding:45px;
+
+}
+
+
+
+.about-name{
+
+    font-size:65px;
+
+}
+
+
+
+}
+
+
+
+
+/*=========================================================
+  MOBILE
+=========================================================*/
+
+
+@media(max-width:650px){
+
+
+
+nav{
+
+    padding:0 20px;
+
+    height:65px;
+
+}
+
+
+
+.logo img{
+
+    height:42px;
+
+}
+
+
+
+.menu{
+
+    gap:12px;
+
+}
+
+
+
+.menu a{
+
+    font-size:10px;
+
+}
+
+
+
+.hero{
+
+    transform:translateY(65px);
+
+}
+
+
+
+.slogan{
+
+    width:90%;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.portfolio{
+
+    font-size:70px;
+
+    letter-spacing:5px;
+
+}
+
+
+
+.roles{
+
+    width:90%;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+}
+
+
+
+.about-box,
+.skills-box,
+.projects-box,
+.contact-box{
+
+    padding:35px 25px;
+
+}
+
+
+
+.about-heading,
+.skills-heading,
+.projects-heading,
+.contact-heading{
+
+    font-size:16px;
+
+    letter-spacing:3px;
+
+}
+
+
+
+.about-name{
+
+    font-size:42px;
+
+    letter-spacing:4px;
+
+}
+
+
+
+.about-text{
+
+    font-size:15px;
+
+    line-height:1.8;
+
+}
+
+
+
+.software-grid,
+.projects-grid{
+
+    grid-template-columns:1fr;
+
+}
+
+
+
+.software-card,
+.project-card{
+
+    min-height:200px;
+
+}
+
+
+
+.photo-viewer-box,
+.graphic-viewer-box,
+.motion-viewer-box,
+.video-viewer-box{
+
+    width:94vw;
+
+    height:75vh;
+
+}
+
+
+
+.viewer-title,
+.graphic-title,
+.motion-title,
+.video-title{
+
+    top:18px;
+
+    left:18px;
+
+}
+
+
+
+.viewer-title span,
+.graphic-title span,
+.motion-title span,
+.video-title span{
+
+    font-size:12px;
+
+}
+
+
+
+#prev-photo,
+#next-photo,
+#prev-graphic,
+#next-graphic,
+#prev-motion,
+#next-motion,
+#prev-video,
+#next-video{
+
+    width:45px;
+
+    height:45px;
+
+    font-size:22px;
+
+}
+
+
+
+#prev-photo,
+#prev-graphic,
+#prev-motion,
+#prev-video{
+
+    left:10px;
+
+}
+
+
+
+#next-photo,
+#next-graphic,
+#next-motion,
+#next-video{
+
+    right:10px;
+
+}
+
+
+
+}
+
+
+</style>
+
+
+
 </body>
 
-</html>  
+</html>
