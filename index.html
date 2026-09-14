@@ -3489,134 +3489,517 @@ document.querySelectorAll(
 =========================================================*/
 
 @media(max-width:650px){
-body{
-    background-attachment:scroll;
-}
-nav{
-    height:60px;
-    padding:0 18px;
-}
-.logo img{
-    height:40px;
-}
-.menu{
-    gap:12px;
-}
-.menu a{
-    font-size:10px;
-    letter-spacing:.5px;
-}
-.hero{
-    transform:translateY(60px);
-}
-.slogan{
-    font-size:10px;
-    letter-spacing:3px;
-    padding:0 20px;
-}
-.portfolio{
-    font-size:70px;
-    letter-spacing:5px;
-}
-.roles{
-    font-size:10px;
-    letter-spacing:2px;
-    padding:0 20px;
-}
-#about,
-#skills,
-#works,
-#contact{
-    padding:80px 5%;
-}
-.about-box,
-.skills-box,
-.projects-box,
-.contact-box{
-    padding:35px 20px;
-    border-radius:22px;
-}
-.about-name{
-    font-size:55px;
-    letter-spacing:4px;
-}
-.about-text{
-    font-size:15px;
-    line-height:1.7;
-}
-.skills-heading,
-.projects-heading,
-.contact-heading{
-    font-size:16px;
-    letter-spacing:3px;
-}
-.software-grid,
-.projects-grid{
-    grid-template-columns:1fr;
-}
-.software-card,
-.project-card{
-    min-height:200px;
-}
-.photo-viewer-box,
-.graphic-viewer-box,
-.motion-viewer-box,
-.video-viewer-box{
-    width:92vw;
-    height:80vh;
-    border-radius:22px;
-}
-.viewer-title,
-.graphic-title,
-.motion-title,
-.video-title{
-    top:18px;
-    left:18px;
-}
-.viewer-title span,
-.graphic-title span,
-.motion-title span,
-.video-title span{
-    font-size:12px;
-    letter-spacing:2px;
-}
-#prev-photo,
-#next-photo,
-#prev-graphic,
-#next-graphic,
-#prev-motion,
-#next-motion,
-#prev-video,
-#next-video{
-    width:45px;
-    height:45px;
-    font-size:22px;
-}
-#prev-photo,
-#prev-graphic,
-#prev-motion,
-#prev-video{
-    left:12px;
-}
-#next-photo,
-#next-graphic,
-#next-motion,
-#next-video{
-    right:12px;
-}
-#close-viewer,
-#close-graphic,
-#close-motion,
-#close-video{
-    width:38px;
-    height:38px;
-    font-size:28px;
-    right:15px;
-}
-.cursor-dot,
-.cursor-ring{
-    display:none;
-}
+
+    /*=====================================================
+      GENERAL
+    =====================================================*/
+
+    body{
+        background-attachment:scroll;
+    }
+
+
+    /*=====================================================
+      NAVIGATION
+    =====================================================*/
+
+    nav{
+        height:60px;
+        padding:0 18px;
+    }
+
+    .logo img{
+        height:40px;
+    }
+
+    .menu{
+        gap:12px;
+    }
+
+    .menu a{
+        font-size:10px;
+        letter-spacing:.5px;
+    }
+
+
+    /*=====================================================
+      HERO
+    =====================================================*/
+
+    .hero{
+        transform:translateY(60px);
+    }
+
+    .slogan{
+        font-size:10px;
+        letter-spacing:3px;
+        padding:0 20px;
+    }
+
+    .portfolio{
+        font-size:58px;
+        letter-spacing:4px;
+    }
+
+    .roles{
+        font-size:10px;
+        letter-spacing:2px;
+        padding:0 20px;
+    }
+
+
+    /*=====================================================
+      SECTION SPACING
+    =====================================================*/
+
+    #about,
+    #skills,
+    #works,
+    #contact{
+        padding:70px 5%;
+    }
+
+
+    /*=====================================================
+      MAIN BOXES
+    =====================================================*/
+
+    .about-box,
+    .skills-box,
+    .projects-box,
+    .contact-box{
+
+        padding:30px 18px;
+
+        border-radius:22px;
+
+    }
+
+
+    /*=====================================================
+      ABOUT
+    =====================================================*/
+
+    .about-name{
+        font-size:48px;
+        letter-spacing:3px;
+        margin-bottom:25px;
+    }
+
+    .about-text{
+        font-size:14px;
+        line-height:1.7;
+    }
+
+    .resume-btn{
+        margin-top:30px;
+        padding:13px 30px;
+        font-size:12px;
+    }
+
+
+    /*=====================================================
+      SECTION HEADINGS
+    =====================================================*/
+
+    .skills-heading,
+    .projects-heading,
+    .contact-heading{
+
+        font-size:16px;
+
+        letter-spacing:3px;
+
+        margin-bottom:30px;
+
+    }
+
+
+    /*=====================================================
+      CORE SOFTWARE COMPETENCIES
+      MOBILE = HORIZONTAL CARDS
+    =====================================================*/
+
+    .software-grid{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:12px;
+
+        width:100%;
+
+    }
+
+    .software-card{
+
+        width:100%;
+
+        min-height:65px;
+
+        padding:10px 16px;
+
+        display:flex;
+
+        flex-direction:row;
+
+        justify-content:flex-start;
+
+        align-items:center;
+
+        text-align:left;
+
+        box-sizing:border-box;
+
+    }
+
+    .software-card img{
+
+        width:42px;
+
+        height:42px;
+
+        object-fit:contain;
+
+        margin:0 18px 0 0;
+
+        flex-shrink:0;
+
+    }
+
+    .software-card h3{
+
+        margin:0;
+
+        font-size:15px;
+
+        letter-spacing:1px;
+
+    }
+
+    /* Special software logos */
+
+    .illustrator-logo,
+    .canva-logo,
+    .fcp-logo{
+
+        width:38px !important;
+
+        height:38px !important;
+
+        margin-right:22px !important;
+
+    }
+
+
+    /*=====================================================
+      PROJECT SHOWCASE
+      MOBILE = HORIZONTAL CARDS
+    =====================================================*/
+
+    .projects-grid{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:12px;
+
+        width:100%;
+
+    }
+
+    .project-card{
+
+        width:100%;
+
+        min-height:65px;
+
+        padding:10px 16px;
+
+        display:flex;
+
+        flex-direction:row;
+
+        justify-content:flex-start;
+
+        align-items:center;
+
+        text-align:left;
+
+        box-sizing:border-box;
+
+    }
+
+    .project-card img{
+
+        width:42px !important;
+
+        height:42px !important;
+
+        object-fit:contain;
+
+        margin:0 18px 0 0 !important;
+
+        flex-shrink:0;
+
+        transform:none !important;
+
+    }
+
+    .project-card h3{
+
+        margin:0;
+
+        font-size:15px;
+
+        letter-spacing:1px;
+
+    }
+
+
+    /*=====================================================
+      LET'S CONNECT
+      MOBILE = HORIZONTAL CARDS
+    =====================================================*/
+
+    .contact-grid{
+
+        display:flex;
+
+        flex-direction:column;
+
+        gap:12px;
+
+        width:100%;
+
+    }
+
+    .contact-card{
+
+        width:100%;
+
+        min-height:65px;
+
+        padding:10px 16px;
+
+        display:flex;
+
+        flex-direction:row;
+
+        justify-content:flex-start;
+
+        align-items:center;
+
+        text-align:left;
+
+        box-sizing:border-box;
+
+    }
+
+    .contact-card img{
+
+        width:42px;
+
+        height:42px;
+
+        object-fit:contain;
+
+        margin:0 18px 0 0;
+
+        flex-shrink:0;
+
+    }
+
+    .contact-card h3{
+
+        margin:0 0 3px 0;
+
+        font-size:15px;
+
+        letter-spacing:1px;
+
+    }
+
+    .contact-card p{
+
+        margin:0;
+
+        font-size:11px;
+
+        letter-spacing:.3px;
+
+    }
+
+
+    /*=====================================================
+      EXISTING MEDIA VIEWERS
+    =====================================================*/
+
+    .photo-viewer-box,
+    .graphic-viewer-box,
+    .motion-viewer-box,
+    .video-viewer-box{
+
+        width:92vw;
+
+        height:80vh;
+
+        border-radius:22px;
+
+    }
+
+    .viewer-title,
+    .graphic-title,
+    .motion-title,
+    .video-title{
+
+        top:18px;
+
+        left:18px;
+
+    }
+
+    .viewer-title span,
+    .graphic-title span,
+    .motion-title span,
+    .video-title span{
+
+        font-size:12px;
+
+        letter-spacing:2px;
+
+    }
+
+    #prev-photo,
+    #next-photo,
+    #prev-graphic,
+    #next-graphic,
+    #prev-motion,
+    #next-motion,
+    #prev-video,
+    #next-video{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:22px;
+
+    }
+
+    #prev-photo,
+    #prev-graphic,
+    #prev-motion,
+    #prev-video{
+
+        left:12px;
+
+    }
+
+    #next-photo,
+    #next-graphic,
+    #next-motion,
+    #next-video{
+
+        right:12px;
+
+    }
+
+    #close-viewer,
+    #close-graphic,
+    #close-motion,
+    #close-video{
+
+        width:38px;
+
+        height:38px;
+
+        font-size:28px;
+
+        right:15px;
+
+    }
+
+
+    /*=====================================================
+      SCRIPT WRITING VIEWER
+    =====================================================*/
+
+    .script-viewer-box{
+
+        width:94vw;
+
+        min-height:500px;
+
+        padding:90px 20px 30px;
+
+        flex-direction:column;
+
+        overflow-y:auto;
+
+    }
+
+    .script-thumbnail{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+    .script-page-box{
+
+        width:94vw;
+
+        height:88vh;
+
+    }
+
+    #prev-script-page{
+
+        left:10px;
+
+    }
+
+    #next-script-page{
+
+        right:10px;
+
+    }
+
+    #prev-script-page,
+    #next-script-page{
+
+        width:45px;
+
+        height:45px;
+
+        font-size:24px;
+
+    }
+
+    #script-page-image{
+
+        max-width:90%;
+
+        max-height:80%;
+
+    }
+
+
+    /*=====================================================
+      CUSTOM CURSOR
+    =====================================================*/
+
+    .cursor-dot,
+    .cursor-ring{
+
+        display:none;
+
+    }
+
 }
 </style>
 </body>
