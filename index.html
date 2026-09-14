@@ -2079,11 +2079,26 @@ document.addEventListener("keydown",(e)=>{
 
     transform:scale(1);
 
-    transition:transform:.25s ease;
+    transition:transform .15s ease;
 
     user-select:none;
+
+    cursor:default;
+
+    position:relative;
+
+    will-change:transform;
 }
 
+#script-page-image.zoomed{
+    cursor:grab;
+}
+
+#script-page-image.dragging{
+    cursor:grabbing;
+
+    transition:none;
+}
 
 /*=========================================================
   PAGE NAVIGATION
@@ -2483,6 +2498,9 @@ const theNextDay =
 const scriptPageViewer =
     document.getElementById("script-page-viewer");
 
+const scriptPageBox =
+    document.querySelector(".script-page-box");
+
 const scriptPageImage =
     document.getElementById("script-page-image");
 
@@ -2514,6 +2532,68 @@ let scriptZoom = 1;
 
 
 /*-------------------------------------------------------
+  PAN POSITION
+---------------------------------------------------------*/
+
+let panX = 0;
+let panY = 0;
+
+let isDragging = false;
+
+let startX = 0;
+let startY = 0;
+
+let startPanX = 0;
+let startPanY = 0;
+
+
+/*-------------------------------------------------------
+  UPDATE SCRIPT IMAGE
+---------------------------------------------------------*/
+
+function updateScriptImage(){
+
+    scriptPageImage.style.transform =
+        "translate(" +
+        panX +
+        "px, " +
+        panY +
+        "px) scale(" +
+        scriptZoom +
+        ")";
+
+
+    scriptZoomLevel.textContent =
+        Math.round(scriptZoom * 100)
+        + "%";
+
+
+    if(scriptZoom > 1){
+
+        scriptPageImage.classList.add("zoomed");
+
+    }else{
+
+        scriptPageImage.classList.remove("zoomed");
+
+    }
+
+}
+
+
+/*-------------------------------------------------------
+  RESET PAN
+---------------------------------------------------------*/
+
+function resetPan(){
+
+    panX = 0;
+    panY = 0;
+
+}
+
+
+/*-------------------------------------------------------
   SHOW SCRIPT PAGE
 ---------------------------------------------------------*/
 
@@ -2523,19 +2603,17 @@ function showScriptPage(){
         scriptPages[currentScriptPage];
 
 
-    scriptPageImage.style.transform =
-        "scale(" + scriptZoom + ")";
+    resetPan();
+
+    scriptZoom = 1;
+
+    updateScriptImage();
 
 
     scriptPageCounter.textContent =
         (currentScriptPage + 1)
         + " / "
         + scriptPages.length;
-
-
-    scriptZoomLevel.textContent =
-        Math.round(scriptZoom * 100)
-        + "%";
 
 }
 
@@ -2598,6 +2676,8 @@ theNextDay.addEventListener("click",()=>{
 
     scriptZoom = 1;
 
+    resetPan();
+
     showScriptPage();
 
     scriptPageViewer.classList.add("show");
@@ -2621,8 +2701,6 @@ nextScriptPage.addEventListener("click",()=>{
 
     }
 
-    scriptZoom = 1;
-
     showScriptPage();
 
 });
@@ -2643,8 +2721,6 @@ prevScriptPage.addEventListener("click",()=>{
 
     }
 
-    scriptZoom = 1;
-
     showScriptPage();
 
 });
@@ -2654,7 +2730,9 @@ prevScriptPage.addEventListener("click",()=>{
   ZOOM IN
 ---------------------------------------------------------*/
 
-scriptZoomIn.addEventListener("click",()=>{
+scriptZoomIn.addEventListener("click",(e)=>{
+
+    e.stopPropagation();
 
     scriptZoom += 0.1;
 
@@ -2664,7 +2742,7 @@ scriptZoomIn.addEventListener("click",()=>{
 
     }
 
-    showScriptPage();
+    updateScriptImage();
 
 });
 
@@ -2673,7 +2751,9 @@ scriptZoomIn.addEventListener("click",()=>{
   ZOOM OUT
 ---------------------------------------------------------*/
 
-scriptZoomOut.addEventListener("click",()=>{
+scriptZoomOut.addEventListener("click",(e)=>{
+
+    e.stopPropagation();
 
     scriptZoom -= 0.1;
 
@@ -2683,7 +2763,175 @@ scriptZoomOut.addEventListener("click",()=>{
 
     }
 
-    showScriptPage();
+    /*
+       If zoom returns to 100% or below,
+       reset the page position.
+    */
+
+    if(scriptZoom <= 1){
+
+        scriptZoom = 1;
+
+        resetPan();
+
+    }
+
+    updateScriptImage();
+
+});
+
+
+/*=======================================================
+  MOUSE WHEEL ZOOM
+=========================================================*/
+
+scriptPageViewer.addEventListener("wheel",(e)=>{
+
+    /*
+       Only zoom when the mouse is
+       inside the script page viewer.
+    */
+
+    if(
+        !scriptPageViewer.classList.contains("show")
+    ){
+
+        return;
+
+    }
+
+
+    e.preventDefault();
+
+
+    /*
+       Scroll up = zoom in
+       Scroll down = zoom out
+    */
+
+    if(e.deltaY < 0){
+
+        scriptZoom += 0.1;
+
+    }else{
+
+        scriptZoom -= 0.1;
+
+    }
+
+
+    /*
+       Maximum zoom
+    */
+
+    if(scriptZoom > 3){
+
+        scriptZoom = 3;
+
+    }
+
+
+    /*
+       Minimum zoom
+    */
+
+    if(scriptZoom < 0.5){
+
+        scriptZoom = 0.5;
+
+    }
+
+
+    /*
+       Reset position at 100%
+    */
+
+    if(scriptZoom <= 1){
+
+        scriptZoom = 1;
+
+        resetPan();
+
+    }
+
+
+    updateScriptImage();
+
+},{passive:false});
+
+
+/*=======================================================
+  MOUSE DRAG / PAN
+=========================================================*/
+
+scriptPageImage.addEventListener("mousedown",(e)=>{
+
+    /*
+       Only allow dragging when zoomed.
+    */
+
+    if(scriptZoom <= 1){
+
+        return;
+
+    }
+
+
+    e.preventDefault();
+
+
+    isDragging = true;
+
+
+    startX = e.clientX;
+    startY = e.clientY;
+
+
+    startPanX = panX;
+    startPanY = panY;
+
+
+    scriptPageImage.classList.add("dragging");
+
+});
+
+
+document.addEventListener("mousemove",(e)=>{
+
+    if(!isDragging){
+
+        return;
+
+    }
+
+
+    panX =
+        startPanX
+        + (e.clientX - startX);
+
+
+    panY =
+        startPanY
+        + (e.clientY - startY);
+
+
+    updateScriptImage();
+
+});
+
+
+document.addEventListener("mouseup",()=>{
+
+    if(!isDragging){
+
+        return;
+
+    }
+
+
+    isDragging = false;
+
+    scriptPageImage.classList.remove("dragging");
 
 });
 
@@ -2696,8 +2944,15 @@ function closeScriptPageViewer(){
 
     scriptPageViewer.classList.remove("show");
 
-    scriptPageImage.style.transform =
-        "scale(1)";
+    isDragging = false;
+
+    scriptPageImage.classList.remove("dragging");
+
+    scriptZoom = 1;
+
+    resetPan();
+
+    updateScriptImage();
 
 }
 
@@ -2724,14 +2979,16 @@ scriptPageViewer.addEventListener("click",(e)=>{
 });
 
 
-/*-------------------------------------------------------
+/*=======================================================
   KEYBOARD CONTROLS
----------------------------------------------------------*/
+=========================================================*/
 
 document.addEventListener("keydown",(e)=>{
 
 
-    /* SCRIPT PAGE VIEWER */
+    /*
+       SCRIPT PAGE VIEWER
+    */
 
     if(
         scriptPageViewer.classList.contains("show")
@@ -2762,7 +3019,9 @@ document.addEventListener("keydown",(e)=>{
     }
 
 
-    /* SCRIPT THUMBNAIL VIEWER */
+    /*
+       SCRIPT THUMBNAIL VIEWER
+    */
 
     if(
         scriptViewer.classList.contains("show")
