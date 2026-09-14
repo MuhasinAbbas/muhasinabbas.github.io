@@ -647,8 +647,8 @@ nav{
 
 .projects-grid{
     display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:30px;
+    grid-template-columns:repeat(5,1fr);
+    gap:25px;
 }
 
 .project-card{
@@ -776,10 +776,14 @@ PROJECTS SHOWCASE
 <div class="project-card" id="video">
 <img src="Video Editing.png" alt="Video Editing">
 <h3>Video Editing</h3>
-
-  
-
 </div>
+
+<!-- SCRIPT WRITING -->
+<div class="project-card" id="script">
+<img src="Script Writing Logo.png" alt="Script Writing">
+<h3>Script Writing</h3>
+</div>  
+
 </div>
 </div>
 </section>
@@ -1819,6 +1823,961 @@ document.addEventListener("keydown",(e)=>{
     }
 });
   
+</script>
+
+<style>
+
+/*=========================================================
+  SCRIPT WRITING VIEWER
+=========================================================*/
+
+#script-viewer{
+    position:fixed;
+    inset:0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:rgba(0,0,0,.75);
+    backdrop-filter:blur(10px);
+    opacity:0;
+    visibility:hidden;
+    transition:.35s ease;
+    z-index:9999;
+}
+
+#script-viewer.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.script-viewer-box{
+    width:min(1100px,90vw);
+    height:min(700px,85vh);
+    position:relative;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:rgba(0,0,0,.45);
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+
+    padding:80px 50px 50px;
+}
+
+
+/*=========================================================
+  SCRIPT VIEWER TITLE
+=========================================================*/
+
+.script-title{
+    position:absolute;
+
+    top:25px;
+    left:30px;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    z-index:5;
+}
+
+.script-title img{
+    width:38px;
+    height:38px;
+
+    object-fit:contain;
+}
+
+.script-title span{
+    font-size:15px;
+    font-weight:600;
+    letter-spacing:3px;
+}
+
+
+/*=========================================================
+  SCRIPT THUMBNAILS
+=========================================================*/
+
+.script-thumbnails{
+    width:100%;
+    height:100%;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+
+    align-items:center;
+    justify-items:center;
+
+    overflow-y:auto;
+
+    padding:20px;
+}
+
+.script-thumbnail{
+    width:100%;
+    max-width:260px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    cursor:pointer;
+
+    padding:15px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,.08);
+    border:1px solid rgba(255,255,255,.15);
+
+    transition:.35s ease;
+}
+
+.script-thumbnail:hover{
+    transform:translateY(-8px) scale(1.02);
+
+    background:rgba(255,255,255,.14);
+
+    border-color:#25349A;
+
+    box-shadow:0 15px 40px rgba(37,52,154,.35);
+}
+
+.script-thumbnail img{
+    width:100%;
+    height:330px;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    background:rgba(0,0,0,.25);
+
+    transition:.35s ease;
+}
+
+.script-thumbnail:hover img{
+    transform:scale(1.02);
+}
+
+.script-thumbnail h3{
+    margin-top:15px;
+
+    font-size:16px;
+    font-weight:600;
+
+    letter-spacing:1px;
+}
+
+
+/*=========================================================
+  CLOSE BUTTON
+=========================================================*/
+
+#close-script{
+    position:absolute;
+
+    top:20px;
+    right:25px;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:34px;
+
+    transition:.3s ease;
+
+    z-index:10;
+}
+
+#close-script:hover{
+    background:#25349A;
+}
+
+
+/*=========================================================
+  SCRIPT PAGE VIEWER
+=========================================================*/
+
+#script-page-viewer{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.88);
+
+    backdrop-filter:blur(12px);
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:.35s ease;
+
+    z-index:10000;
+}
+
+#script-page-viewer.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.script-page-box{
+    width:min(1200px,94vw);
+    height:min(850px,92vh);
+
+    position:relative;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    overflow:hidden;
+
+    border-radius:25px;
+
+    background:rgba(0,0,0,.55);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(15px);
+}
+
+
+/*=========================================================
+  SCRIPT PAGE
+=========================================================*/
+
+#script-page-image{
+    max-width:82%;
+    max-height:84%;
+
+    object-fit:contain;
+
+    border-radius:10px;
+
+    transform:scale(1);
+
+    transition:transform:.25s ease;
+
+    user-select:none;
+}
+
+
+/*=========================================================
+  PAGE NAVIGATION
+=========================================================*/
+
+#prev-script-page,
+#next-script-page{
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:55px;
+    height:55px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:30px;
+
+    transition:.3s ease;
+
+    z-index:5;
+}
+
+#prev-script-page{
+    left:25px;
+}
+
+#next-script-page{
+    right:25px;
+}
+
+#prev-script-page:hover,
+#next-script-page:hover{
+    background:#25349A;
+}
+
+
+/*=========================================================
+  CLOSE PAGE VIEWER
+=========================================================*/
+
+#close-script-page{
+    position:absolute;
+
+    top:20px;
+    right:25px;
+
+    width:45px;
+    height:45px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:34px;
+
+    transition:.3s ease;
+
+    z-index:10;
+}
+
+#close-script-page:hover{
+    background:#25349A;
+}
+
+
+/*=========================================================
+  ZOOM CONTROLS
+=========================================================*/
+
+.script-zoom-controls{
+    position:absolute;
+
+    bottom:20px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    padding:8px 12px;
+
+    border-radius:30px;
+
+    background:rgba(0,0,0,.55);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    z-index:10;
+}
+
+.script-zoom-controls button{
+    width:40px;
+    height:40px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.08);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s ease;
+}
+
+.script-zoom-controls button:hover{
+    background:#25349A;
+}
+
+#script-zoom-level{
+    min-width:55px;
+
+    text-align:center;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+}
+
+
+/*=========================================================
+  PAGE COUNTER
+=========================================================*/
+
+#script-page-counter{
+    position:absolute;
+
+    bottom:27px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    z-index:5;
+
+    pointer-events:none;
+}
+
+
+/*=========================================================
+  MOBILE
+=========================================================*/
+
+@media(max-width:650px){
+
+    .script-viewer-box{
+        width:92vw;
+        height:80vh;
+
+        padding:70px 20px 30px;
+
+        border-radius:22px;
+    }
+
+    .script-thumbnails{
+        grid-template-columns:1fr;
+
+        gap:20px;
+
+        padding:10px;
+    }
+
+    .script-thumbnail{
+        max-width:300px;
+    }
+
+    .script-thumbnail img{
+        height:300px;
+    }
+
+    .script-title{
+        top:18px;
+        left:18px;
+    }
+
+    .script-title span{
+        font-size:12px;
+        letter-spacing:2px;
+    }
+
+    .script-page-box{
+        width:94vw;
+        height:88vh;
+
+        border-radius:22px;
+    }
+
+    #script-page-image{
+        max-width:78%;
+        max-height:78%;
+    }
+
+    #prev-script-page,
+    #next-script-page{
+        width:45px;
+        height:45px;
+
+        font-size:22px;
+    }
+
+    #prev-script-page{
+        left:12px;
+    }
+
+    #next-script-page{
+        right:12px;
+    }
+
+    #close-script,
+    #close-script-page{
+        width:38px;
+        height:38px;
+
+        font-size:28px;
+
+        right:15px;
+    }
+
+    .script-zoom-controls{
+        bottom:15px;
+    }
+
+    #script-page-counter{
+        bottom:25px;
+    }
+}
+
+</style>
+
+<!--=======================================================
+  SCRIPT WRITING VIEWER HTML
+=========================================================-->
+
+<div id="script-viewer">
+
+    <div class="script-viewer-box">
+
+        <div class="script-title">
+
+            <img src="Script Writing Logo.png" alt="Script Writing">
+
+            <span>SCRIPT WRITING</span>
+
+        </div>
+
+
+        <button id="close-script">
+            &times;
+        </button>
+
+
+        <div class="script-thumbnails">
+
+            <!-- THE NEXT DAY -->
+
+            <div class="script-thumbnail" id="the-next-day">
+
+                <img
+                    src="The Next Day Poster.png"
+                    alt="The Next Day"
+                >
+
+                <h3>THE NEXT DAY</h3>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--=======================================================
+  SCRIPT PAGE VIEWER
+=========================================================-->
+
+<div id="script-page-viewer">
+
+    <div class="script-page-box">
+
+
+        <button id="close-script-page">
+            &times;
+        </button>
+
+
+        <button id="prev-script-page">
+            &#10094;
+        </button>
+
+
+        <img
+            id="script-page-image"
+            src=""
+            alt="Script Page"
+        >
+
+
+        <button id="next-script-page">
+            &#10095;
+        </button>
+
+
+        <div id="script-page-counter">
+            1 / 3
+        </div>
+
+
+        <div class="script-zoom-controls">
+
+            <button id="script-zoom-out">
+                −
+            </button>
+
+            <span id="script-zoom-level">
+                100%
+            </span>
+
+            <button id="script-zoom-in">
+                +
+            </button>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<script>
+
+/*=======================================================
+  SCRIPT WRITING JAVASCRIPT
+=========================================================*/
+
+
+/*-------------------------------------------------------
+  SCRIPT PAGES
+---------------------------------------------------------*/
+
+const scriptPages = [
+
+    "The Next Day 1.png",
+
+    "The Next Day 2.png",
+
+    "The Next Day 3.png"
+
+];
+
+
+/*-------------------------------------------------------
+  SCRIPT VIEWER ELEMENTS
+---------------------------------------------------------*/
+
+const scriptCard =
+    document.getElementById("script");
+
+const scriptViewer =
+    document.getElementById("script-viewer");
+
+const closeScript =
+    document.getElementById("close-script");
+
+const theNextDay =
+    document.getElementById("the-next-day");
+
+
+/*-------------------------------------------------------
+  SCRIPT PAGE VIEWER ELEMENTS
+---------------------------------------------------------*/
+
+const scriptPageViewer =
+    document.getElementById("script-page-viewer");
+
+const scriptPageImage =
+    document.getElementById("script-page-image");
+
+const closeScriptPage =
+    document.getElementById("close-script-page");
+
+const nextScriptPage =
+    document.getElementById("next-script-page");
+
+const prevScriptPage =
+    document.getElementById("prev-script-page");
+
+const scriptPageCounter =
+    document.getElementById("script-page-counter");
+
+const scriptZoomIn =
+    document.getElementById("script-zoom-in");
+
+const scriptZoomOut =
+    document.getElementById("script-zoom-out");
+
+const scriptZoomLevel =
+    document.getElementById("script-zoom-level");
+
+
+let currentScriptPage = 0;
+
+let scriptZoom = 1;
+
+
+/*-------------------------------------------------------
+  SHOW SCRIPT PAGE
+---------------------------------------------------------*/
+
+function showScriptPage(){
+
+    scriptPageImage.src =
+        scriptPages[currentScriptPage];
+
+
+    scriptPageImage.style.transform =
+        "scale(" + scriptZoom + ")";
+
+
+    scriptPageCounter.textContent =
+        (currentScriptPage + 1)
+        + " / "
+        + scriptPages.length;
+
+
+    scriptZoomLevel.textContent =
+        Math.round(scriptZoom * 100)
+        + "%";
+
+}
+
+
+/*-------------------------------------------------------
+  OPEN SCRIPT WRITING VIEWER
+---------------------------------------------------------*/
+
+scriptCard.addEventListener("click",()=>{
+
+    scriptViewer.classList.add("show");
+
+    document.body.style.overflow="hidden";
+
+});
+
+
+/*-------------------------------------------------------
+  CLOSE SCRIPT WRITING VIEWER
+---------------------------------------------------------*/
+
+function closeScriptViewer(){
+
+    scriptViewer.classList.remove("show");
+
+    document.body.style.overflow="auto";
+
+}
+
+
+closeScript.addEventListener("click",()=>{
+
+    closeScriptViewer();
+
+});
+
+
+/*-------------------------------------------------------
+  CLICK OUTSIDE SCRIPT VIEWER
+---------------------------------------------------------*/
+
+scriptViewer.addEventListener("click",(e)=>{
+
+    if(e.target === scriptViewer){
+
+        closeScriptViewer();
+
+    }
+
+});
+
+
+/*-------------------------------------------------------
+  OPEN THE NEXT DAY SCRIPT
+---------------------------------------------------------*/
+
+theNextDay.addEventListener("click",()=>{
+
+    currentScriptPage = 0;
+
+    scriptZoom = 1;
+
+    showScriptPage();
+
+    scriptPageViewer.classList.add("show");
+
+});
+
+
+/*-------------------------------------------------------
+  NEXT PAGE
+---------------------------------------------------------*/
+
+nextScriptPage.addEventListener("click",()=>{
+
+    currentScriptPage++;
+
+    if(
+        currentScriptPage >= scriptPages.length
+    ){
+
+        currentScriptPage = 0;
+
+    }
+
+    scriptZoom = 1;
+
+    showScriptPage();
+
+});
+
+
+/*-------------------------------------------------------
+  PREVIOUS PAGE
+---------------------------------------------------------*/
+
+prevScriptPage.addEventListener("click",()=>{
+
+    currentScriptPage--;
+
+    if(currentScriptPage < 0){
+
+        currentScriptPage =
+            scriptPages.length - 1;
+
+    }
+
+    scriptZoom = 1;
+
+    showScriptPage();
+
+});
+
+
+/*-------------------------------------------------------
+  ZOOM IN
+---------------------------------------------------------*/
+
+scriptZoomIn.addEventListener("click",()=>{
+
+    scriptZoom += 0.1;
+
+    if(scriptZoom > 3){
+
+        scriptZoom = 3;
+
+    }
+
+    showScriptPage();
+
+});
+
+
+/*-------------------------------------------------------
+  ZOOM OUT
+---------------------------------------------------------*/
+
+scriptZoomOut.addEventListener("click",()=>{
+
+    scriptZoom -= 0.1;
+
+    if(scriptZoom < 0.5){
+
+        scriptZoom = 0.5;
+
+    }
+
+    showScriptPage();
+
+});
+
+
+/*-------------------------------------------------------
+  CLOSE SCRIPT PAGE VIEWER
+---------------------------------------------------------*/
+
+function closeScriptPageViewer(){
+
+    scriptPageViewer.classList.remove("show");
+
+    scriptPageImage.style.transform =
+        "scale(1)";
+
+}
+
+
+closeScriptPage.addEventListener("click",()=>{
+
+    closeScriptPageViewer();
+
+});
+
+
+/*-------------------------------------------------------
+  CLICK OUTSIDE PAGE VIEWER
+---------------------------------------------------------*/
+
+scriptPageViewer.addEventListener("click",(e)=>{
+
+    if(e.target === scriptPageViewer){
+
+        closeScriptPageViewer();
+
+    }
+
+});
+
+
+/*-------------------------------------------------------
+  KEYBOARD CONTROLS
+---------------------------------------------------------*/
+
+document.addEventListener("keydown",(e)=>{
+
+
+    /* SCRIPT PAGE VIEWER */
+
+    if(
+        scriptPageViewer.classList.contains("show")
+    ){
+
+        if(e.key === "Escape"){
+
+            closeScriptPageViewer();
+
+        }
+
+
+        if(e.key === "ArrowRight"){
+
+            nextScriptPage.click();
+
+        }
+
+
+        if(e.key === "ArrowLeft"){
+
+            prevScriptPage.click();
+
+        }
+
+        return;
+
+    }
+
+
+    /* SCRIPT THUMBNAIL VIEWER */
+
+    if(
+        scriptViewer.classList.contains("show")
+    ){
+
+        if(e.key === "Escape"){
+
+            closeScriptViewer();
+
+        }
+
+    }
+
+});
+
 </script>
 
 <!--=======================================================
