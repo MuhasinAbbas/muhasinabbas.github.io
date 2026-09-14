@@ -1873,21 +1873,17 @@ document.addEventListener("keydown",(e)=>{
 
 .script-title{
     position:absolute;
-
     top:25px;
     left:30px;
-
     display:flex;
     align-items:center;
     gap:12px;
-
     z-index:5;
 }
 
 .script-title img{
     width:38px;
     height:38px;
-
     object-fit:contain;
 }
 
@@ -1903,80 +1899,45 @@ document.addEventListener("keydown",(e)=>{
 =========================================================*/
 
 .script-thumbnail{
-
     width:280px;
-
     height:360px;
-
     padding:20px;
-
     box-sizing:border-box;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
-
     border-radius:22px;
-
     background:rgba(255,255,255,.08);
-
     border:1px solid rgba(255,255,255,.15);
-
     cursor:pointer;
-
     transition:.35s ease;
-
     flex-shrink:0;
-
 }
 
-
 .script-thumbnail:hover{
-
     transform:translateY(-10px);
-
     background:rgba(255,255,255,.14);
-
     border-color:#25349A;
-
     box-shadow:
         0 15px 40px
         rgba(37,52,154,.35);
-
 }
-
 
 .script-thumbnail img{
-
     width:100%;
-
     height:260px;
-
     object-fit:contain;
-
     border-radius:14px;
-
     margin-bottom:20px;
-
 }
 
-
 .script-thumbnail h3{
-
     margin:0;
-
     font-size:17px;
-
     font-weight:600;
-
     letter-spacing:2px;
-
 }
   
 /*=========================================================
@@ -1985,33 +1946,23 @@ document.addEventListener("keydown",(e)=>{
 
 #close-script{
     position:absolute;
-
     top:20px;
     right:25px;
-
     width:45px;
     height:45px;
-
     border:none;
     border-radius:50%;
-
     background:rgba(255,255,255,.08);
-
     color:white;
-
     cursor:pointer;
-
     font-size:34px;
-
     transition:.3s ease;
-
     z-index:10;
 }
 
 #close-script:hover{
     background:#25349A;
 }
-
 
 /*=========================================================
   SCRIPT PAGE VIEWER
@@ -2020,20 +1971,14 @@ document.addEventListener("keydown",(e)=>{
 #script-page-viewer{
     position:fixed;
     inset:0;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     background:rgba(0,0,0,.88);
-
     backdrop-filter:blur(12px);
-
     opacity:0;
     visibility:hidden;
-
     transition:.35s ease;
-
     z-index:10000;
 }
 
@@ -2045,21 +1990,14 @@ document.addEventListener("keydown",(e)=>{
 .script-page-box{
     width:min(1200px,94vw);
     height:min(850px,92vh);
-
     position:relative;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     overflow:hidden;
-
     border-radius:25px;
-
     background:rgba(0,0,0,.55);
-
     border:1px solid rgba(255,255,255,.15);
-
     backdrop-filter:blur(15px);
 }
 
@@ -2071,21 +2009,13 @@ document.addEventListener("keydown",(e)=>{
 #script-page-image{
     max-width:82%;
     max-height:84%;
-
     object-fit:contain;
-
     border-radius:10px;
-
     transform:scale(1);
-
     transition:transform .15s ease;
-
     user-select:none;
-
     cursor:default;
-
     position:relative;
-
     will-change:transform;
 }
 
@@ -2095,7 +2025,6 @@ document.addEventListener("keydown",(e)=>{
 
 #script-page-image.dragging{
     cursor:grabbing;
-
     transition:none;
 }
 
@@ -2106,27 +2035,17 @@ document.addEventListener("keydown",(e)=>{
 #prev-script-page,
 #next-script-page{
     position:absolute;
-
     top:50%;
-
     transform:translateY(-50%);
-
     width:55px;
     height:55px;
-
     border:none;
     border-radius:50%;
-
     background:rgba(255,255,255,.08);
-
     color:white;
-
     cursor:pointer;
-
     font-size:30px;
-
     transition:.3s ease;
-
     z-index:5;
 }
 
@@ -2150,26 +2069,17 @@ document.addEventListener("keydown",(e)=>{
 
 #close-script-page{
     position:absolute;
-
     top:20px;
     right:25px;
-
     width:45px;
     height:45px;
-
     border:none;
     border-radius:50%;
-
     background:rgba(255,255,255,.08);
-
     color:white;
-
     cursor:pointer;
-
     font-size:34px;
-
     transition:.3s ease;
-
     z-index:10;
 }
 
@@ -2177,50 +2087,34 @@ document.addEventListener("keydown",(e)=>{
     background:#25349A;
 }
 
-
 /*=========================================================
   ZOOM CONTROLS
 =========================================================*/
 
 .script-zoom-controls{
     position:absolute;
-
     bottom:20px;
     left:50%;
-
     transform:translateX(-50%);
-
     display:flex;
     align-items:center;
-
     gap:10px;
-
     padding:8px 12px;
-
     border-radius:30px;
-
     background:rgba(0,0,0,.55);
-
     border:1px solid rgba(255,255,255,.15);
-
     z-index:10;
 }
 
 .script-zoom-controls button{
     width:40px;
     height:40px;
-
     border:none;
     border-radius:50%;
-
     background:rgba(255,255,255,.08);
-
     color:white;
-
     cursor:pointer;
-
     font-size:22px;
-
     transition:.3s ease;
 }
 
@@ -2230,14 +2124,10 @@ document.addEventListener("keydown",(e)=>{
 
 #script-zoom-level{
     min-width:55px;
-
     text-align:center;
-
     font-size:13px;
-
     letter-spacing:1px;
 }
-
 
 /*=========================================================
   PAGE COUNTER
@@ -2245,42 +2135,30 @@ document.addEventListener("keydown",(e)=>{
 
 #script-page-counter{
     position:absolute;
-
     bottom:27px;
     left:50%;
-
     transform:translateX(-50%);
-
     font-size:14px;
-
     letter-spacing:3px;
-
     z-index:5;
-
     pointer-events:none;
 }
-
 
 /*=========================================================
   MOBILE
 =========================================================*/
 
 @media(max-width:650px){
-
     .script-viewer-box{
         width:92vw;
         height:80vh;
-
         padding:70px 20px 30px;
-
         border-radius:22px;
     }
 
     .script-thumbnails{
         grid-template-columns:1fr;
-
         gap:20px;
-
         padding:10px;
     }
 
@@ -2305,7 +2183,6 @@ document.addEventListener("keydown",(e)=>{
     .script-page-box{
         width:94vw;
         height:88vh;
-
         border-radius:22px;
     }
 
@@ -2318,7 +2195,6 @@ document.addEventListener("keydown",(e)=>{
     #next-script-page{
         width:45px;
         height:45px;
-
         font-size:22px;
     }
 
@@ -2334,9 +2210,7 @@ document.addEventListener("keydown",(e)=>{
     #close-script-page{
         width:38px;
         height:38px;
-
         font-size:28px;
-
         right:15px;
     }
 
@@ -2356,109 +2230,75 @@ document.addEventListener("keydown",(e)=>{
 =========================================================-->
 
 <div id="script-viewer">
-
     <div class="script-viewer-box">
-
         <div class="script-title">
-
             <img src="Script Writing Logo.png"
                  alt="Script Writing">
-
             <span>SCRIPT WRITING</span>
-
         </div>
-
 
         <button id="close-script">
             &times;
         </button>
 
-
         <!-- THE NEXT DAY -->
 
         <div class="script-thumbnail"
              id="the-next-day">
-
             <img src="The Next Day Poster.png"
                  alt="The Next Day">
-
             <h3>THE NEXT DAY</h3>
-
         </div>
-
 
         <!-- JEWELLERY -->
-
         <div class="script-thumbnail"
              id="jewellery">
-
             <img src="Jewellery Poster.png"
                  alt="Jewellery">
-
-            <h3>JEWELLERY</h3>
-
+            <h3>JEWELLERY COMMERCIAL</h3>
         </div>
-
-
     </div>
-
 </div>
-
-
 
 <!--=======================================================
   SCRIPT PAGE VIEWER HTML
 =========================================================-->
 
 <div id="script-page-viewer">
-
     <div class="script-page-box">
-
         <button id="close-script-page">
             &times;
         </button>
-
 
         <button id="prev-script-page">
             &#10094;
         </button>
 
-
         <img id="script-page-image"
              src=""
              alt="Script Page">
-
 
         <button id="next-script-page">
             &#10095;
         </button>
 
-
         <div id="script-page-counter">
             1 / 3
         </div>
 
-
         <div class="script-zoom-controls">
-
             <button id="script-zoom-out">
                 −
             </button>
-
             <span id="script-zoom-level">
                 100%
             </span>
-
             <button id="script-zoom-in">
                 +
             </button>
-
         </div>
-
     </div>
-
 </div>
-
 <style>
 
 /*=========================================================
@@ -2467,121 +2307,70 @@ document.addEventListener("keydown",(e)=>{
 
 #script-viewer,
 #script-page-viewer{
-
     position:fixed;
-
     inset:0;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     background:rgba(0,0,0,.75);
-
     backdrop-filter:blur(10px);
-
     opacity:0;
-
     visibility:hidden;
-
     transition:.35s ease;
-
     z-index:9999;
-
 }
-
 
 #script-viewer.show,
 #script-page-viewer.show{
-
     opacity:1;
-
     visibility:visible;
-
 }
-
 
 /*=========================================================
   SCRIPT PROJECT VIEWER
 =========================================================*/
 
 .script-viewer-box{
-
     width:min(1100px,90vw);
-
     min-height:500px;
-
     position:relative;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     gap:35px;
-
     padding:100px 50px 50px;
-
     box-sizing:border-box;
-
     border-radius:30px;
-
     background:rgba(0,0,0,.45);
-
     border:1px solid rgba(255,255,255,.15);
-
     backdrop-filter:blur(15px);
-
 }
-
 
 /*=========================================================
   TITLE
 =========================================================*/
 
 .script-title{
-
     position:absolute;
-
     top:25px;
-
     left:30px;
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     z-index:5;
-
 }
-
 
 .script-title img{
-
     width:38px;
-
     height:38px;
-
     object-fit:contain;
-
 }
-
 
 .script-title span{
-
     font-size:15px;
-
     font-weight:600;
-
     letter-spacing:3px;
-
 }
-
 
 /*=========================================================
   CLOSE BUTTON
@@ -2589,197 +2378,115 @@ document.addEventListener("keydown",(e)=>{
 
 #close-script,
 #close-script-page{
-
     position:absolute;
-
     top:20px;
-
     right:25px;
-
     width:45px;
-
     height:45px;
-
     border:none;
-
     border-radius:50%;
-
     background:rgba(255,255,255,.08);
-
     color:white;
-
     font-size:34px;
-
     cursor:pointer;
-
     transition:.3s;
-
     z-index:20;
-
 }
-
 
 #close-script:hover,
 #close-script-page:hover{
-
     background:#25349A;
-
 }
-
 
 /*=========================================================
   SCRIPT THUMBNAILS
 =========================================================*/
 
 .script-thumbnail{
-
     width:280px;
-
     min-height:330px;
-
     padding:20px;
-
     box-sizing:border-box;
-
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
-
     text-align:center;
-
     border-radius:22px;
-
     background:rgba(255,255,255,.08);
-
     border:1px solid rgba(255,255,255,.15);
-
     cursor:pointer;
-
     transition:.35s ease;
-
 }
 
 
 .script-thumbnail:hover{
-
     transform:translateY(-10px);
-
     background:rgba(255,255,255,.14);
-
     border-color:#25349A;
-
     box-shadow:
         0 15px 40px
         rgba(37,52,154,.35);
-
 }
-
 
 .script-thumbnail img{
-
     width:100%;
-
     height:240px;
-
     object-fit:contain;
-
     border-radius:14px;
-
     margin-bottom:20px;
-
 }
-
 
 .script-thumbnail h3{
-
     margin:0;
-
     font-size:17px;
-
     font-weight:600;
-
     letter-spacing:2px;
-
 }
-
 
 /*=========================================================
   SCRIPT PAGE VIEWER
 =========================================================*/
 
 .script-page-box{
-
     width:min(1100px,90vw);
-
     height:min(750px,90vh);
-
     position:relative;
-
     display:flex;
-
     justify-content:center;
-
     align-items:center;
-
     overflow:hidden;
-
     border-radius:30px;
-
     background:rgba(0,0,0,.45);
-
     border:1px solid rgba(255,255,255,.15);
-
     backdrop-filter:blur(15px);
-
 }
-
 
 /*=========================================================
   SCRIPT PAGE IMAGE
 =========================================================*/
 
 #script-page-image{
-
     max-width:85%;
-
     max-height:85%;
-
     object-fit:contain;
-
     border-radius:12px;
-
     user-select:none;
-
     transition:transform .15s ease;
-
     cursor:zoom-in;
-
     transform:
         translate(0px,0px)
         scale(1);
-
 }
-
 
 #script-page-image.zoomed{
-
     cursor:grab;
-
 }
-
 
 #script-page-image.dragging{
-
     cursor:grabbing;
-
     transition:none;
-
 }
-
 
 /*=========================================================
   PREVIOUS / NEXT
@@ -2787,224 +2494,132 @@ document.addEventListener("keydown",(e)=>{
 
 #prev-script-page,
 #next-script-page{
-
     position:absolute;
-
     top:50%;
-
     transform:translateY(-50%);
-
     width:55px;
-
     height:55px;
-
     border:none;
-
     border-radius:50%;
-
     background:rgba(255,255,255,.08);
-
     color:white;
-
     font-size:30px;
-
     cursor:pointer;
-
     transition:.3s;
-
     z-index:10;
-
 }
 
 
 #prev-script-page{
-
     left:25px;
-
 }
-
 
 #next-script-page{
-
     right:25px;
-
 }
-
 
 #prev-script-page:hover,
 #next-script-page:hover{
-
     background:#25349A;
-
 }
-
 
 /*=========================================================
   PAGE COUNTER
 =========================================================*/
 
 #script-page-counter{
-
     position:absolute;
-
     bottom:45px;
-
     left:50%;
-
     transform:translateX(-50%);
-
     font-size:14px;
-
     letter-spacing:3px;
-
 }
-
 
 /*=========================================================
   ZOOM CONTROLS
 =========================================================*/
 
 .script-zoom-controls{
-
     position:absolute;
-
     bottom:15px;
-
     left:50%;
-
     transform:translateX(-50%);
-
     display:flex;
-
     align-items:center;
-
     gap:12px;
-
     z-index:20;
-
 }
-
 
 .script-zoom-controls button{
-
     width:32px;
-
     height:32px;
-
     border:none;
-
     border-radius:50%;
-
     background:rgba(255,255,255,.08);
-
     color:white;
-
     font-size:20px;
-
     cursor:pointer;
-
     transition:.3s;
-
 }
-
 
 .script-zoom-controls button:hover{
-
-    background:#25349A;
-
+   background:#25349A;
 }
-
 
 #script-zoom-level{
-
     min-width:50px;
-
     text-align:center;
-
     font-size:13px;
-
     letter-spacing:1px;
-
 }
-
 
 /*=========================================================
   MOBILE
 =========================================================*/
 
 @media(max-width:700px){
-
     .script-viewer-box{
-
         width:94vw;
-
         min-height:500px;
-
         padding:90px 20px 30px;
-
         flex-direction:column;
-
         overflow-y:auto;
-
     }
-
 
     .script-thumbnail{
-
         width:100%;
-
         max-width:300px;
-
     }
-
 
     .script-page-box{
-
         width:94vw;
-
         height:88vh;
-
     }
-
 
     #prev-script-page{
-
         left:10px;
-
     }
-
 
     #next-script-page{
-
         right:10px;
-
     }
-
 
     #prev-script-page,
     #next-script-page{
-
         width:45px;
-
         height:45px;
-
         font-size:24px;
-
     }
 
-
     #script-page-image{
-
         max-width:90%;
-
         max-height:80%;
-
     }
 
 }
 
 </style>
-
 <script>
 
 /*=========================================================
