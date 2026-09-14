@@ -400,12 +400,13 @@ nav{
 
 .software-grid{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:35px;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+    width:100%;
 }
 
 .software-card{
-    min-height:200px;
+    min-height:120px;
 
     display:flex;
     flex-direction:column;
@@ -414,7 +415,7 @@ nav{
 
     text-align:center;
 
-    padding:35px 20px;
+    padding:20px 10px;
 
     border-radius:22px;
 
@@ -424,6 +425,8 @@ nav{
     backdrop-filter:blur(10px);
 
     transition:.35s ease;
+
+    box-sizing:border-box;
 }
 
 .software-card:hover{
