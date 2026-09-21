@@ -10,7 +10,6 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
@@ -60,18 +59,13 @@ nav{
     left:0;
     width:100%;
     height:70px;
-
     display:flex;
     justify-content:space-between;
     align-items:center;
-
     padding:0 45px;
-
     background:rgba(255,255,255,.92);
     backdrop-filter:blur(8px);
-
     box-shadow:0 5px 18px rgba(0,0,0,.08);
-
     z-index:9999;
 }
 
@@ -92,30 +86,22 @@ nav{
 
 .menu a{
     position:relative;
-
     text-decoration:none;
-
     color:#111;
-
     font-size:12px;
     font-weight:600;
     letter-spacing:1px;
-
     transition:.35s ease;
 }
 
 .menu a::after{
     content:"";
-
     position:absolute;
     left:0;
     bottom:-6px;
-
     width:0;
     height:2px;
-
     background:#25349A;
-
     transition:.35s ease;
 }
 
@@ -134,60 +120,43 @@ nav{
 .hero{
     width:100%;
     height:100vh;
-
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
-
     text-align:center;
-
     background:rgba(0,0,0,.25);
-
     transform:translateY(70px);
 }
 
 .slogan{
     margin-bottom:28px;
-
     font-size:15px;
     font-weight:600;
     letter-spacing:6px;
-
     text-transform:uppercase;
 }
 
 .portfolio{
     position:relative;
-
     font-family:'Agency FB',sans-serif;
     font-size:clamp(90px,15vw,230px);
     font-weight:900;
-
     letter-spacing:10px;
-
     line-height:.9;
-
     text-transform:uppercase;
-
     cursor:pointer;
-
     transition:.35s ease;
 }
 
 .portfolio::after{
     content:"";
-
     position:absolute;
-
     left:0;
     bottom:-20px;
-
     width:100%;
     height:7px;
-
     background:#fff;
-
     transition:.35s ease;
 }
 
@@ -202,11 +171,9 @@ nav{
 
 .roles{
     margin-top:55px;
-
     font-size:15px;
     font-weight:600;
     letter-spacing:5px;
-
     text-transform:uppercase;
 }
 
@@ -217,19 +184,15 @@ nav{
 }
 
 @keyframes bounce{
-
     0%{
         transform:translateY(0);
     }
-
     50%{
         transform:translateY(15px);
     }
-
     100%{
         transform:translateY(0);
     }
-
 }
 
 /*=========================================================
@@ -238,69 +201,50 @@ nav{
 
 #about{
     min-height:100vh;
-
     display:flex;
     justify-content:center;
     align-items:center;
-
     padding:120px 8%;
 }
 
 .about-box{
     width:100%;
     max-width:1300px;
-
     padding:70px 80px 60px;
-
     border-radius:30px;
-
     background:rgba(0,0,0,.45);
     backdrop-filter:blur(10px);
-
     transform: translateY(-20px);
 }
 
 .about-heading{
     display:inline-block;
-
     position:relative;
-
     margin-bottom:35px;
-
     font-size:18px;
     font-weight:600;
     letter-spacing:6px;
-
     text-transform:uppercase;
 }
 
 .about-heading::after{
     content:"";
-
     position:absolute;
-
     left:0;
     bottom:-10px;
-
     width:100%;
     height:2px;
-
     background:#fff;
 }
 
 .about-name{
     margin-bottom:35px;
-
     font-family:'Agency FB',sans-serif;
     font-size:90px;
     font-weight:900;
-
     letter-spacing:8px;
-
     color:#29409A;
-
     text-transform:uppercase;
-
     transition:color .35s ease;
 }
 
@@ -310,30 +254,21 @@ nav{
 
 .about-text{
     max-width:1100px;
-
     font-size:18px;
     line-height:1.9;
 }
 
 .resume-btn{
     display:inline-block;
-
     margin-top:40px;
-
     padding:15px 40px;
-
     border-radius:30px;
-
     background:#25349A;
-
     color:#fff;
-
     text-decoration:none;
-
     font-size:14px;
     font-weight:600;
     letter-spacing:2px;
-
     transition:.35s ease;
 }
 
@@ -1208,7 +1143,6 @@ document.addEventListener("keydown",(e)=>{
 </button>
 
 </div>
-
 </div>
 
 <!--=======================================================
@@ -1442,7 +1376,6 @@ document.addEventListener("keydown",(e)=>{
 <img src="Motion Graphics.png" alt="Motion Graphics">
 
 <span>MOTION GRAPHICS</span>
-
 </div>
 
 <button id="close-motion">
@@ -1462,9 +1395,7 @@ document.addEventListener("keydown",(e)=>{
 &#10095;
 
 </button>
-
 </div>
-
 </div>
 
 <!--=======================================================
@@ -1504,7 +1435,6 @@ motionCard.addEventListener("click",()=>{
     showMotion();
     motionViewer.classList.add("show");
     document.body.style.overflow="hidden";
-
 });
 
 nextMotion.addEventListener("click",()=>{
@@ -1513,7 +1443,6 @@ nextMotion.addEventListener("click",()=>{
         currentMotion = 0;
     }
     showMotion();
-
 });
 
 prevMotion.addEventListener("click",()=>{
@@ -1535,11 +1464,9 @@ motionViewer.addEventListener("click",(e)=>{
     if(e.target===motionViewer){
         closeMotionViewer();
     }
-
 });
 
 document.addEventListener("keydown",(e)=>{
-
     if(!motionViewer.classList.contains("show")) return;
     if(e.key==="Escape"){
         closeMotionViewer();
@@ -1671,7 +1598,6 @@ document.addEventListener("keydown",(e)=>{
 }
 
 #video-counter{
-
     position:absolute;
     bottom:7px;
     left:50%;
@@ -1691,7 +1617,6 @@ document.addEventListener("keydown",(e)=>{
 <div class="video-title">
 <img src="Video Editing.png" alt="Video Editing">
 <span>VIDEO EDITING</span>
-
 </div>
 
 <button id="close-video">
@@ -1703,19 +1628,16 @@ document.addEventListener("keydown",(e)=>{
   
 </button>
 <video id="editing-video" controls></video>
+
 <div id="video-counter">
-
 1 / 1
-
 </div>
-
+  
 <button id="next-video">
 &#10095;
 
 </button>
-
 </div>
-
 </div>
 
 <!--=======================================================
@@ -1745,7 +1667,6 @@ function showEditingVideo(){
     (currentVideo + 1)
     + " / "
     + editingVideos.length;
-
 }
 
 videoCard.addEventListener("click",()=>{
@@ -1800,7 +1721,6 @@ document.addEventListener("keydown",(e)=>{
 });
   
 </script>
-
 <style>
 
 /*=========================================================
@@ -1868,7 +1788,6 @@ document.addEventListener("keydown",(e)=>{
     font-weight:600;
     letter-spacing:3px;
 }
-
 
 /*=========================================================
   SCRIPT THUMBNAILS
@@ -1977,7 +1896,6 @@ document.addEventListener("keydown",(e)=>{
     backdrop-filter:blur(15px);
 }
 
-
 /*=========================================================
   SCRIPT PAGE
 =========================================================*/
@@ -2037,7 +1955,6 @@ document.addEventListener("keydown",(e)=>{
 #next-script-page:hover{
     background:#25349A;
 }
-
 
 /*=========================================================
   CLOSE PAGE VIEWER
@@ -2198,7 +2115,6 @@ document.addEventListener("keydown",(e)=>{
         bottom:25px;
     }
 }
-
 </style>
 
 <!--=======================================================
@@ -2395,7 +2311,6 @@ document.addEventListener("keydown",(e)=>{
     transition:.35s ease;
 }
 
-
 .script-thumbnail:hover{
     transform:translateY(-10px);
     background:rgba(255,255,255,.14);
@@ -2484,7 +2399,6 @@ document.addEventListener("keydown",(e)=>{
     transition:.3s;
     z-index:10;
 }
-
 
 #prev-script-page{
     left:25px;
@@ -2592,9 +2506,7 @@ document.addEventListener("keydown",(e)=>{
         max-width:90%;
         max-height:80%;
     }
-
 }
-
 </style>
 <script>
 
@@ -2603,27 +2515,22 @@ document.addEventListener("keydown",(e)=>{
 =========================================================*/
 
 const nextDayPages = [
-
     "The Next Day 1.png",
     "The Next Day 2.png",
     "The Next Day 3.png"
 
 ];
 
-
 /*=========================================================
   JEWELLERY
 =========================================================*/
 
 const jewelleryPages = [
-
     "Jewellery Ad 1.png",
     "Jewellery Ad 2.png",
     "Jewellery Ad 3.png",
     "Jewellery Ad 4.png"
-
 ];
-
 
 /*=========================================================
   SCRIPT WRITING ELEMENTS
@@ -2638,18 +2545,15 @@ const scriptViewer =
 const closeScript =
     document.getElementById("close-script");
 
-
 /* THE NEXT DAY */
 
 const nextDay =
     document.getElementById("the-next-day");
 
-
 /* JEWELLERY */
 
 const jewellery =
     document.getElementById("jewellery");
-
 
 /* PAGE VIEWER */
 
@@ -2680,192 +2584,134 @@ const scriptZoomOut =
 const scriptZoomLevel =
     document.getElementById("script-zoom-level");
 
-
 /*=========================================================
   CURRENT PROJECT / PAGE
 =========================================================*/
 
 let currentScriptPages = [];
-
 let currentScriptPage = 0;
-
 
 /*=========================================================
   OPEN SCRIPT WRITING
 =========================================================*/
 
 scriptCard.addEventListener("click",()=>{
-
     scriptViewer.classList.add("show");
-
     document.body.style.overflow="hidden";
-
 });
-
 
 /*=========================================================
   THE NEXT DAY
 =========================================================*/
 
 nextDay.addEventListener("click",()=>{
-
     currentScriptPages =
         nextDayPages;
-
     currentScriptPage = 0;
-
     resetScriptZoom();
-
     scriptPageViewer.classList.add("show");
-
     showScriptPage();
-
 });
-
 
 /*=========================================================
   JEWELLERY
 =========================================================*/
 
 jewellery.addEventListener("click",()=>{
-
     currentScriptPages =
         jewelleryPages;
-
     currentScriptPage = 0;
-
     resetScriptZoom();
-
     scriptPageViewer.classList.add("show");
-
     showScriptPage();
-
 });
-
 
 /*=========================================================
   SHOW PAGE
 =========================================================*/
 
 function showScriptPage(){
-
     scriptPageImage.src =
         currentScriptPages[currentScriptPage];
-
-
     scriptPageCounter.textContent =
         (currentScriptPage + 1)
         + " / "
         + currentScriptPages.length;
-
 }
-
 
 /*=========================================================
   CLOSE SCRIPT VIEWER
 =========================================================*/
 
 function closeScriptViewer(){
-
     scriptViewer.classList.remove("show");
-
     document.body.style.overflow="auto";
-
 }
-
 
 closeScript.addEventListener(
     "click",
     closeScriptViewer
 );
 
-
 /*=========================================================
   CLOSE PAGE VIEWER
 =========================================================*/
 
 function closeScriptPageViewer(){
-
     scriptPageViewer.classList.remove("show");
-
     resetScriptZoom();
-
 }
-
 
 closeScriptPage.addEventListener(
     "click",
     closeScriptPageViewer
 );
 
-
 /*=========================================================
   NEXT PAGE
 =========================================================*/
 
 nextScriptPage.addEventListener("click",()=>{
-
     currentScriptPage++;
-
-
     if(
         currentScriptPage >=
         currentScriptPages.length
     ){
-
         currentScriptPage = 0;
-
     }
 
-
     resetScriptZoom();
-
     showScriptPage();
-
 });
-
 
 /*=========================================================
   PREVIOUS PAGE
 =========================================================*/
 
 prevScriptPage.addEventListener("click",()=>{
-
     currentScriptPage--;
-
-
     if(currentScriptPage < 0){
-
         currentScriptPage =
             currentScriptPages.length - 1;
-
     }
 
-
     resetScriptZoom();
-
     showScriptPage();
-
 });
-
 
 /*=========================================================
   ZOOM VARIABLES
 =========================================================*/
 
 let scriptZoom = 1;
-
 let panX = 0;
-
 let panY = 0;
-
 
 /*=========================================================
   UPDATE ZOOM
 =========================================================*/
 
 function updateScriptZoom(){
-
     scriptPageImage.style.transform =
         "translate("
         + panX
@@ -2875,98 +2721,61 @@ function updateScriptZoom(){
         + scriptZoom
         + ")";
 
-
     scriptZoomLevel.textContent =
         Math.round(scriptZoom * 100)
         + "%";
 
-
     if(scriptZoom > 1){
-
         scriptPageImage.classList.add("zoomed");
 
     }else{
-
         scriptPageImage.classList.remove("zoomed");
-
     }
-
 }
-
 
 /*=========================================================
   RESET ZOOM
 =========================================================*/
 
 function resetScriptZoom(){
-
     scriptZoom = 1;
-
     panX = 0;
-
     panY = 0;
-
     isDragging = false;
-
     scriptPageImage.classList.remove(
         "dragging"
     );
-
     updateScriptZoom();
-
 }
-
 
 /*=========================================================
   ZOOM IN
 =========================================================*/
 
 scriptZoomIn.addEventListener("click",()=>{
-
     scriptZoom += .1;
-
-
     if(scriptZoom > 3){
-
         scriptZoom = 3;
-
     }
-
-
     updateScriptZoom();
-
 });
-
 
 /*=========================================================
   ZOOM OUT
 =========================================================*/
 
 scriptZoomOut.addEventListener("click",()=>{
-
     scriptZoom -= .1;
-
-
     if(scriptZoom < 1){
-
         scriptZoom = 1;
-
     }
-
 
     if(scriptZoom === 1){
-
         panX = 0;
-
         panY = 0;
-
     }
-
-
     updateScriptZoom();
-
 });
-
 
 /*=========================================================
   MOUSE WHEEL ZOOM
@@ -2975,93 +2784,56 @@ scriptZoomOut.addEventListener("click",()=>{
 scriptPageViewer.addEventListener(
     "wheel",
     (e)=>{
-
         e.preventDefault();
 
-
         if(e.deltaY < 0){
-
             scriptZoom += .1;
 
         }else{
-
             scriptZoom -= .1;
-
         }
-
 
         if(scriptZoom > 3){
-
             scriptZoom = 3;
-
         }
-
 
         if(scriptZoom < 1){
-
             scriptZoom = 1;
-
         }
-
 
         if(scriptZoom === 1){
-
             panX = 0;
-
             panY = 0;
-
         }
-
-
         updateScriptZoom();
-
     },
     {passive:false}
 );
-
 
 /*=========================================================
   DRAG / MOVE ZOOMED PAGE
 =========================================================*/
 
 let isDragging = false;
-
 let dragStartX = 0;
-
 let dragStartY = 0;
-
 let startPanX = 0;
-
 let startPanY = 0;
-
 
 scriptPageImage.addEventListener(
     "mousedown",
     (e)=>{
-
         if(scriptZoom <= 1) return;
-
-
         isDragging = true;
-
-
         scriptPageImage.classList.add(
             "dragging"
         );
-
-
         dragStartX = e.clientX;
-
         dragStartY = e.clientY;
-
-
         startPanX = panX;
-
         startPanY = panY;
-
     }
 );
-
 
 /*=========================================================
   DRAGGING
@@ -3070,25 +2842,16 @@ scriptPageImage.addEventListener(
 document.addEventListener(
     "mousemove",
     (e)=>{
-
         if(!isDragging) return;
-
-
         panX =
             startPanX
             + (e.clientX - dragStartX);
-
-
         panY =
             startPanY
             + (e.clientY - dragStartY);
-
-
         updateScriptZoom();
-
     }
 );
-
 
 /*=========================================================
   STOP DRAGGING
@@ -3097,16 +2860,12 @@ document.addEventListener(
 document.addEventListener(
     "mouseup",
     ()=>{
-
         isDragging = false;
-
         scriptPageImage.classList.remove(
             "dragging"
         );
-
     }
 );
-
 
 /*=========================================================
   CLICK OUTSIDE SCRIPT VIEWER
@@ -3115,16 +2874,11 @@ document.addEventListener(
 scriptViewer.addEventListener(
     "click",
     (e)=>{
-
         if(e.target === scriptViewer){
-
             closeScriptViewer();
-
         }
-
     }
 );
-
 
 /*=========================================================
   CLICK OUTSIDE PAGE VIEWER
@@ -3133,16 +2887,11 @@ scriptViewer.addEventListener(
 scriptPageViewer.addEventListener(
     "click",
     (e)=>{
-
         if(e.target === scriptPageViewer){
-
             closeScriptPageViewer();
-
         }
-
     }
 );
-
 
 /*=========================================================
   KEYBOARD CONTROLS
@@ -3152,39 +2901,23 @@ document.addEventListener(
     "keydown",
     (e)=>{
 
-
         /* PAGE VIEWER */
 
         if(
             scriptPageViewer.classList
             .contains("show")
         ){
-
             if(e.key === "Escape"){
-
                 closeScriptPageViewer();
-
             }
-
-
             if(e.key === "ArrowRight"){
-
                 nextScriptPage.click();
-
             }
-
-
             if(e.key === "ArrowLeft"){
-
                 prevScriptPage.click();
-
             }
-
-
             return;
-
         }
-
 
         /* SCRIPT PROJECT VIEWER */
 
@@ -3192,18 +2925,12 @@ document.addEventListener(
             scriptViewer.classList
             .contains("show")
         ){
-
             if(e.key === "Escape"){
-
                 closeScriptViewer();
-
             }
-
         }
-
     }
 );
-
 </script>
 
 <!--=======================================================
@@ -3507,7 +3234,6 @@ document.querySelectorAll(
         background-attachment:scroll;
     }
 
-
     /*=====================================================
       NAVIGATION
     =====================================================*/
@@ -3565,11 +3291,8 @@ document.querySelectorAll(
     #skills,
     #works,
     #contact{
-
         padding:70px 5%;
-
     }
-
 
     /*=====================================================
       MAIN BOXES
@@ -3579,50 +3302,32 @@ document.querySelectorAll(
     .skills-box,
     .projects-box,
     .contact-box{
-
         padding:30px 18px;
-
         border-radius:22px;
-
     }
-
 
     /*=====================================================
       ABOUT ME
     =====================================================*/
 
     .about-name{
-
         font-size:48px;
-
         letter-spacing:3px;
-
         margin-bottom:25px;
-
     }
 
     .about-text{
-
         font-size:14px;
-
         line-height:1.7;
-
     }
 
     .resume-btn{
-
         display:block;
-
         width:max-content;
-
         margin-top:30px;
-
         padding:13px 30px;
-
         font-size:12px;
-
     }
-
 
     /*=====================================================
       SECTION HEADINGS
@@ -3631,94 +3336,57 @@ document.querySelectorAll(
     .skills-heading,
     .projects-heading,
     .contact-heading{
-
         font-size:16px;
-
         letter-spacing:3px;
-
         margin-bottom:30px;
-
     }
-
 
     /*=====================================================
       CORE SOFTWARE COMPETENCIES
     =====================================================*/
 
     #skills{
-
         display:flex;
-
         justify-content:center;
-
         align-items:center;
-
     }
 
     .skills-box{
-
         width:100%;
-
         transform:none;
-
     }
 
     .software-grid{
-
         display:flex;
-
         flex-direction:column;
-
         gap:12px;
-
         width:100%;
-
     }
 
     .software-card{
-
         width:100%;
-
         min-height:65px;
-
         padding:10px 16px;
-
         display:flex;
-
         flex-direction:row;
-
         justify-content:flex-start;
-
         align-items:center;
-
         text-align:left;
-
         box-sizing:border-box;
-
     }
 
     .software-card img{
-
         width:42px;
-
         height:42px;
-
         object-fit:contain;
-
         margin:0 18px 0 0;
-
         flex-shrink:0;
-
     }
 
     .software-card h3{
-
         margin:0;
-
         font-size:15px;
-
         letter-spacing:1px;
-
     }
 
     /* Individual software logos */
@@ -3726,123 +3394,75 @@ document.querySelectorAll(
     .illustrator-logo,
     .canva-logo,
     .fcp-logo{
-
         width:38px !important;
-
         height:38px !important;
-
         margin-right:22px !important;
-
     }
-
 
     /*=====================================================
       PROJECT SHOWCASE
     =====================================================*/
 
     #works{
-
         display:flex;
-
         justify-content:center;
-
         align-items:center;
-
     }
 
     .projects-box{
-
         width:100%;
-
         transform:none;
-
     }
 
     .projects-grid{
-
         display:flex;
-
         flex-direction:column;
-
         gap:12px;
-
         width:100%;
-
     }
 
     .project-card{
-
         width:100%;
-
         min-height:65px;
-
         padding:10px 16px;
-
         display:flex;
-
         flex-direction:row;
-
         justify-content:flex-start;
-
         align-items:center;
-
         text-align:left;
-
         box-sizing:border-box;
-
     }
 
     .project-card img{
-
         width:42px !important;
-
         height:42px !important;
-
         object-fit:contain;
-
         margin:0 18px 0 0 !important;
-
         flex-shrink:0;
-
         transform:none !important;
-
     }
 
     .project-card h3{
-
         margin:0;
-
         font-size:15px !important;
-
         font-weight:600;
-
         letter-spacing:1px;
-
     }
-
 
     /*=====================================================
       SCRIPT WRITING CARD
     =====================================================*/
 
     #script h3{
-
         font-size:15px !important;
-
         font-weight:600 !important;
-
         letter-spacing:1px !important;
-
     }
 
     #script img{
-
         width:42px !important;
-
         height:42px !important;
-
         margin:0 18px 0 0 !important;
-
     }
 
 
@@ -3852,165 +3472,101 @@ document.querySelectorAll(
     =====================================================*/
 
     .script-viewer-box{
-
         width:92vw;
-
         min-height:auto;
-
         max-height:82vh;
-
         padding:80px 18px 25px;
-
         display:flex;
-
         flex-direction:column;
-
         justify-content:flex-start;
-
         align-items:center;
-
         gap:12px;
-
         overflow-y:auto;
-
         border-radius:22px;
-
     }
-
 
     /* Script Writing title */
 
     .script-title{
-
         top:18px;
-
         left:18px;
-
         gap:10px;
-
     }
 
     .script-title img{
-
         width:36px;
-
         height:36px;
-
     }
 
     .script-title span{
-
         font-size:12px;
-
         letter-spacing:3px;
-
     }
 
 
     /* Project thumbnail */
 
     .script-thumbnail{
-
         width:100%;
-
         max-width:none;
-
         min-height:65px;
-
         height:65px;
-
         padding:10px 16px;
-
         display:flex;
-
         flex-direction:row;
-
         justify-content:flex-start;
-
         align-items:center;
-
         text-align:left;
-
         border-radius:18px;
-
         box-sizing:border-box;
-
     }
 
 
     .script-thumbnail img{
-
         width:42px;
-
         height:42px;
-
         object-fit:contain;
-
         margin:0 18px 0 0;
-
         flex-shrink:0;
-
         border-radius:8px;
-
     }
 
 
     .script-thumbnail h3{
-
         margin:0;
-
         font-size:15px;
-
         font-weight:600;
-
         letter-spacing:1px;
-
     }
-
 
     /*=====================================================
       SCRIPT PAGE VIEWER
     =====================================================*/
 
     .script-page-box{
-
         width:94vw;
-
         height:88vh;
-
         border-radius:22px;
-
     }
 
     #prev-script-page{
-
         left:10px;
-
     }
 
     #next-script-page{
-
         right:10px;
-
     }
 
     #prev-script-page,
     #next-script-page{
-
         width:45px;
-
         height:45px;
-
         font-size:24px;
-
     }
 
     #script-page-image{
-
         max-width:90%;
-
         max-height:80%;
-
     }
 
 
@@ -4019,119 +3575,71 @@ document.querySelectorAll(
     =====================================================*/
 
     #contact{
-
         display:flex;
-
         justify-content:center;
-
         align-items:center;
-
     }
 
     .contact-box{
-
         width:100%;
-
         transform:none;
-
     }
 
     .contact-grid{
-
         display:flex;
-
         flex-direction:column;
-
         gap:12px;
-
         width:100%;
-
     }
 
     .contact-card{
-
         width:100%;
-
         min-height:70px;
-
         padding:10px 16px;
-
         display:grid;
-
         grid-template-columns:42px 1fr;
-
         grid-template-rows:1fr 1fr;
-
         column-gap:18px;
-
         align-items:center;
-
         text-align:left;
-
         box-sizing:border-box;
-
     }
 
     .contact-card img{
-
         width:42px;
-
         height:42px;
-
         object-fit:contain;
-
         grid-column:1;
-
         grid-row:1 / 3;
-
         margin:0;
-
     }
 
 
     /* Contact heading */
 
     .contact-card h3{
-
         grid-column:2;
-
         grid-row:1;
-
         align-self:end;
-
         margin:0;
-
         font-size:15px;
-
         font-weight:600;
-
         letter-spacing:1px;
-
         line-height:1.1;
-
     }
 
 
     /* Contact ID / username */
 
     .contact-card p{
-
         grid-column:2;
-
         grid-row:2;
-
         align-self:start;
-
         margin:3px 0 0 0;
-
         font-size:11px;
-
         line-height:1.2;
-
         letter-spacing:.3px;
-
         color:rgba(255,255,255,.85);
-
     }
   
     /*=====================================================
@@ -4142,35 +3650,25 @@ document.querySelectorAll(
     .graphic-viewer-box,
     .motion-viewer-box,
     .video-viewer-box{
-
         width:92vw;
-
         height:80vh;
-
         border-radius:22px;
-
     }
 
     .viewer-title,
     .graphic-title,
     .motion-title,
     .video-title{
-
         top:18px;
-
         left:18px;
-
     }
 
     .viewer-title span,
     .graphic-title span,
     .motion-title span,
     .video-title span{
-
         font-size:12px;
-
         letter-spacing:2px;
-
     }
 
     #prev-photo,
@@ -4181,60 +3679,42 @@ document.querySelectorAll(
     #next-motion,
     #prev-video,
     #next-video{
-
         width:45px;
-
         height:45px;
-
         font-size:22px;
-
     }
 
     #prev-photo,
     #prev-graphic,
     #prev-motion,
     #prev-video{
-
         left:12px;
-
     }
 
     #next-photo,
     #next-graphic,
     #next-motion,
     #next-video{
-
         right:12px;
-
     }
 
     #close-viewer,
     #close-graphic,
     #close-motion,
     #close-video{
-
         width:38px;
-
         height:38px;
-
         font-size:28px;
-
         right:15px;
-
     }
-
 
     /*=====================================================
       CUSTOM CURSOR
     =====================================================*/
-
     .cursor-dot,
     .cursor-ring{
-
         display:none;
-
     }
-
 }
 </style>
 </body>
